@@ -27,4 +27,16 @@ export default defineConfig({
   schema: {
     collections: [TinaUserCollection, PageCollection],
   },
+  ui: {
+    logo: "/m2z-logo.png",
+    theme: {
+      color: {
+        primary: {
+          light: "#E6007E",
+          medium: "#E6007E",
+          dark: "#E6007E",
+        },
+      },
+    },
+  },
 });
