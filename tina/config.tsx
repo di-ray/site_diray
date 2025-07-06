@@ -5,6 +5,11 @@ import {
 import { defineConfig, LocalAuthProvider } from "tinacms";
 
 import { PageCollection } from "./collections/page";
+import { SettingsCollection } from "./collections/settings";
+import { PostCollection } from "./collections/post";
+import { ProjectCollection } from "./collections/project";
+import { TestimonialCollection } from "./collections/testimonial";
+import { TeamMemberCollection } from "./collections/teamMember";
 
 const isLocal = process.env.TINA_PUBLIC_IS_LOCAL === "true";
 
@@ -17,6 +22,11 @@ export default defineConfig({
     publicFolder: "public",
     outputFolder: "admin",
   },
+  ui: {
+    previewUrl: ({ branch }) => {
+      return { url: `/preview?branch=${branch}` };
+    },
+  },
   media: {
     tina: {
       mediaRoot: "",
@@ -25,18 +35,14 @@ export default defineConfig({
     },
   },
   schema: {
-    collections: [TinaUserCollection, PageCollection],
-  },
-  ui: {
-    logo: "/m2z-logo.png",
-    theme: {
-      color: {
-        primary: {
-          light: "#E6007E",
-          medium: "#E6007E",
-          dark: "#E6007E",
-        },
-      },
-    },
+    collections: [
+      TinaUserCollection,
+      PageCollection,
+      SettingsCollection,
+      PostCollection,
+      ProjectCollection,
+      TestimonialCollection,
+      TeamMemberCollection,
+    ],
   },
 });

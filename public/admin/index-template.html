@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="M2Z Control - Painel Administrativo" />
+    <title>M2Z Control - Admin</title>
+    <link rel="icon" type="image/png" href="/m2z-logo.png" />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/admin/custom.css" />
+    
+    <!-- TinaCMS Development Scripts -->
+    <script type="module">
+      import RefreshRuntime from 'http://localhost:4001/@react-refresh'
+      RefreshRuntime.injectIntoGlobalHook(window)
+      window.$RefreshReg$ = () => {}
+      window.$RefreshSig$ = () => (type) => type
+      window.__vite_plugin_react_preamble_installed__ = true
+    </script>
+    <script type="module" src="http://localhost:4001/@vite/client"></script>
+    
+    <!-- Error Handling -->
+    <script>
+      function handleLoadError() {
+        document.getElementById('root').innerHTML = `
+          <style>
+            body { 
+              font-family: 'Inter', sans-serif; 
+              font-size: 16px; 
+              line-height: 1.4; 
+              color: #333; 
+              background-color: #f8fafc; 
+              margin: 0;
+              padding: 0;
+            }
+            .error-container { 
+              max-width: 600px; 
+              margin: 40px auto; 
+              padding: 40px; 
+              text-align: center; 
+              background-color: #fff; 
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+              border-radius: 12px;
+              border: 1px solid #e2e8f0;
+            }
+            .error-container h1 { 
+              font-size: 24px; 
+              margin-bottom: 20px; 
+              color: #1e293b;
+              font-weight: 600;
+            }
+            .error-container p { 
+              margin-bottom: 16px; 
+              color: #475569;
+            }
+            .error-container a { 
+              color: #e91e63; 
+              text-decoration: none; 
+              font-weight: 500;
+            }
+            .error-container a:hover { 
+              text-decoration: underline; 
+            }
+            .logo {
+              width: 48px;
+              height: 48px;
+              margin: 0 auto 20px;
+              background: url('/m2z-logo.png') center/contain no-repeat;
+            }
+          </style>
+          <div class="error-container">
+            <div class="logo"></div>
+            <h1>Erro ao carregar o M2Z Control</h1>
+            <p>Houve um problema ao carregar os recursos do painel administrativo.</p>
+            <p>Verifique se o servidor de desenvolvimento está rodando corretamente.</p>
+            <p>Para mais informações, visite a <a href="https://tina.io/docs/tina-cloud/faq/#how-do-i-resolve-failed-loading-tinacms-assets-error" target="_blank">documentação do TinaCMS</a>.</p>
+          </div>
+        `;
+      }
+    </script>
+    
+    <!-- TinaCMS Main Script -->
+    <script type="module" src="http://localhost:4001/src/main.tsx" onerror="handleLoadError()"></script>
+    
+    <!-- M2Z Customizations -->
+    <script src="/admin/m2z-init.js"></script>
+  </head>
+  <body class="tina-tailwind m2z-admin">
+    <div id="root">
+      <!-- Loading placeholder -->
+      <div style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-family: 'Inter', sans-serif;
+        background: #f8fafc;
+        color: #64748b;
+      ">
+        <div style="text-align: center;">
+          <div style="
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 16px;
+            background: url('/m2z-logo.png') center/contain no-repeat;
+            animation: pulse 2s infinite;
+          "></div>
+          <p>Carregando M2Z Control...</p>
+        </div>
+      </div>
+    </div>
+    
+    <style>
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+      }
+    </style>
+  </body>
+</html>

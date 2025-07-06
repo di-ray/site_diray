@@ -1,0 +1,299 @@
+/* M2Z Control - Design Moderno e Elegante */
+
+/* Sistema de cores minimalista */
+:root {
+  --m2z-primary: #E6007E;
+  --m2z-secondary: #6366f1;
+  --m2z-neutral-50: #f8fafc;
+  --m2z-neutral-100: #f1f5f9;
+  --m2z-neutral-200: #e2e8f0;
+  --m2z-neutral-300: #cbd5e1;
+  --m2z-neutral-400: #94a3b8;
+  --m2z-neutral-500: #64748b;
+  --m2z-neutral-600: #475569;
+  --m2z-neutral-700: #334155;
+  --m2z-neutral-800: #1e293b;
+  --m2z-neutral-900: #0f172a;
+  --m2z-white: #ffffff;
+  --m2z-glass: rgba(255, 255, 255, 0.95);
+  --m2z-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --m2z-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+/* Base limpa e moderna */
+body, html {
+  background: var(--m2z-neutral-50) !important;
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif !important;
+  color: var(--m2z-neutral-700) !important;
+  line-height: 1.6 !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* Sidebar moderna e elegante */
+aside, nav[role="navigation"], .tina-sidebar,
+div[class*="bg-gray-900"], div[class*="bg-slate"] {
+  background: var(--m2z-white) !important;
+  border-right: 1px solid var(--m2z-neutral-200) !important;
+  backdrop-filter: blur(8px) !important;
+  box-shadow: var(--m2z-shadow) !important;
+}
+
+/* Logo M2Z moderno */
+h1, .text-2xl, .text-xl, .font-bold {
+  color: var(--m2z-neutral-800) !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.025em !important;
+}
+
+/* Links da sidebar com hover sutil */
+aside a, aside button, nav a, nav button {
+  color: var(--m2z-neutral-600) !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  border-radius: 8px !important;
+  padding: 8px 12px !important;
+  margin: 2px 0 !important;
+}
+
+aside a:hover, aside button:hover, nav a:hover, nav button:hover {
+  background-color: var(--m2z-neutral-100) !important;
+  color: var(--m2z-neutral-800) !important;
+  transform: none !important;
+}
+
+/* Item ativo na sidebar */
+aside [aria-current="page"], nav [aria-current="page"],
+.bg-blue-50, .bg-blue-100, .font-medium {
+  background-color: rgba(230, 0, 126, 0.08) !important;
+  color: var(--m2z-primary) !important;
+  border-left: none !important;
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+}
+
+/* Botões modernos e minimalistas */
+button, .btn, input[type="submit"], input[type="button"],
+[class*="bg-blue-"] {
+  background: var(--m2z-primary) !important;
+  border: none !important;
+  color: var(--m2z-white) !important;
+  font-weight: 500 !important;
+  border-radius: 8px !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: var(--m2z-shadow) !important;
+  padding: 10px 16px !important;
+  font-size: 14px !important;
+}
+
+button:hover, .btn:hover, input[type="submit"]:hover {
+  background: #d1006e !important;
+  box-shadow: var(--m2z-shadow-lg) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Botões secundários */
+button[class*="bg-gray"], .bg-gray-100, .bg-gray-200 {
+  background: var(--m2z-white) !important;
+  border: 1px solid var(--m2z-neutral-300) !important;
+  color: var(--m2z-neutral-700) !important;
+  box-shadow: var(--m2z-shadow) !important;
+}
+
+button[class*="bg-gray"]:hover {
+  background: var(--m2z-neutral-50) !important;
+  border-color: var(--m2z-neutral-400) !important;
+}
+
+/* Campos de input modernos */
+input, textarea, select, .form-control {
+  border: 1px solid var(--m2z-neutral-300) !important;
+  border-radius: 8px !important;
+  background: var(--m2z-white) !important;
+  color: var(--m2z-neutral-700) !important;
+  font-size: 14px !important;
+  padding: 12px 14px !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: var(--m2z-shadow) !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--m2z-primary) !important;
+  box-shadow: 0 0 0 3px rgba(230, 0, 126, 0.1), var(--m2z-shadow) !important;
+  outline: none !important;
+}
+
+/* Cards e containers com glassmorphism sutil */
+.bg-white, [class*="bg-white"] {
+  background: var(--m2z-glass) !important;
+  border: 1px solid var(--m2z-neutral-200) !important;
+  border-radius: 12px !important;
+  box-shadow: var(--m2z-shadow) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+/* Links elegantes */
+.text-blue-600, .text-blue-500, .text-blue-700, a[class*="text-blue"] {
+  color: var(--m2z-primary) !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+}
+
+.text-blue-600:hover, .text-blue-500:hover {
+  color: #d1006e !important;
+  text-decoration: underline !important;
+  text-decoration-color: rgba(230, 0, 126, 0.3) !important;
+  text-underline-offset: 4px !important;
+}
+
+/* Spinners elegantes */
+.animate-spin, [class*="spinner"], .loading {
+  color: var(--m2z-primary) !important;
+  animation: spin 1s linear infinite !important;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Labels e texto */
+label, .text-sm.font-medium {
+  color: var(--m2z-neutral-700) !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  margin-bottom: 6px !important;
+}
+
+/* Estados de validação */
+.text-green-600 { color: #059669 !important; }
+.text-red-600 { color: #dc2626 !important; }
+.text-yellow-600 { color: #d97706 !important; }
+
+/* Dropdown e menus */
+.bg-white.shadow-lg, [role="menu"] {
+  background: var(--m2z-glass) !important;
+  border: 1px solid var(--m2z-neutral-200) !important;
+  border-radius: 12px !important;
+  box-shadow: var(--m2z-shadow-lg) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+/* Breadcrumbs */
+nav[aria-label="Breadcrumb"] {
+  color: var(--m2z-neutral-500) !important;
+}
+
+nav[aria-label="Breadcrumb"] a {
+  color: var(--m2z-primary) !important;
+  font-weight: 500 !important;
+}
+
+/* Scrollbars minimalistas */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--m2z-neutral-300);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--m2z-neutral-400);
+}
+
+/* Modais modernos */
+.bg-black.bg-opacity-50 {
+  background: rgba(15, 23, 42, 0.6) !important;
+  backdrop-filter: blur(4px) !important;
+}
+
+/* Editor de conteúdo */
+.ProseMirror {
+  border: 1px solid var(--m2z-neutral-300) !important;
+  border-radius: 12px !important;
+  padding: 20px !important;
+  background: var(--m2z-white) !important;
+  box-shadow: var(--m2z-shadow) !important;
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+}
+
+.ProseMirror:focus {
+  border-color: var(--m2z-primary) !important;
+  box-shadow: 0 0 0 3px rgba(230, 0, 126, 0.1), var(--m2z-shadow) !important;
+  outline: none !important;
+}
+
+/* Toolbar do editor */
+.tina-toolbar {
+  background: var(--m2z-glass) !important;
+  border: 1px solid var(--m2z-neutral-200) !important;
+  border-bottom: none !important;
+  border-radius: 12px 12px 0 0 !important;
+  backdrop-filter: blur(8px) !important;
+  padding: 8px 12px !important;
+}
+
+.tina-toolbar button {
+  color: var(--m2z-neutral-600) !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 6px !important;
+  padding: 8px !important;
+  transition: all 0.2s ease !important;
+}
+
+.tina-toolbar button:hover,
+.tina-toolbar button.is-active {
+  color: var(--m2z-primary) !important;
+  background: rgba(230, 0, 126, 0.08) !important;
+}
+
+/* Badge e status indicators */
+.bg-gray-100.text-gray-800 {
+  background: var(--m2z-neutral-100) !important;
+  color: var(--m2z-neutral-700) !important;
+  border: 1px solid var(--m2z-neutral-200) !important;
+  border-radius: 6px !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  padding: 4px 8px !important;
+}
+
+/* Logo personalizado */
+.tina-sidebar h1::before {
+  content: "M2Z";
+  display: inline-block;
+  background: linear-gradient(135deg, var(--m2z-primary), var(--m2z-secondary));
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 8px;
+  margin-right: 12px;
+  letter-spacing: 1px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .tina-sidebar {
+    background: var(--m2z-glass) !important;
+    backdrop-filter: blur(12px) !important;
+  }
+}
+
+/* Dark mode (se necessário) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --m2z-neutral-50: #0f172a;
+    --m2z-neutral-100: #1e293b;
+    --m2z-neutral-200: #334155;
+    --m2z-glass: rgba(30, 41, 59, 0.95);
+  }
+}

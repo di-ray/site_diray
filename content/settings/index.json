@@ -1,0 +1,23 @@
+{
+  "siteInfo": {
+    "title": "Título do Site",
+    "description": "Descrição do seu novo site.",
+    "keywords": "palavra-chave1, palavra-chave2"
+  },
+  "contact": {
+    "email": "contato@exemplo.com",
+    "phone": "+55 (00) 00000-0000",
+    "address": "Sua Rua, 123\nSua Cidade - UF"
+  },
+  "social": {
+    "facebook": "https://facebook.com/",
+    "instagram": "https://instagram.com/",
+    "linkedin": "https://linkedin.com/",
+    "twitter": "https://twitter.com/"
+  },
+  "theme": {
+    "primaryColor": "#3b82f6",
+    "secondaryColor": "#6366f1",
+    "darkMode": false
+  }
+}

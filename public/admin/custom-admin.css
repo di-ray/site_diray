@@ -1,0 +1,426 @@
+/* ==========================================================================
+   PERSONALIZAÇÃO TINACMS - M2Z CONTROL
+   ========================================================================== */
+
+/* CSS Variables para consistência */
+:root {
+  --m2z-primary: #E6007E;
+  --m2z-primary-light: #FF66B3;
+  --m2z-primary-dark: #B8005A;
+  --m2z-secondary: #64748B;
+  --m2z-success: #10B981;
+  --m2z-warning: #F59E0B;
+  --m2z-error: #EF4444;
+  --m2z-grey-0: #FFFFFF;
+  --m2z-grey-1: #F8FAFC;
+  --m2z-grey-2: #F1F5F9;
+  --m2z-grey-3: #E2E8F0;
+  --m2z-grey-9: #1E293B;
+}
+
+/* ==========================================================================
+   LAYOUT PRINCIPAL
+   ========================================================================== */
+
+/* Container principal do app */
+body.tina-tailwind,
+#root {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+/* ==========================================================================
+   BOTÕES E ELEMENTOS INTERATIVOS
+   ========================================================================== */
+
+/* Botões primários - seletores específicos do TinaCMS */
+button[data-variant="primary"],
+button[class*="bg-blue-500"],
+button[class*="bg-blue-600"],
+.bg-blue-500,
+.bg-blue-600,
+[class*="bg-primary"] {
+  background-color: var(--m2z-primary) !important;
+  border-color: var(--m2z-primary) !important;
+}
+
+button[data-variant="primary"]:hover,
+button[class*="bg-blue-500"]:hover,
+button[class*="bg-blue-600"]:hover,
+.bg-blue-500:hover,
+.bg-blue-600:hover,
+[class*="bg-primary"]:hover {
+  background-color: var(--m2z-primary-dark) !important;
+  border-color: var(--m2z-primary-dark) !important;
+}
+
+/* Links primários */
+a[class*="text-blue"],
+.text-blue-500,
+.text-blue-600,
+[class*="text-primary"] {
+  color: var(--m2z-primary) !important;
+}
+
+a[class*="text-blue"]:hover,
+.text-blue-500:hover,
+.text-blue-600:hover,
+[class*="text-primary"]:hover {
+  color: var(--m2z-primary-dark) !important;
+}
+
+/* ==========================================================================
+   FORMULÁRIOS E INPUTS
+   ========================================================================== */
+
+/* Campos de input com foco */
+input:focus,
+textarea:focus,
+select:focus,
+[contenteditable]:focus {
+  border-color: var(--m2z-primary) !important;
+  box-shadow: 0 0 0 3px rgba(230, 0, 126, 0.1) !important;
+  outline: none !important;
+}
+
+/* Checkboxes e radio buttons */
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  background-color: var(--m2z-primary) !important;
+  border-color: var(--m2z-primary) !important;
+}
+
+/* ==========================================================================
+   NAVEGAÇÃO E SIDEBAR
+   ========================================================================== */
+
+/* Itens de navegação ativos */
+[aria-current="page"],
+[data-current="true"],
+.active,
+[class*="active"] {
+  color: var(--m2z-primary) !important;
+  border-color: var(--m2z-primary) !important;
+}
+
+/* Links de navegação hover */
+nav a:hover,
+[role="navigation"] a:hover {
+  color: var(--m2z-primary) !important;
+}
+
+/* ==========================================================================
+   HEADERS E TÍTULOS
+   ========================================================================== */
+
+/* Headers principais */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--m2z-grey-9) !important;
+}
+
+/* Elementos com bordas primárias */
+.border-blue-500,
+.border-blue-600,
+[class*="border-primary"] {
+  border-color: var(--m2z-primary) !important;
+}
+
+/* ==========================================================================
+   ESTADOS E INDICADORES
+   ========================================================================== */
+
+/* Badges e indicadores */
+.badge,
+[class*="badge"],
+.indicator,
+[class*="indicator"] {
+  background-color: var(--m2z-primary) !important;
+  color: white !important;
+}
+
+/* Tabs ativos */
+[role="tab"][aria-selected="true"],
+.tab-active,
+[class*="tab-active"] {
+  border-bottom-color: var(--m2z-primary) !important;
+  color: var(--m2z-primary) !important;
+}
+
+/* ==========================================================================
+   ESPECÍFICO TINACMS - SELETORES MAIS DIRECIONADOS
+   ========================================================================== */
+
+/* Seletores específicos do TinaCMS baseados na estrutura HTML observada */
+.tina-tailwind [class*="text-blue"],
+.tina-tailwind [class*="bg-blue"] {
+  color: var(--m2z-primary) !important;
+  background-color: var(--m2z-primary) !important;
+}
+
+/* Forçar cores em elementos específicos do TinaCMS */
+.tina-tailwind button[class*="blue"],
+.tina-tailwind a[class*="blue"],
+.tina-tailwind div[class*="blue"] {
+  background-color: var(--m2z-primary) !important;
+  color: white !important;
+}
+
+/* Para elementos com múltiplas classes */
+.tina-tailwind [class*="bg-"][class*="blue"] {
+  background-color: var(--m2z-primary) !important;
+}
+
+.tina-tailwind [class*="text-"][class*="blue"] {
+  color: var(--m2z-primary) !important;
+}
+
+.tina-tailwind [class*="border-"][class*="blue"] {
+  border-color: var(--m2z-primary) !important;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  /* Ajustes para mobile */
+  .tina-tailwind {
+    font-size: 14px;
+  }
+  
+  button {
+    padding: 8px 16px !important;
+  }
+}
+
+/* ==========================================================================
+   DARK MODE
+   ========================================================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --m2z-primary: #FF66B3;
+    --m2z-primary-dark: #E6007E;
+  }
+}
+
+/* ==========================================================================
+   UTILITÁRIOS E SOBRESCRITAS IMPORTANTES
+   ========================================================================== */
+
+/* Força aplicação da marca M2Z em elementos críticos */
+.tina-tailwind * {
+  transition: all 0.2s ease;
+}
+
+/* Sobrescrever qualquer azul padrão do TinaCMS */
+.tina-tailwind *[style*="blue"],
+.tina-tailwind *[style*="#3b82f6"],
+.tina-tailwind *[style*="#2563eb"] {
+  color: var(--m2z-primary) !important;
+  background-color: var(--m2z-primary) !important;
+  border-color: var(--m2z-primary) !important;
+}
+
+/* ==========================================================================
+   CSS ADICIONAL (LEGADO - MANTER PARA COMPATIBILIDADE)
+   ========================================================================== */
+
+/* Toolbar personalizada */
+.tina-toolbar {
+  background: white;
+  border-bottom: 2px solid #e2e8f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Botões personalizados */
+.tina-button-primary {
+  background: linear-gradient(135deg, #E6007E 0%, #B8005A 100%);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.tina-button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(230, 0, 126, 0.3);
+}
+
+/* Editor de conteúdo */
+.tina-content-editor {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 30px;
+}
+
+/* Campos de formulário */
+.tina-field {
+  margin-bottom: 24px;
+}
+
+.tina-field-label {
+  color: #374151;
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.tina-field-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.tina-field-input:focus {
+  outline: none;
+  border-color: #E6007E;
+  box-shadow: 0 0 0 3px rgba(230, 0, 126, 0.1);
+}
+
+/* Preview do conteúdo */
+.tina-preview {
+  background: #f8fafc;
+  border: 2px dashed #cbd5e1;
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Mensagens de status */
+.tina-notification {
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 16px;
+  font-weight: 500;
+}
+
+.tina-notification.success {
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+}
+
+.tina-notification.error {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+
+.tina-notification.warning {
+  background: #fffbeb;
+  color: #d97706;
+  border: 1px solid #fed7aa;
+}
+
+/* Media manager */
+.tina-media-manager {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.tina-media-item {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.tina-media-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .tina-sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  
+  .tina-content-editor {
+    margin: 10px;
+    padding: 20px;
+  }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .tina-sidebar {
+    background: #1f2937;
+    border-right-color: #374151;
+  }
+  
+  .tina-sidebar-nav a {
+    color: #d1d5db;
+  }
+  
+  .tina-sidebar-nav a:hover {
+    background: #374151;
+    color: #E6007E;
+  }
+  
+  .tina-content-editor {
+    background: #1f2937;
+    color: #f9fafb;
+  }
+  
+  .tina-field-input {
+    background: #374151;
+    border-color: #4b5563;
+    color: #f9fafb;
+  }
+  
+  .tina-field-label {
+    color: #e5e7eb;
+  }
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tina-content-editor {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Loading states */
+.tina-loading {
+  position: relative;
+}
+
+.tina-loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 32px;
+  height: 32px;
+  margin: -16px 0 0 -16px;
+  border: 3px solid #e5e7eb;
+  border-top-color: #E6007E;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
