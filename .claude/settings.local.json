@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(cp:*)",
+      "Bash(npm run dev:*)",
+      "Bash(timeout 5s npm run build)",
+      "Bash(rm:*)"
+    ],
+    "deny": []
+  }
+}

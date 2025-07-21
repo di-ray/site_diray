@@ -1,5 +1,6 @@
 import { createDatabase, createLocalDatabase } from "@tinacms/datalayer";
-import { MongodbLevel } from "mongodb-level";
+import { RedisLevel } from "upstash-redis-level";
+import { Redis } from "@upstash/redis";
 import { GitHubProvider } from "tinacms-gitprovider-github";
 
 // Manage this flag in your CI/CD pipeline and make sure it is set to false in production
@@ -29,10 +30,11 @@ export default isLocal
         repo,
         token,
       }),
-      databaseAdapter: new MongodbLevel<string, Record<string, any>>({
-        collectionName: `tinacms-${branch}`,
-        dbName: "tinacms",
-        mongoUri: process.env.MONGODB_URI as string,
+      databaseAdapter: new RedisLevel<string, Record<string, any>>({
+        redis: new Redis({
+          url: process.env.KV_REST_API_URL as string,
+          token: process.env.KV_REST_API_TOKEN as string,
+        }),
       }),
       namespace: branch,
     });

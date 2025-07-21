@@ -1,4 +1,3 @@
-
 import type { Collection } from "tinacms";
 
 export const TestimonialCollection: Collection = {

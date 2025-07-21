@@ -6,10 +6,8 @@ import { defineConfig, LocalAuthProvider } from "tinacms";
 
 import { PageCollection } from "./collections/page";
 import { SettingsCollection } from "./collections/settings";
-import { PostCollection } from "./collections/post";
-import { ProjectCollection } from "./collections/project";
-import { TestimonialCollection } from "./collections/testimonial";
-import { TeamMemberCollection } from "./collections/teamMember";
+import { FAQCollection } from "./collections/faq";
+import { SolutionCollection } from "./collections/solution";
 
 const isLocal = process.env.TINA_PUBLIC_IS_LOCAL === "true";
 
@@ -39,10 +37,8 @@ export default defineConfig({
       TinaUserCollection,
       PageCollection,
       SettingsCollection,
-      PostCollection,
-      ProjectCollection,
-      TestimonialCollection,
-      TeamMemberCollection,
+      FAQCollection,
+      SolutionCollection,
     ],
   },
 });

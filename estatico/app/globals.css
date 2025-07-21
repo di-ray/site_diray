@@ -1,0 +1,692 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 27%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 27%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 27%;
+    --primary: 0 100% 67%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 100% 61%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 45 100% 61%;
+    --accent-foreground: 0 0% 27%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 100% 67%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-dark text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-poppins font-bold;
+  }
+}
+
+.container {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0.5rem;
+  }
+  h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+  h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+  }
+  .grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem;
+  }
+  h1 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+}
+
+.font-poppins {
+  font-family: var(--font-poppins), sans-serif;
+}
+
+.font-inter {
+  font-family: var(--font-inter), sans-serif;
+}
+
+.font-black {
+  font-weight: 900;
+}
+
+/* Diagonal stripes background */
+.bg-diagonal {
+  background-color: #1a2327;
+  background-image: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.3) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.3) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 100px 100px;
+}
+
+/* Animações */
+.animate-fadeIn {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.animate-fadeInUp {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+.animate-fadeInDown {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInDown 0.8s ease-in-out forwards;
+}
+
+.animate-slideInLeft {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slideInLeft 0.8s ease-in-out forwards;
+}
+
+.animate-slideInRight {
+  opacity: 0;
+  transform: translateX(20px);
+  animation: slideInRight 0.8s ease-in-out forwards;
+}
+
+.animate-slideInDown {
+  animation: slideInDown 0.5s ease-in-out forwards;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+.animate-spin-slow {
+  animation: spin 3s linear infinite;
+}
+
+/* Animation delays */
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+.delay-700 {
+  animation-delay: 700ms;
+}
+
+.delay-1000 {
+  animation-delay: 1000ms;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(-10px);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Client logos */
+.client-logos {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  opacity: 0.7;
+  transition: opacity 0.4s ease;
+}
+
+.client-logos:hover {
+  opacity: 1;
+}
+
+/* Section illumination effects */
+.section-illumination {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-illumination::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(ellipse at bottom right, rgba(255, 89, 89, 0.3) 0%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Enhanced Illumination Effects */
+.section-illumination-red::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(ellipse at bottom, rgba(255, 0, 0, 0.3) 0%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+  animation: pulse 6s infinite alternate;
+}
+
+.section-illumination-purple::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, rgba(128, 0, 128, 0.3) 0%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+  animation: pulse 6s infinite alternate;
+}
+
+.section-illumination-gradient::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, rgba(255, 0, 0, 0.25) 0%, rgba(128, 0, 128, 0.25) 50%, rgba(0, 0, 0, 0) 100%);
+  z-index: 0;
+  pointer-events: none;
+  animation: pulse 6s infinite alternate;
+}
+
+/* Animation for illumination effects */
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+}
+
+/* Additional animations */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-glow {
+  animation: glow 4s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px rgba(255, 89, 89, 0.5), 0 0 10px rgba(255, 89, 89, 0.3);
+  }
+  to {
+    box-shadow: 0 0 10px rgba(255, 89, 89, 0.7), 0 0 20px rgba(255, 89, 89, 0.5), 0 0 30px rgba(255, 89, 89, 0.3);
+  }
+}
+
+.section-illumination-red {
+  position: relative;
+  overflow: hidden;
+  background-color: #0a0a0a;
+}
+
+.section-illumination-red::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(ellipse at bottom, rgba(255, 0, 0, 0.2) 0%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.section-illumination-purple {
+  position: relative;
+  overflow: hidden;
+  background-color: #0a0a0a;
+}
+
+.section-illumination-purple::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, rgba(128, 0, 128, 0.2) 0%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.section-illumination-gradient {
+  position: relative;
+  overflow: hidden;
+  background-color: #0a0a0a;
+}
+
+.section-illumination-gradient::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, rgba(255, 0, 0, 0.15) 0%, rgba(128, 0, 128, 0.15) 50%, rgba(0, 0, 0, 0) 100%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Modern architecture background */
+.architecture-bg {
+  position: relative;
+  background-color: #0a0a0a;
+}
+.architecture-bg-about {
+  position: relative;
+  background-color: #ffcd38;
+}
+
+.architecture-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/images/background.webp");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+/* Solution cards */
+.solution-card {
+  background-color: rgba(255, 89, 89, 0.9);
+  border: 1px solid rgba(255, 89, 89, 0.1);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.solution-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(to top, rgba(255, 89, 89, 0.1), transparent);
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+.solution-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(255, 89, 89, 0.3);
+  box-shadow: 0 10px 30px rgba(255, 89, 89, 0.1);
+}
+
+.solution-card:hover::after {
+  height: 100%;
+}
+
+.solution-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white !important;
+  text-align: center;
+}
+
+.solution-card-description {
+  color: rgba(255, 255, 255, 0.986);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.solution-card-button {
+  background-color: rgb(255, 255, 255);
+  color: var(--secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.solution-card-button:hover {
+  background-color: rgb(255, 255, 255);
+  transform: translateY(-2px);
+}
+
+/* Enhanced CTA buttons */
+.cta-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.cta-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+.cta-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced icons */
+.icon-container {
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.icon-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 89, 89, 0.2) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.icon-container:hover {
+  transform: scale(1.1);
+}
+
+.icon-container:hover::before {
+  opacity: 1;
+}
+
+.icon-container svg {
+  transition: all 0.3s ease;
+}
+
+.icon-container:hover svg {
+  transform: rotate(10deg);
+  color: var(--primary);
+}
+
+/* Scroll reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animated underline for links */
+.animated-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.animated-underline::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.animated-underline:hover::after {
+  width: 100%;
+}
+
+/* Fix for text colors */
+.text-gray-600,
+.text-gray-700,
+.text-gray-800 {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.text-gray-400,
+.text-gray-500 {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.text-gray-300 {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.text-gray-200 {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+.text-highlight {
+  color: #ff5959 !important;
+}
+
+/* Fix for background images and videos */
+.bg-dark {
+  background-color: #0a0a0a;
+  position: relative;
+}
+
+/* Ensure background components are visible */
+[class*="background"] {
+  z-index: -1 !important;
+}
+
+/* Fix for text colors */
+
+h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+h6 span {
+  color: var(--primary) !important;
+}
