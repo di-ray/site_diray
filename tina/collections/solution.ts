@@ -124,7 +124,7 @@ export const SolutionCollection: Collection = {
           name: "whyDiray",
           label: "Por que Diray",
           fields: [
-            { name: "heading", label: "Título", type: "string" },
+            { name: "heading", label: "Título", type: "string", required: true },
             { name: "subheading", label: "Subtítulo", type: "string" },
             {
               name: "features",
@@ -148,7 +148,7 @@ export const SolutionCollection: Collection = {
           name: "contact",
           label: "Entre em contato",
           fields: [
-            { name: "heading", label: "Título", type: "string" },
+            { name: "heading", label: "Título", type: "string", required: true },
             { name: "subheading", label: "Subtítulo", type: "string" },
             { name: "whatsapp", label: "WhatsApp", type: "string" },
             { name: "email", label: "E-mail", type: "string" },

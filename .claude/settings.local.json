@@ -5,7 +5,9 @@
       "Bash(cp:*)",
       "Bash(npm run dev:*)",
       "Bash(timeout 5s npm run build)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(npm run build:*)",
+      "Bash(mv:*)"
     ],
     "deny": []
   }

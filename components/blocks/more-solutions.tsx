@@ -77,7 +77,7 @@ export function MoreSolutionsSection({ heading = "Nossas Soluções", solutions 
                     </div>
                   </div>
                   <h3 className="solution-card-title">{solution.title}</h3>
-                  <p className="solution-card-description">{solution.excerpt || solution.description}</p>
+                  <p className="solution-card-description">{solution.description}</p>
                 </div>
                 <div className="mt-6 text-center">
                   <div className="solution-card-button">
