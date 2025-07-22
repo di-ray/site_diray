@@ -1,3 +1,10 @@
 {
-  "users": []
+  "users": [
+    {
+      "username": "admin",
+      "name": "Admin",
+      "email": "admin@diray.com.br",
+      "password": "$2b$10$/1ekbHhNIRi6AIQNQiYOQe95wpK8wFp8fQeYv2U0Zl0LgYWHPZtGK"
+    }
+  ]
 }
