@@ -10,7 +10,9 @@
       "Bash(mv:*)",
       "Bash(npm install:*)",
       "Bash(node:*)",
-      "Bash(echo $TINA_PUBLIC_IS_LOCAL)"
+      "Bash(echo $TINA_PUBLIC_IS_LOCAL)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "deny": []
   }
