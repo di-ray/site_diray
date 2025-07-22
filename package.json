@@ -88,7 +88,7 @@
     "sonner": "2.0.6",
     "tailwind-merge": "^3.3.1",
     "tailwindcss-animate": "^1.0.7",
-    "tinacms": "2.2.1",
+    "tinacms": "2.1.0",
     "tinacms-authjs": "4.0.0",
     "tinacms-gitprovider-github": "2.0.1",
     "typescript": "5.5.4",
