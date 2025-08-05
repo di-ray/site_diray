@@ -65,11 +65,78 @@ export function SolutionPageTemplate(props: SolutionPageTemplateProps) {
               />
             );
           case "SolutionBlocksSolutionCalculator":
+            // Se temos dados completos da calculadora, renderizamos diretamente
+            if (block.calculatorType === 'tina' && block.calculatorId?.__typename === 'Calculator') {
+              const calculator = block.calculatorId;
+              
+              // Renderizar o componente apropriado baseado no tipo
+              if (calculator.type === 'salary-based') {
+                const SalaryBasedCalculator = require('../calculators/SalaryBasedCalculator').SalaryBasedCalculator;
+                return (
+                  <SalaryBasedCalculator
+                    key={idx}
+                    calculatorId={calculator._sys?.filename || ''}
+                    serviceName={calculator.name || ''}
+                    config={calculator.config || {}}
+                    display={calculator.display || {}}
+                  />
+                );
+              } else if (calculator.type === 'budget-plans') {
+                const BudgetPlansCalculator = require('../calculators/BudgetPlansCalculator').BudgetPlansCalculator;
+                return (
+                  <BudgetPlansCalculator
+                    key={idx}
+                    calculatorId={calculator._sys?.filename || ''}
+                    serviceName={calculator.name || ''}
+                    config={calculator.config || {}}
+                    display={calculator.display || {}}
+                  />
+                );
+              } else if (calculator.type === 'training-based') {
+                const TrainingBasedCalculator = require('../calculators/TrainingBasedCalculator').TrainingBasedCalculator;
+                return (
+                  <TrainingBasedCalculator
+                    key={idx}
+                    calculatorId={calculator._sys?.filename || ''}
+                    serviceName={calculator.name || ''}
+                    config={calculator.config || {}}
+                    display={calculator.display || {}}
+                  />
+                );
+              } else if (calculator.type === 'custom') {
+                const CustomCalculator = require('../calculators/CustomCalculator').CustomCalculator;
+                return (
+                  <CustomCalculator
+                    key={idx}
+                    calculatorId={calculator._sys?.filename || ''}
+                    serviceName={calculator.name || ''}
+                    config={calculator.config || {}}
+                    display={calculator.display || {}}
+                  />
+                );
+              }
+            }
+            
+            // Fallback para calculadora legada
             return (
               <SolutionCalculator
                 key={idx}
-                basePrice={block.basePrice}
-                factors={block.factors}
+                basePrice={block.basePrice || undefined}
+                factors={block.factors ? block.factors
+                  .filter(factor => factor && factor.name && factor.options)
+                  .map(factor => ({
+                    name: factor!.name || '',
+                    options: factor!.options
+                      ? factor!.options
+                          .filter(opt => opt && opt.label && opt.multiplier !== undefined)
+                          .map(opt => ({ 
+                            label: opt!.label || '', 
+                            multiplier: Number(opt!.multiplier)
+                          }))
+                      : []
+                  })) : undefined}
+                calculatorType={block.calculatorType as 'legacy' | 'tina' | undefined}
+                calculatorId={typeof block.calculatorId === 'string' ? block.calculatorId : block.calculatorId?._sys?.filename || block.calculatorId?.id}
                 slug={data.solution._sys?.filename}
                 title={data.solution.title}
               />

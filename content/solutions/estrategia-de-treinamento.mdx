@@ -27,26 +27,8 @@ blocks:
           - Transferência de conhecimento sobre as ferramentas aplicadas, incluindo IA.
         icon: Zap
   - _template: solutionCalculator
-    basePrice: 10800
-    factors:
-      - name: Tamanho da Empresa
-        options:
-          - label: Até 50 funcionários
-            multiplier: 1
-          - label: 51-200 funcionários
-            multiplier: 1.3
-          - label: 201-500 funcionários
-            multiplier: 1.6
-          - label: Mais de 500 funcionários
-            multiplier: 2
-      - name: Complexidade
-        options:
-          - label: Básica
-            multiplier: 1
-          - label: Intermediária
-            multiplier: 1.4
-          - label: Avançada
-            multiplier: 1.8
+    calculatorType: tina
+    calculatorId: content/calculators/programa-desenvolvimento.json
   - _template: solutionTimeline
     timelineTitle: Etapas da Implementação
     steps:

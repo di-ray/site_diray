@@ -15,7 +15,21 @@
       "Bash(git commit:*)",
       "Bash(git push:*)",
       "Bash(grep:*)",
-      "Bash(npm ls:*)"
+      "Bash(npm ls:*)",
+      "WebFetch(domain:tina.io)",
+      "Bash(set TINA_PUBLIC_IS_LOCAL=true)",
+      "Bash(pnpm run:*)",
+      "Bash(pnpm add:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(pnpm build:*)",
+      "Bash(pnpm tinacms build)",
+      "Bash(del pagesadminindex.tsx)",
+      "Bash(mkdir:*)",
+      "Bash(pnpm tinacms dev)",
+      "Bash(del \"D:\\CATALISTI\\M2Z\\PROPRIETARIO\\m2z-control\\components\\blocks\\SolutionCalculator.tsx\")",
+      "Bash(pnpm tinacms build:*)",
+      "Bash(taskkill:*)",
+      "Bash(pnpm next:*)"
     ],
     "deny": []
   }

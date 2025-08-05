@@ -1,0 +1,93 @@
+{
+  "name": "Programa de Desenvolvimento",
+  "type": "training-based",
+  "description": "Calculadora para orçamento de Programas de Desenvolvimento com treinamentos",
+  "config": {
+    "trainingTypes": [
+      {
+        "type": "synchronous",
+        "durations": [
+          {
+            "hours": 1,
+            "consultingHours": 39,
+            "cost": 5850,
+            "weeks": 2,
+            "additionalPerSession": 2
+          },
+          {
+            "hours": 2,
+            "consultingHours": 41,
+            "cost": 6150,
+            "weeks": 2,
+            "additionalPerSession": 4
+          },
+          {
+            "hours": 4,
+            "consultingHours": 45,
+            "cost": 6750,
+            "weeks": 3,
+            "additionalPerSession": 8
+          },
+          {
+            "hours": 8,
+            "consultingHours": 74,
+            "cost": 11100,
+            "weeks": 4,
+            "additionalPerSession": 16
+          },
+          {
+            "hours": 16,
+            "consultingHours": 145,
+            "cost": 21750,
+            "weeks": 6,
+            "additionalPerSession": 32
+          },
+          {
+            "hours": 24,
+            "consultingHours": 213,
+            "cost": 31950,
+            "weeks": 8,
+            "additionalPerSession": 48
+          }
+        ]
+      },
+      {
+        "type": "asynchronous",
+        "durations": [
+          {
+            "hours": 0.5,
+            "consultingHours": 73,
+            "cost": 10950,
+            "weeks": 4
+          },
+          {
+            "hours": 1,
+            "consultingHours": 125,
+            "cost": 18750,
+            "weeks": 6
+          },
+          {
+            "hours": 1.5,
+            "consultingHours": 177,
+            "cost": 26550,
+            "weeks": 8
+          },
+          {
+            "hours": 2,
+            "consultingHours": 229,
+            "cost": 34350,
+            "weeks": 10
+          }
+        ]
+      }
+    ],
+    "hourlyRate": 150,
+    "requiresLeadForm": true,
+    "showPDF": true
+  },
+  "display": {
+    "title": "Orçamento - Programas de Desenvolvimento",
+    "buttonText": "Calcular",
+    "warningMessage": "Para calcular o orçamento, preencha as informações acima ou entre em contato para conversar sobre esta solução."
+  }
+}

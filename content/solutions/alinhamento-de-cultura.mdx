@@ -27,26 +27,8 @@ blocks:
           - Ferramentas e metodologias para avaliar e ajustar a cultura continuamente.
         icon: Zap
   - _template: solutionCalculator
-    basePrice: 8640
-    factors:
-      - name: Tamanho da Empresa
-        options:
-          - label: Até 50 funcionários
-            multiplier: 1
-          - label: 51-200 funcionários
-            multiplier: 1.3
-          - label: 201-500 funcionários
-            multiplier: 1.6
-          - label: Mais de 500 funcionários
-            multiplier: 2
-      - name: Nível de Desalinhamento
-        options:
-          - label: Baixo
-            multiplier: 1
-          - label: Médio
-            multiplier: 1.3
-          - label: Alto
-            multiplier: 1.6
+    calculatorType: tina
+    calculatorId: content/calculators/alinhamento-cultura.json
   - _template: solutionTimeline
     timelineTitle: Etapas da Implementação
     steps:

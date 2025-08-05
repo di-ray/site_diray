@@ -27,26 +27,8 @@ blocks:
           - Ferramentas e técnicas para monitorar e otimizar a comunicação continuamente.
         icon: Zap
   - _template: solutionCalculator
-    basePrice: 7200
-    factors:
-      - name: Tamanho da Empresa
-        options:
-          - label: Até 50 funcionários
-            multiplier: 1
-          - label: 51-200 funcionários
-            multiplier: 1.3
-          - label: 201-500 funcionários
-            multiplier: 1.6
-          - label: Mais de 500 funcionários
-            multiplier: 2
-      - name: Complexidade da Comunicação
-        options:
-          - label: Simples
-            multiplier: 1
-          - label: Moderada
-            multiplier: 1.4
-          - label: Complexa
-            multiplier: 1.8
+    calculatorType: tina
+    calculatorId: content/calculators/plano-comunicacao.json
   - _template: solutionTimeline
     timelineTitle: Etapas da Implementação
     steps:

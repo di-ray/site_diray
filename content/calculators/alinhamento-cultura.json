@@ -1,0 +1,210 @@
+{
+  "name": "Alinhamento de Cultura",
+  "type": "budget-plans",
+  "description": "Calculadora para orçamento de Alinhamento de Cultura com planos predefinidos",
+  "config": {
+    "plans": [
+      {
+        "id": "plan-50",
+        "label": "Até 50 respondentes",
+        "range": "Até 50 respondentes",
+        "totalCost": 11700,
+        "totalHours": 78,
+        "duration": "17 dias úteis",
+        "activities": [
+          {
+            "name": "Reunião de Briefing",
+            "duration": "1 dia útil",
+            "hours": "1",
+            "cost": "R$ 150,00"
+          },
+          {
+            "name": "Entrevista com Stakeholders",
+            "duration": "1 dia útil",
+            "hours": "4,5",
+            "cost": "R$ 675,00"
+          },
+          {
+            "name": "Aplicação de questionários",
+            "duration": "1 dia útil",
+            "hours": "3",
+            "cost": "R$ 450,00"
+          },
+          {
+            "name": "Análise do resultado",
+            "duration": "3 dias úteis",
+            "hours": "10",
+            "cost": "R$ 1.500,00"
+          },
+          {
+            "name": "Desenho do plano de ação",
+            "duration": "5 dias úteis",
+            "hours": "40",
+            "cost": "R$ 6.000,00"
+          },
+          {
+            "name": "Apresentação para cliente",
+            "duration": "1 dia útil",
+            "hours": "0,75",
+            "cost": "R$ 112,50"
+          },
+          {
+            "name": "Ajuste e reenvio",
+            "duration": "3 dias úteis",
+            "hours": "12",
+            "cost": "R$ 1.800,00"
+          },
+          {
+            "name": "Sessão de Transferência",
+            "duration": "1 dia útil",
+            "hours": "6",
+            "cost": "R$ 900,00"
+          },
+          {
+            "name": "Entrega final",
+            "duration": "1 dia útil",
+            "hours": "0,75",
+            "cost": "R$ 112,50"
+          }
+        ]
+      },
+      {
+        "id": "plan-100",
+        "label": "De 51 a 100 respondentes",
+        "range": "De 51 a 100 respondentes",
+        "totalCost": 13050,
+        "totalHours": 87,
+        "duration": "17 dias úteis",
+        "activities": [
+          {
+            "name": "Reunião de Briefing",
+            "duration": "1 dia útil",
+            "hours": "1",
+            "cost": "R$ 150,00"
+          },
+          {
+            "name": "Entrevista com Stakeholders",
+            "duration": "1 dia útil",
+            "hours": "4,5",
+            "cost": "R$ 675,00"
+          },
+          {
+            "name": "Aplicação de questionários",
+            "duration": "1 dia útil",
+            "hours": "4",
+            "cost": "R$ 600,00"
+          },
+          {
+            "name": "Análise do resultado",
+            "duration": "3 dias úteis",
+            "hours": "14",
+            "cost": "R$ 2.100,00"
+          },
+          {
+            "name": "Desenho do plano de ação",
+            "duration": "5 dias úteis",
+            "hours": "44",
+            "cost": "R$ 6.600,00"
+          },
+          {
+            "name": "Apresentação para cliente",
+            "duration": "1 dia útil",
+            "hours": "0,75",
+            "cost": "R$ 112,50"
+          },
+          {
+            "name": "Ajuste e reenvio",
+            "duration": "3 dias úteis",
+            "hours": "12",
+            "cost": "R$ 1.800,00"
+          },
+          {
+            "name": "Sessão de Transferência",
+            "duration": "1 dia útil",
+            "hours": "6",
+            "cost": "R$ 900,00"
+          },
+          {
+            "name": "Entrega final",
+            "duration": "1 dia útil",
+            "hours": "0,75",
+            "cost": "R$ 112,50"
+          }
+        ]
+      },
+      {
+        "id": "plan-200",
+        "label": "De 101 a 200 respondentes",
+        "range": "De 101 a 200 respondentes",
+        "totalCost": 14850,
+        "totalHours": 99,
+        "duration": "17 dias úteis",
+        "activities": [
+          {
+            "name": "Reunião de Briefing",
+            "duration": "1 dia útil",
+            "hours": "1",
+            "cost": "R$ 150,00"
+          },
+          {
+            "name": "Entrevista com Stakeholders",
+            "duration": "1 dia útil",
+            "hours": "4,5",
+            "cost": "R$ 675,00"
+          },
+          {
+            "name": "Aplicação de questionários",
+            "duration": "1 dia útil",
+            "hours": "6",
+            "cost": "R$ 900,00"
+          },
+          {
+            "name": "Análise do resultado",
+            "duration": "3 dias úteis",
+            "hours": "18",
+            "cost": "R$ 2.700,00"
+          },
+          {
+            "name": "Desenho do plano de ação",
+            "duration": "5 dias úteis",
+            "hours": "50",
+            "cost": "R$ 7.500,00"
+          },
+          {
+            "name": "Apresentação para cliente",
+            "duration": "1 dia útil",
+            "hours": "0,75",
+            "cost": "R$ 112,50"
+          },
+          {
+            "name": "Ajuste e reenvio",
+            "duration": "3 dias úteis",
+            "hours": "12",
+            "cost": "R$ 1.800,00"
+          },
+          {
+            "name": "Sessão de Transferência",
+            "duration": "1 dia útil",
+            "hours": "6",
+            "cost": "R$ 900,00"
+          },
+          {
+            "name": "Entrega final",
+            "duration": "1 dia útil",
+            "hours": "0,75",
+            "cost": "R$ 112,50"
+          }
+        ]
+      }
+    ],
+    "hourlyRate": 150,
+    "requiresLeadForm": true,
+    "showPDF": true
+  },
+  "display": {
+    "title": "Contrate já o serviço",
+    "subtitle": "Planos (segundo tamanho da população-alvo do plano)",
+    "buttonText": "Calcular",
+    "warningMessage": "Para calcular o orçamento, selecione um plano acima ou entre em contato para conversar sobre esta solução."
+  }
+}

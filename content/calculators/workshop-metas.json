@@ -1,0 +1,39 @@
+{
+  "name": "Workshop de Metas",
+  "type": "salary-based",
+  "description": "Calculadora para orçamento de Workshop de Metas baseado em faixas salariais",
+  "config": {
+    "salaryRanges": [
+      {
+        "id": "lowRange",
+        "label": "Até R$ 12.000",
+        "min": 0,
+        "max": 12000,
+        "multiplier": 1
+      },
+      {
+        "id": "midRange",
+        "label": "De R$ 12.000 a R$ 25.000",
+        "min": 12000,
+        "max": 25000,
+        "multiplier": 2
+      },
+      {
+        "id": "highRange",
+        "label": "Acima de R$ 25.000",
+        "min": 25000,
+        "max": null,
+        "multiplier": 4
+      }
+    ],
+    "hourlyRate": 150,
+    "requiresLeadForm": true,
+    "showPDF": true
+  },
+  "display": {
+    "title": "Contrate já o serviço",
+    "subtitle": "Quantas pessoas estarão no escopo do serviço por faixa salarial (salário base mensal bruto)?",
+    "buttonText": "Calcular",
+    "warningMessage": "Para calcular o orçamento, preencha as informações acima ou entre em contato para conversar sobre esta solução."
+  }
+}

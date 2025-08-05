@@ -80,10 +80,27 @@ export const SolutionCollection: Collection = {
           name: "solutionCalculator",
           label: "Calculadora de Solução",
           fields: [
-            { name: "basePrice", label: "Preço Base", type: "number" },
+            { 
+              name: "calculatorType", 
+              label: "Tipo de Calculadora", 
+              type: "string",
+              options: [
+                { value: "legacy", label: "Calculadora Antiga (Legado)" },
+                { value: "tina", label: "Calculadora TinaCMS" },
+              ],
+              required: false,
+            },
+            { 
+              name: "calculatorId", 
+              label: "ID da Calculadora (TinaCMS)", 
+              type: "reference",
+              collections: ["calculator"],
+              description: "Selecione uma calculadora do TinaCMS",
+            },
+            { name: "basePrice", label: "Preço Base (Legado)", type: "number" },
             {
               name: "factors",
-              label: "Fatores",
+              label: "Fatores (Legado)",
               type: "object",
               list: true,
               fields: [

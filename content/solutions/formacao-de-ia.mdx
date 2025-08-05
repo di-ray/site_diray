@@ -27,26 +27,9 @@ blocks:
           - Acesso a recursos e ferramentas para manter a equipe atualizada com as novidades do setor.
         icon: Zap
   - _template: solutionCalculator
-    basePrice: 9600
-    factors:
-      - name: Número de Participantes
-        options:
-          - label: Até 10 pessoas
-            multiplier: 1
-          - label: 11-25 pessoas
-            multiplier: 1.4
-          - label: 26-50 pessoas
-            multiplier: 1.8
-          - label: Mais de 50 pessoas
-            multiplier: 2.2
-      - name: Nível de Profundidade
-        options:
-          - label: Introdutório
-            multiplier: 1
-          - label: Intermediário
-            multiplier: 1.3
-          - label: Avançado
-            multiplier: 1.6
+    calculatorType: tina
+    calculatorId: content/calculators/formacao-ia.json
+  - _template: solutionTimeline
     timelineTitle: Etapas da Implementação
     steps:
       - title: Diagnóstico de Maturidade

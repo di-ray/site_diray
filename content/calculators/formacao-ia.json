@@ -1,0 +1,61 @@
+{
+  "name": "Formação de IA",
+  "type": "custom",
+  "description": "Calculadora para orçamento de Formação de IA baseado em número de participantes e profundidade",
+  "config": {
+    "formula": "9600 * numeroParticipantes * nivelProfundidade",
+    "variables": [
+      {
+        "name": "numeroParticipantes",
+        "label": "Número de Participantes",
+        "type": "select",
+        "defaultValue": "1",
+        "options": [
+          {
+            "value": "1",
+            "label": "Até 10 pessoas"
+          },
+          {
+            "value": "1.4",
+            "label": "11-25 pessoas"
+          },
+          {
+            "value": "1.8",
+            "label": "26-50 pessoas"
+          },
+          {
+            "value": "2.2",
+            "label": "Mais de 50 pessoas"
+          }
+        ]
+      },
+      {
+        "name": "nivelProfundidade",
+        "label": "Nível de Profundidade",
+        "type": "select",
+        "defaultValue": "1",
+        "options": [
+          {
+            "value": "1",
+            "label": "Introdutório"
+          },
+          {
+            "value": "1.3",
+            "label": "Intermediário"
+          },
+          {
+            "value": "1.6",
+            "label": "Avançado"
+          }
+        ]
+      }
+    ],
+    "hourlyRate": 150,
+    "requiresLeadForm": true,
+    "showPDF": true
+  },
+  "display": {
+    "title": "Simule seu investimento",
+    "resultLabel": "Investimento estimado:"
+  }
+}

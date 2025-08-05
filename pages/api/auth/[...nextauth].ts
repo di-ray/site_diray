@@ -1,13 +1,13 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import { TinaAuthJSOptions, AuthJsBackendAuthProvider } from "tinacms-authjs/dist/tinacms";
+const { TinaAuthJSOptions, AuthJsBackendAuthProvider } = require("tinacms-authjs");
 import bcrypt from "bcrypt";
 
 const users = require("../../../content/users/index.json").users;
 
-export default NextAuth({
+export const authOptions = {
   ...TinaAuthJSOptions({
-    authProvider: new AuthJsBackendAuthProvider(),
+    // authProvider é configurado apenas no backend, não aqui
     secret: process.env.NEXTAUTH_SECRET!,
     debug: process.env.NODE_ENV === "development"
   }),
@@ -63,4 +63,6 @@ export default NextAuth({
       return token;
     }
   }
-});
+};
+
+export default NextAuth(authOptions);
