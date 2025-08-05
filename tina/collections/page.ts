@@ -34,10 +34,9 @@ export const PageCollection: Collection = {
           name: "hero",
           label: "Seção Hero",
           fields: [
-            { name: "heroTitle", label: "Título (linha 1)", type: "string" },
-            { name: "heroHighlight", label: "Destaque (linha 2)", type: "string" },
-            { name: "heroSubtitle", label: "Subtítulo (linha 3)", type: "string" },
-            { name: "subheading", label: "Subheading", type: "string" },
+            { name: "heading", label: "Título Principal", type: "string" },
+            { name: "subheading", label: "Subtítulo", type: "string" },
+            { name: "description", label: "Descrição", type: "string" },
             { name: "buttonText", label: "Texto do Botão", type: "string" },
             { name: "buttonLink", label: "Link do Botão", type: "string" },
           ],
@@ -46,23 +45,23 @@ export const PageCollection: Collection = {
           name: "engagement",
           label: "Seção de Engajamento",
           fields: [
-            { name: "heading", label: "Título", type: "string", required: true },
-            { name: "text", label: "Texto", type: "rich-text", required: true },
+            { name: "heading", label: "Título", type: "string" },
+            { name: "text", label: "Texto", type: "rich-text" },
           ],
         },
         {
           name: "challenges",
           label: "Seção de Desafios (Cards)",
           fields: [
-            { name: "heading", label: "Título da Seção", type: "string", required: true },
+            { name: "heading", label: "Título da Seção", type: "string" },
             {
               name: "cards",
               label: "Cards",
               type: "object",
               list: true,
               fields: [
-                { name: "groupTitle", label: "Título do Grupo (Ex: CEOs)", type: "string", required: true },
-                { name: "content", label: "Conteúdo do Card (Pontos)", type: "rich-text", required: true },
+                { name: "groupTitle", label: "Título do Grupo (Ex: CEOs)", type: "string" },
+                { name: "content", label: "Conteúdo do Card (Pontos)", type: "rich-text" },
                 { name: "resultText", label: "Texto de Resultado", type: "string" },
               ],
             },
@@ -71,13 +70,13 @@ export const PageCollection: Collection = {
         {
           name: "moreSolutions",
           label: "Mais Soluções",
-          fields: [{ name: "heading", label: "Título", type: "string", required: true }],
+          fields: [{ name: "heading", label: "Título", type: "string" }],
         },
         {
           name: "whyDiray",
           label: "Por que DI.RAY",
           fields: [
-            { name: "heading", label: "Título", type: "string", required: true },
+            { name: "heading", label: "Título", type: "string" },
             { name: "subheading", label: "Subtítulo", type: "string" },
           ],
         },
@@ -85,10 +84,10 @@ export const PageCollection: Collection = {
           name: "about",
           label: "Seção Sobre",
           fields: [
-            { name: "heading", label: "Título", type: "string", required: true },
+            { name: "heading", label: "Título", type: "string" },
             { name: "founderName", label: "Nome do Fundador", type: "string" },
             { name: "founderTitle", label: "Cargo do Fundador", type: "string" },
-            { name: "biography", label: "Biografia", type: "rich-text", required: true },
+            { name: "biography", label: "Biografia", type: "rich-text" },
             { name: "founderImage", label: "Imagem do Fundador", type: "image" },
             { name: "clientLogosImage", label: "Imagem de Logos de Clientes", type: "image" },
           ],
@@ -97,7 +96,7 @@ export const PageCollection: Collection = {
           name: "faq",
           label: "Seção de FAQ",
           fields: [
-            { name: "heading", label: "Título", type: "string", required: true },
+            { name: "heading", label: "Título", type: "string" },
             { name: "subheading", label: "Subtítulo", type: "string" },
             {
               name: "questions",
@@ -105,8 +104,8 @@ export const PageCollection: Collection = {
               type: "object",
               list: true,
               fields: [
-                { name: "question", label: "Pergunta", type: "string", required: true },
-                { name: "answer", label: "Resposta", type: "rich-text", required: true },
+                { name: "question", label: "Pergunta", type: "string" },
+                { name: "answer", label: "Resposta", type: "rich-text" },
               ],
             },
           ],
@@ -115,7 +114,7 @@ export const PageCollection: Collection = {
           name: "contact",
           label: "Seção de Contato",
           fields: [
-            { name: "heading", label: "Título", type: "string", required: true },
+            { name: "heading", label: "Título", type: "string" },
             { name: "subheading", label: "Subtítulo", type: "string" },
             { name: "whatsapp", label: "Whatsapp", type: "string" },
             { name: "email", label: "E-mail", type: "string" },

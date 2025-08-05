@@ -3,6 +3,7 @@
 import React from "react"
 import { motion, type Variants } from "framer-motion"
 import { Sparkles, DollarSign, Award, Unlink } from "lucide-react"
+import { tinaField } from "tinacms/dist/react"
 
 // Animation Variants for Staggered Effects
 const containerVariants: Variants = {
@@ -20,9 +21,6 @@ const itemVariants: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 }
 
-import * as Icons from "lucide-react"
-import { tinaField } from "tinacms/dist/react"
-
 interface Feature {
   icon: string
   title: string
@@ -30,75 +28,96 @@ interface Feature {
 }
 
 interface WhyDiraySectionProps {
-  heading: string
+  heading?: string
   features?: Feature[]
 }
 
-export function WhyDiraySection({ heading = "Por que escolher a DI.RAY?", features = [] }: WhyDiraySectionProps) {
+export function WhyDiraySection({ 
+  heading = "Por que", 
+  features = [] 
+}: WhyDiraySectionProps) {
   const defaultFeatures = [
     {
-      icon: "Target",
-      title: "Foco em Resultados",
-      description: "Soluções práticas e efetivas que geram resultados concretos para sua organização."
+      icon: "Sparkles",
+      title: "Transparência",
+      description: "Saiba desde o primeiro dia exatamente o que será feito, quanto custará e quais as métricas de sucesso."
     },
     {
-      icon: "Users",
-      title: "Capacitação do Time",
-      description: "Transferimos conhecimento para que seu time replique as soluções quando quiser."
+      icon: "DollarSign",
+      title: "Economia",
+      description: "Um só prestador e soluções usando aplicativos do dia a dia. Sem cobranças extras e sistemas caros e complexos"
     },
     {
-      icon: "Zap",
-      title: "Implementação Rápida",
-      description: "Metodologia ágil que permite implementar mudanças sem sistemas complexos."
+      icon: "Award",
+      title: "Excelência",
+      description: "Número limitado de clientes aliado a mais de 20 anos de experiência em multinacionais"
     },
     {
-      icon: "Shield",
-      title: "20 Anos de Experiência",
-      description: "Experiência em multinacionais como Meta, Nubank, McDonald's e Danone."
-    },
-    {
-      icon: "Bot",
-      title: "Inteligência Artificial",
-      description: "Uso de IA para simplificar processos e maximizar a eficiência organizacional."
-    },
-    {
-      icon: "CheckCircle",
-      title: "Autonomia Garantida",
-      description: "Você não fica dependente de consultoria após a implementação."
+      icon: "Unlink",
+      title: "Autonomia",
+      description: "Seu time treinado nas metodologias e em IA para replicar as soluções o quanto quiser"
     }
   ];
 
   const displayFeatures = features.length > 0 ? features : defaultFeatures;
 
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-r from-primary to-red-700 section-illumination">
-      <div className="container mx-auto px-6 md:px-8 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 data-tina-field={tinaField({ heading }, "heading")} className="text-3xl md:text-4xl font-bold mb-6 text-white reveal">
-            {heading}
-          </h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section id="por-que-diray" className="py-16 md:py-24 bg-gradient-to-b from-red-500 to-primary">
+      <div className="container mx-auto px-4 relative z-10">
+        <motion.h2
+          data-tina-field={tinaField({ heading }, "heading")}
+          className="text-3xl md:text-4xl font-bold mb-16 text-white items-center text-center"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          {heading} <span className="text-primary">DI.RAY</span>
+        </motion.h2>
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           {displayFeatures.map((feature, i) => {
-            const IconComponent = Icons[feature.icon as keyof typeof Icons] as React.ElementType | undefined;
+            const Icon = feature.icon === "Sparkles" ? Sparkles :
+                        feature.icon === "DollarSign" ? DollarSign :
+                        feature.icon === "Award" ? Award :
+                        feature.icon === "Unlink" ? Unlink : Sparkles;
+            
             return (
-              <motion.div 
-                key={i} 
-                className="bg-dark/50 backdrop-blur-sm p-8 rounded-lg border border-primary/20 hover:border-primary/50 transition-all duration-300 reveal text-center"
+              <motion.div
+                key={i}
+                className="bg-dark/50 p-8 rounded-lg border border-primary/30 hover:border-white transition-all duration-300"
                 variants={itemVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
+                whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
               >
-                <div className="icon-container mb-6">
-                  {IconComponent ? <IconComponent className="text-primary mx-auto" size={48} /> : <Icons.ShieldCheck className="text-primary mx-auto" size={48} />}
+                <div className="flex flex-col items-center mb-6">
+                  <motion.div
+                    className="icon-container w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mb-4"
+                    whileHover={{ rotate: 360, transition: { duration: 0.5 } }}
+                  >
+                    <Icon size={32} className="text-[#ffcd38]" />
+                  </motion.div>
+                  <h3 
+                    data-tina-field={tinaField(feature, `features.${i}.title`)}
+                    className="text-2xl font-bold text-white text-center"
+                  >
+                    {feature.title}
+                  </h3>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                <p className="text-white/80">{feature.description}</p>
+                <p 
+                  data-tina-field={tinaField(feature, `features.${i}.description`)}
+                  className="text-white text-center"
+                >
+                  {feature.description}
+                </p>
               </motion.div>
             )
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   )

@@ -6,10 +6,18 @@ import { TinaMarkdown } from "tinacms/dist/rich-text"
 import CTAButton from "@/components/ui/cta-button"
 import { initScrollReveal } from "@/lib/scroll-reveal"
 
-export const HeroSection = (props) => {
+interface HeroSectionProps {
+  heading?: string
+  subheading?: string
+  description?: string
+  buttonText?: string
+  buttonLink?: string
+}
+
+export const HeroSection = (props: HeroSectionProps) => {
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
   }
 
   useEffect(() => {
@@ -17,8 +25,18 @@ export const HeroSection = (props) => {
     return () => cleanup?.()
   }, [])
 
-  // Suporte para heroTitle, heroHighlight, heroSubtitle (igual soluções)
-  const { heroTitle, heroHighlight, heroSubtitle, heading, subheading, buttonText = "Saiba Mais", buttonLink = "/solucoes" } = props;
+  // Conteúdo padrão do projeto DIRAY original
+  const defaultHeading = "Desenvolva\nEngaje\nCresça"
+  const defaultSubheading = "Soluções em desenvolvimento organizacional"
+  const defaultDescription = "que você contrata uma vez e reaplica quantas vezes quiser."
+  const defaultButtonText = "Saiba Mais"
+  const defaultButtonLink = "/solucoes"
+
+  const heading = props.heading || defaultHeading
+  const subheading = props.subheading || defaultSubheading
+  const description = props.description || defaultDescription
+  const buttonText = props.buttonText || defaultButtonText
+  const buttonLink = props.buttonLink || defaultButtonLink
 
   return (
     <section className="relative architecture-bg min-h-screen flex items-center py-32 md:py-48">
@@ -26,41 +44,44 @@ export const HeroSection = (props) => {
         <div className="max-w-2xl">
           <div className="mb-8"></div>
           <motion.h1
-            className="text-6xl md:text-7xl lg:text-7xl font-black tracking-tight mb-10 text-white font-poppins hero-heading-rich"
+            className="text-6xl md:text-7xl lg:text-7xl font-black tracking-tight mb-10 text-white font-poppins"
             variants={itemVariants}
             initial="hidden"
             animate="visible"
+            data-tina-field={tinaField(props, "heading")}
           >
-            {heroTitle && (
-              <>
-                <span className="block">{heroTitle}</span>
-                <span className="block text-highlight">{heroHighlight}</span>
-                <span className="block">{heroSubtitle}</span>
-              </>
-            )}
-            {!heroTitle && (Array.isArray(heading) || typeof heading === "object" ? (
-              <TinaMarkdown content={heading} />
-            ) : (
-              heading?.split('\n').map((line, index) => (
-                <span key={index} className="block">
-                  {line.includes('**') ? (
-                    <>
-                      {line.split('**')[0]}
-                      <span className="text-highlight">{line.split('**')[1]}</span>
-                      {line.split('**')[2]}
-                    </>
-                  ) : line}
-                </span>
-              ))
+            {heading.split('\n').map((line, index) => (
+              <span key={index} className="block">
+                {line === "Engaje" ? (
+                  <span className="text-highlight"> {line}</span>
+                ) : (
+                  line
+                )}
+              </span>
             ))}
           </motion.h1>
+          
+          <motion.p 
+            className="text-lg md:text-xl mb-2 text-white font-medium"
+            variants={itemVariants}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 0.3 }}
+            data-tina-field={tinaField(props, "subheading")}
+          >
+            {subheading}
+          </motion.p>
 
-          {subheading && (
-            <p data-tina-field={tinaField(props, "subheading")}
-               className="text-lg md:text-xl mb-8 text-white animate-fadeInUp delay-1000">
-              {subheading}
-            </p>
-          )}
+          <motion.p 
+            className="text-lg md:text-xl mb-8 text-white animate-fadeInUp delay-1000"
+            variants={itemVariants}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 0.6 }}
+            data-tina-field={tinaField(props, "description")}
+          >
+            {description}
+          </motion.p>
 
           <div className="mt-8 animate-fadeInUp delay-1000">
             <CTAButton href={buttonLink} variant="primary" size="lg" showArrow>
@@ -73,15 +94,3 @@ export const HeroSection = (props) => {
   )
 }
 
-// Adicione este CSS globalmente (ex: em globals.css):
-/*
-.hero-heading-rich code,
-.hero-heading-rich strong {
-  color: #ff5959;
-  background: none;
-  font-weight: inherit;
-  font-size: inherit;
-  padding: 0;
-  border-radius: 0;
-}
-*/
