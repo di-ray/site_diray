@@ -13,8 +13,6 @@ export default defineConfig({
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID, // This should match the value in your .env file
   branch,
   
-  // SELF-HOSTED: contentApiUrlOverride aponta para nossa API
-  contentApiUrlOverride: "/api/tina/gql",
   build: {
     publicFolder: "public",
     outputFolder: "admin",
