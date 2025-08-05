@@ -75,7 +75,7 @@ export function MoreSolutionsSection({
     }
   ];
 
-  const displaySolutions = solutions.length > 0 ? solutions : defaultSolutions;
+  const displaySolutions = solutions && solutions.length > 0 ? solutions : defaultSolutions;
   
   // Filtra a solução atual para não aparecer na lista
   const filteredSolutions = displaySolutions.filter((s) => s.slug !== currentPage)

@@ -59,7 +59,7 @@ export function WhyDiraySection({
     }
   ];
 
-  const displayFeatures = features.length > 0 ? features : defaultFeatures;
+  const displayFeatures = features && features.length > 0 ? features : defaultFeatures;
 
   return (
     <section id="por-que-diray" className="py-16 md:py-24 bg-gradient-to-b from-red-500 to-primary">
