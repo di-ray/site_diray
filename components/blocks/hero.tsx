@@ -1,6 +1,6 @@
 "use client"
 import { useEffect } from "react"
-import { motion } from "framer-motion"
+import { motion, type Variants } from "framer-motion"
 import { tinaField } from "tinacms/dist/react"
 import { TinaMarkdown } from "tinacms/dist/rich-text"
 import CTAButton from "@/components/ui/cta-button"
@@ -15,7 +15,7 @@ interface HeroSectionProps {
 }
 
 export const HeroSection = (props: HeroSectionProps) => {
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
   }
