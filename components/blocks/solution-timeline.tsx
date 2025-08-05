@@ -17,14 +17,14 @@ interface SolutionTimelineProps {
 export function SolutionTimeline({ timelineTitle = "Etapas da Implementação", steps = [] }: SolutionTimelineProps) {
   return (
     <section className="py-16 md:py-24 bg-gradient-to-b from-dark to-gray-900">
-      <motion.div className="container mx-auto px-4" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.8, ease: "easeOut" }}>
+      <motion.div className="container mx-auto px-4" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.8, ease: "easeOut" as const }}>
         <motion.h2 
           data-tina-field={tinaField({ timelineTitle }, "timelineTitle")}
           className="text-3xl md:text-4xl font-bold mb-12 text-center text-white" 
           initial={{ opacity: 0, y: -20 }} 
           whileInView={{ opacity: 1, y: 0 }} 
           viewport={{ once: true, margin: "-100px" }} 
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: "easeOut" as const }}
         >
           {timelineTitle}
         </motion.h2>
@@ -32,18 +32,17 @@ export function SolutionTimeline({ timelineTitle = "Etapas da Implementação", 
           <motion.div className="absolute right-0 top-0 h-full w-1 bg-gradient-to-b from-primary to-red-500 z-10 hidden sm:block" initial={{ height: 0 }} whileInView={{ height: "100%" }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 1.5, ease: "easeInOut" }} />
           <motion.div className="space-y-8 w-full">
             {steps && steps.map((step, index) => {
-              const Icon = Icons[step.icon] || Icons.ChevronRight;
+              const IconComponent = step.icon && Icons[step.icon as keyof typeof Icons] ? Icons[step.icon as keyof typeof Icons] : Icons.ChevronRight;
+              const Icon = IconComponent as React.ElementType;
               return (
                 <motion.div key={index} className="relative flex items-center mb-12 w-full z-20" whileHover={{ scale: 1.02 }} transition={{ duration: 0.3 }}>
                   <div className="w-full sm:w-3/4 bg-gradient-to-br from-primary to-red-500 p-4 sm:p-6 rounded-[30px_0px_30px_30px] shadow-lg hover:shadow-xl transition-all duration-300">
                     <h3 
-                      data-tina-field={tinaField(step, `steps.${index}.title`)}
                       className="text-base sm:text-lg font-bold text-white mb-2"
                     >
                       {step.title}
                     </h3>
                     <p 
-                      data-tina-field={tinaField(step, `steps.${index}.description`)}
                       className="text-white/80 text-sm"
                     >
                       {step.description}

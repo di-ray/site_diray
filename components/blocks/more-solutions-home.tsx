@@ -33,7 +33,14 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { 
+      duration: 0.6, 
+      ease: "easeOut" as const 
+    } 
+  },
 }
 
 export function MoreSolutionsHomeSection({ 
@@ -143,7 +150,6 @@ export function MoreSolutionsHomeSection({
 
                     {/* Título */}
                     <h3 
-                      data-tina-field={tinaField(solution, `solutions.${index}.title`)}
                       className="text-xl font-bold mb-3 text-white"
                     >
                       {solution.title}
@@ -151,7 +157,6 @@ export function MoreSolutionsHomeSection({
 
                     {/* Descrição */}
                     <p 
-                      data-tina-field={tinaField(solution, `solutions.${index}.description`)}
                       className="text-white text-sm md:text-base mb-2 flex-grow"
                     >
                       {solution.description}

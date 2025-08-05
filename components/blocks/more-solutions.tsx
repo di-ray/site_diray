@@ -33,7 +33,14 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { 
+      duration: 0.6, 
+      ease: "easeOut" as const 
+    } 
+  },
 }
 
 export function MoreSolutionsSection({ 
@@ -133,13 +140,11 @@ export function MoreSolutionsSection({
                     <Icon className="text-primary" size={24} />
                   </div>
                   <h3 
-                    data-tina-field={tinaField(solution, `solutions.${index}.title`)}
                     className="text-xl font-bold mb-3"
                   >
                     {solution.title}
                   </h3>
                   <p 
-                    data-tina-field={tinaField(solution, `solutions.${index}.description`)}
                     className="flex-grow text-muted-foreground mb-6"
                   >
                     {solution.description}

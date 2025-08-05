@@ -30,7 +30,7 @@ const containerVariants: Variants = {
 
 const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
 }
 
 export function WhatYouReceiveSection({ title = "O que você recebe?", items }: WhatYouReceiveSectionProps) {
@@ -86,7 +86,6 @@ export function WhatYouReceiveSection({ title = "O que você recebe?", items }: 
                 </motion.div>
 
                 <h3 
-                  data-tina-field={tinaField(item, `items.${index}.title`)}
                   className="text-xl font-bold mb-3 text-white"
                 >
                   {item.title || 'Título não disponível'}
@@ -95,7 +94,7 @@ export function WhatYouReceiveSection({ title = "O que você recebe?", items }: 
                 {item.description?.filter(desc => desc !== null).map((desc, i) => (
                   <p key={i} className="text-white text-sm md:text-base mb-2">
                     <span className="text-white">◉ </span>
-                    <span data-tina-field={tinaField(item, `items.${index}.description.${i}`)}>
+                    <span>
                       {desc}
                     </span>
                   </p>
