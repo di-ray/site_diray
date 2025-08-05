@@ -104,7 +104,7 @@ export function MoreSolutionsHomeSection({ heading = "Conheça mais soluções",
         {/* Contêiner dos Cards */}
         <div className="relative">
           <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-7xl mx-auto"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6 max-w-7xl mx-auto"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -121,7 +121,7 @@ export function MoreSolutionsHomeSection({ heading = "Conheça mais soluções",
               return (
                 <motion.div
                   key={index}
-                  className="bg-primary rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col"
+                  className="bg-primary rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col min-h-[280px]"
                   variants={itemVariants}
                   whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
                   onClick={() => !isCurrent && (window.location.href = `/solucoes/${solution.slug}`)}

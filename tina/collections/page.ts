@@ -88,6 +88,26 @@ export const PageCollection: Collection = {
           ],
         },
         {
+          name: "moreSolutionsHome",
+          label: "🏠 Mais Soluções (Home)",
+          fields: [
+            { name: "heading", label: "📝 Título", type: "string" },
+            { name: "subtitle", label: "📄 Subtítulo", type: "string" },
+            {
+              name: "solutions",
+              label: "🛠️ Lista de Soluções",
+              type: "object",
+              list: true,
+              fields: [
+                { name: "slug", label: "🔗 Slug", type: "string" },
+                { name: "icon", label: "🎨 Ícone", type: "string" },
+                { name: "title", label: "📝 Título", type: "string" },
+                { name: "description", label: "📄 Descrição", type: "string" },
+              ],
+            },
+          ],
+        },
+        {
           name: "whyDiray",
           label: "⭐ Por que DI.RAY",
           fields: [

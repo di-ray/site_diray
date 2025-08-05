@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import { Inter, Poppins } from "next/font/google"
 import "./globals.css"
 import { cn } from "@/lib/utils"
-import Header from "@/components/header"
+import HeaderWrapper from "@/components/header-wrapper"
 import Footer from "@/components/footer"
 import { TrackingScripts } from "@/components/tracking-scripts"
 import { CookieConsent } from "@/components/cookie-consent"
@@ -51,7 +51,7 @@ export default function RootLayout({
           linkedInPartnerId={process.env.NEXT_PUBLIC_LINKEDIN_PARTNER_ID}
           googleAdsId={process.env.NEXT_PUBLIC_GOOGLE_ADS_ID}
         />
-        <Header />
+        <HeaderWrapper />
         <main>{children}</main>
         <Footer />
         <CookieConsent />
