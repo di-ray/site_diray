@@ -36,8 +36,6 @@ export default function PorQueDiray() {
         <WhyDiraySection />
       </div>
 
-      {/* About Section */}
-      <AboutSection />
 
       <ContatoSection />
     </>
