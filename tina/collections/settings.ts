@@ -94,6 +94,112 @@ export const SettingsCollection: Collection = {
     },
     {
       type: "object",
+      name: "navigation",
+      label: "🧭 Navegação (Header)",
+      fields: [
+        {
+          type: "image",
+          name: "logo",
+          label: "🖼️ Logo",
+        },
+        {
+          type: "object",
+          name: "menuItems",
+          label: "📋 Itens do Menu",
+          list: true,
+          fields: [
+            {
+              type: "string",
+              name: "label",
+              label: "📝 Texto",
+              required: true,
+            },
+            {
+              type: "string",
+              name: "href",
+              label: "🔗 Link",
+              required: true,
+            },
+            {
+              type: "boolean",
+              name: "hasSubmenu",
+              label: "📂 Tem submenu?",
+            },
+            {
+              type: "object",
+              name: "submenuItems",
+              label: "📋 Itens do Submenu",
+              list: true,
+              fields: [
+                {
+                  type: "string",
+                  name: "label",
+                  label: "📝 Texto",
+                },
+                {
+                  type: "string",
+                  name: "href",
+                  label: "🔗 Link",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      type: "object",
+      name: "footer",
+      label: "🦶 Rodapé",
+      fields: [
+        {
+          type: "string",
+          name: "description",
+          label: "📄 Descrição da empresa",
+          ui: {
+            component: "textarea",
+          },
+        },
+        {
+          type: "string",
+          name: "copyright",
+          label: "©️ Copyright",
+        },
+        {
+          type: "object",
+          name: "sections",
+          label: "📂 Seções do Footer",
+          list: true,
+          fields: [
+            {
+              type: "string",
+              name: "title",
+              label: "📝 Título da seção",
+            },
+            {
+              type: "object",
+              name: "links",
+              label: "🔗 Links",
+              list: true,
+              fields: [
+                {
+                  type: "string",
+                  name: "label",
+                  label: "📝 Texto",
+                },
+                {
+                  type: "string",
+                  name: "href",
+                  label: "🔗 Link",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      type: "object",
       name: "theme",
       label: "🎨 Tema e Aparência",
       fields: [

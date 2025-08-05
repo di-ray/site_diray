@@ -11,6 +11,7 @@ import { SolutionCalculator } from "../blocks/solution-calculator"
 import { SolutionTimeline } from "../blocks/solution-timeline"
 import { SolutionQuery } from "@/tina/__generated__/types"
 import { MoreSolutionsSection } from "../blocks/more-solutions"
+import { WhyDiraySection } from "../blocks/why-diray"
 
 type SolutionPageTemplateProps = {
   data: SolutionQuery;
@@ -45,6 +46,10 @@ export function SolutionPageTemplate(props: SolutionPageTemplateProps) {
                 heroHighlight={block.heroHighlight}
                 heroSubtitle={block.heroSubtitle}
                 backgroundImage={block.backgroundImage}
+                videoSrc={block.videoSrc}
+                videoStartTime={block.videoStartTime}
+                videoEndTime={block.videoEndTime}
+                overlayOpacity={block.overlayOpacity}
               />
             );
           case "SolutionBlocksSolutionIntro":
@@ -58,6 +63,7 @@ export function SolutionPageTemplate(props: SolutionPageTemplateProps) {
               />
             );
           case "SolutionBlocksWhatYouReceive":
+            if (!block.items) return null;
             return (
               <WhatYouReceiveSection
                 key={idx}
@@ -153,7 +159,7 @@ export function SolutionPageTemplate(props: SolutionPageTemplateProps) {
             return null;
         }
       })}
-      <PorqueDiRay />
+      <WhyDiraySection />
       <MoreSolutionsSection
         heading="Conheça mais soluções"
         currentPage={data.solution._sys?.filename || ""}

@@ -2,7 +2,7 @@ import { Collection } from 'tinacms'
 
 export const CalculatorCollection: Collection = {
   name: 'calculator',
-  label: 'Calculadoras',
+  label: '🧮 Calculadoras',
   path: 'content/calculators',
   format: 'json',
   fields: [

@@ -2,7 +2,7 @@ import { Collection } from "tinacms";
 
 export const FAQCollection: Collection = {
   name: "faq",
-  label: "Perguntas Frequentes",
+  label: "❓ Perguntas Frequentes",
   path: "content/faqs",
   format: "md",
   fields: [

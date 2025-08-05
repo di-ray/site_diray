@@ -104,6 +104,20 @@ export const FaqSection = (props: FaqSectionProps) => {
           }]
         }]
       }
+    },
+    {
+      category: "Sobre os Serviços",
+      question: "Vocês oferecem treinamentos in-company?",
+      answer: {
+        type: 'root',
+        children: [{
+          type: 'p',
+          children: [{
+            type: 'text',
+            text: 'Sim, desenvolvemos e facilitamos treinamentos personalizados nas instalações do cliente. Nossos programas são práticos e focados na aplicação imediata dos conceitos no contexto específico da sua organização.'
+          }]
+        }]
+      }
     }
   ];
 

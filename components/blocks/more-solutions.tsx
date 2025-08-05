@@ -14,10 +14,10 @@ interface Solution {
 }
 
 interface MoreSolutionsSectionProps {
-  heading: string
+  heading?: string
   subtitle?: string
   solutions?: Solution[]
-  currentPage: string
+  currentPage?: string
 }
 
 // Animation Variants
@@ -40,7 +40,7 @@ export function MoreSolutionsSection({
   heading = "Conheça mais soluções", 
   subtitle = "Esqueça as propostas surpresa. Calcule seu orçamento aqui mesmo no site.",
   solutions = [], 
-  currentPage 
+  currentPage = ""
 }: MoreSolutionsSectionProps) {
   const defaultSolutions = [
     {
@@ -132,8 +132,16 @@ export function MoreSolutionsSection({
                   <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-primary/10">
                     <Icon className="text-primary" size={24} />
                   </div>
-                  <h3 className="text-xl font-bold mb-3">{solution.title}</h3>
-                  <p className="flex-grow text-muted-foreground mb-6">
+                  <h3 
+                    data-tina-field={tinaField(solution, `solutions.${index}.title`)}
+                    className="text-xl font-bold mb-3"
+                  >
+                    {solution.title}
+                  </h3>
+                  <p 
+                    data-tina-field={tinaField(solution, `solutions.${index}.description`)}
+                    className="flex-grow text-muted-foreground mb-6"
+                  >
                     {solution.description}
                   </p>
                   <div className="mt-auto flex items-center justify-end">

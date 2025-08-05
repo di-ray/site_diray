@@ -13,6 +13,7 @@ import { ContactSection } from "./blocks/contact"
 import { MoreSolutionsSection } from "./blocks/more-solutions"
 import { WhyDiraySection } from "./blocks/why-diray"
 import { FaqSection } from "./blocks/faq"
+import { LogoCarousel } from "./blocks/logo-carousel"
 
 const components = {
   hero: HeroSection,
@@ -25,6 +26,8 @@ const components = {
   "why-diray": WhyDiraySection,
   whydiray: WhyDiraySection,
   faq: FaqSection,
+  "logo-carousel": LogoCarousel,
+  logocarousel: LogoCarousel,
 }
 
 export function Page(props: {

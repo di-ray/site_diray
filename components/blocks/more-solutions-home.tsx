@@ -14,10 +14,10 @@ interface Solution {
 }
 
 interface MoreSolutionsSectionProps {
-  heading: string
+  heading?: string
   subtitle?: string
   solutions?: Solution[]
-  currentPage: string
+  currentPage?: string
 }
 
 // Animation Variants
@@ -36,7 +36,7 @@ const itemVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 }
 
-export function MoreSolutionsHomeSection({ heading = "Conheça mais soluções", subtitle = "Esqueça as propostas surpresa. Calcule seu orçamento aqui mesmo no site.", solutions = [], currentPage }: MoreSolutionsSectionProps) {
+export function MoreSolutionsHomeSection({ heading = "Conheça mais soluções", subtitle = "Esqueça as propostas surpresa. Calcule seu orçamento aqui mesmo no site.", solutions = [], currentPage = "" }: MoreSolutionsSectionProps) {
   const defaultSolutions = [
     {
       slug: "workshop-de-metas",
@@ -60,7 +60,7 @@ export function MoreSolutionsHomeSection({ heading = "Conheça mais soluções",
       slug: "estrategia-de-treinamento",
       icon: "BookOpen",
       title: "Estratégia de Treinamento",
-      description: "Desenho da estratégia de conteúdos e programas que atendam às necessidades de treinamento e desenvolvimento da organização."
+      description: "Desenho de uma estratégia de treinamento robusta para desenvolver a organização ou departamentos específicos."
     },
     {
       slug: "formacao-de-ia",
@@ -137,10 +137,18 @@ export function MoreSolutionsHomeSection({ heading = "Conheça mais soluções",
                     </motion.div>
 
                     {/* Título */}
-                    <h3 className="text-xl font-bold mb-3 text-white">{solution.title}</h3>
+                    <h3 
+                      data-tina-field={tinaField(solution, `solutions.${index}.title`)}
+                      className="text-xl font-bold mb-3 text-white"
+                    >
+                      {solution.title}
+                    </h3>
 
                     {/* Descrição */}
-                    <p className="text-white text-sm md:text-base mb-2 flex-grow">
+                    <p 
+                      data-tina-field={tinaField(solution, `solutions.${index}.description`)}
+                      className="text-white text-sm md:text-base mb-2 flex-grow"
+                    >
                       {solution.description}
                     </p>
 
