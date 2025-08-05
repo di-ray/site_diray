@@ -150,6 +150,7 @@ export const PageCollection: Collection = {
               type: "object",
               list: true,
               fields: [
+                { name: "category", label: "📁 Categoria", type: "string" },
                 { name: "question", label: "❓ Pergunta", type: "string" },
                 { name: "answer", label: "💬 Resposta", type: "rich-text" },
               ],
@@ -174,6 +175,50 @@ export const PageCollection: Collection = {
             { name: "subheading", label: "📄 Subtítulo", type: "string" },
             { name: "whatsapp", label: "📱 WhatsApp", type: "string" },
             { name: "email", label: "📧 E-mail", type: "string" },
+          ],
+        },
+        {
+          name: "footer",
+          label: "🦶 Rodapé",
+          fields: [
+            { name: "logo", label: "🖼️ Logo", type: "image" },
+            { name: "logoAlt", label: "📝 Texto Alternativo do Logo", type: "string" },
+            { name: "description", label: "📄 Descrição", type: "string" },
+            { name: "quickLinksTitle", label: "📝 Título Links Rápidos", type: "string" },
+            {
+              name: "quickLinks",
+              label: "🔗 Links Rápidos",
+              type: "object",
+              list: true,
+              fields: [
+                { name: "text", label: "📝 Texto", type: "string" },
+                { name: "href", label: "🔗 Link", type: "string" },
+              ],
+            },
+            { name: "servicesTitle", label: "📝 Título Serviços", type: "string" },
+            {
+              name: "serviceLinks",
+              label: "🛠️ Links de Serviços",
+              type: "object",
+              list: true,
+              fields: [
+                { name: "text", label: "📝 Texto", type: "string" },
+                { name: "href", label: "🔗 Link", type: "string" },
+              ],
+            },
+            { name: "socialTitle", label: "📝 Título Redes Sociais", type: "string" },
+            {
+              name: "socialLinks",
+              label: "📱 Redes Sociais",
+              type: "object",
+              list: true,
+              fields: [
+                { name: "platform", label: "📱 Plataforma", type: "string" },
+                { name: "username", label: "👤 Usuário", type: "string" },
+                { name: "url", label: "🔗 URL", type: "string" },
+              ],
+            },
+            { name: "copyrightText", label: "©️ Texto de Copyright", type: "string" },
           ],
         },
       ],

@@ -4,7 +4,7 @@ import { Inter, Poppins } from "next/font/google"
 import "./globals.css"
 import { cn } from "@/lib/utils"
 import HeaderWrapper from "@/components/header-wrapper"
-import Footer from "@/components/footer"
+import { FooterWrapper } from "@/components/footer-wrapper"
 import { TrackingScripts } from "@/components/tracking-scripts"
 import { CookieConsent } from "@/components/cookie-consent"
 
@@ -53,7 +53,7 @@ export default function RootLayout({
         />
         <HeaderWrapper />
         <main>{children}</main>
-        <Footer />
+        <FooterWrapper />
         <CookieConsent />
       </body>
     </html>

@@ -152,49 +152,99 @@ export const SettingsCollection: Collection = {
       name: "footer",
       label: "🦶 Rodapé",
       fields: [
-        {
-          type: "string",
-          name: "description",
-          label: "📄 Descrição da empresa",
-          ui: {
-            component: "textarea",
-          },
+        { 
+          type: "image",
+          name: "logo", 
+          label: "🖼️ Logo" 
         },
-        {
+        { 
           type: "string",
-          name: "copyright",
-          label: "©️ Copyright",
+          name: "logoAlt", 
+          label: "📝 Texto Alternativo do Logo" 
+        },
+        { 
+          type: "string",
+          name: "description", 
+          label: "📄 Descrição" 
+        },
+        { 
+          type: "string",
+          name: "quickLinksTitle", 
+          label: "📝 Título Links Rápidos" 
         },
         {
           type: "object",
-          name: "sections",
-          label: "📂 Seções do Footer",
+          name: "quickLinks",
+          label: "🔗 Links Rápidos",
           list: true,
           fields: [
-            {
+            { 
               type: "string",
-              name: "title",
-              label: "📝 Título da seção",
+              name: "text", 
+              label: "📝 Texto" 
             },
-            {
-              type: "object",
-              name: "links",
-              label: "🔗 Links",
-              list: true,
-              fields: [
-                {
-                  type: "string",
-                  name: "label",
-                  label: "📝 Texto",
-                },
-                {
-                  type: "string",
-                  name: "href",
-                  label: "🔗 Link",
-                },
-              ],
+            { 
+              type: "string",
+              name: "href", 
+              label: "🔗 Link" 
             },
           ],
+        },
+        { 
+          type: "string",
+          name: "servicesTitle", 
+          label: "📝 Título Serviços" 
+        },
+        {
+          type: "object",
+          name: "serviceLinks",
+          label: "🛠️ Links de Serviços",
+          list: true,
+          fields: [
+            { 
+              type: "string",
+              name: "text", 
+              label: "📝 Texto" 
+            },
+            { 
+              type: "string",
+              name: "href", 
+              label: "🔗 Link" 
+            },
+          ],
+        },
+        { 
+          type: "string",
+          name: "socialTitle", 
+          label: "📝 Título Redes Sociais" 
+        },
+        {
+          type: "object",
+          name: "socialLinks",
+          label: "📱 Redes Sociais",
+          list: true,
+          fields: [
+            { 
+              type: "string",
+              name: "platform", 
+              label: "📱 Plataforma" 
+            },
+            { 
+              type: "string",
+              name: "username", 
+              label: "👤 Usuário" 
+            },
+            { 
+              type: "string",
+              name: "url", 
+              label: "🔗 URL" 
+            },
+          ],
+        },
+        { 
+          type: "string",
+          name: "copyrightText", 
+          label: "©️ Texto de Copyright" 
         },
       ],
     },

@@ -84,7 +84,7 @@ export function HeaderSection({
                 return (
                   <div key={index} className="relative group animate-fadeInDown delay-200">
                     <button className="flex items-center transition-colors text-white hover:text-primary">
-                      <span data-tina-field={tinaField(link, `navigationLinks.${index}.text`)}>
+                      <span data-tina-field={tinaField(link, "text")}>
                         {link.text}
                       </span>
                       <ChevronDown className="ml-1 h-4 w-4" />
@@ -96,7 +96,7 @@ export function HeaderSection({
                             key={sIndex}
                             href={solution.href}
                             className="block px-4 py-2 text-white hover:bg-primary/20 rounded-md"
-                            data-tina-field={tinaField(solution, `solutionLinks.${sIndex}.text`)}
+                            data-tina-field={tinaField(solution, "text")}
                           >
                             {solution.text}
                           </Link>
@@ -112,7 +112,7 @@ export function HeaderSection({
                   key={index}
                   href={link.href}
                   className={`transition-colors text-white hover:text-primary animate-fadeInDown delay-${(index + 1) * 100}`}
-                  data-tina-field={tinaField(link, `navigationLinks.${index}.text`)}
+                  data-tina-field={tinaField(link, "text")}
                 >
                   {link.text}
                 </Link>
