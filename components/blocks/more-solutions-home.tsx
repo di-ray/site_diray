@@ -36,7 +36,12 @@ const itemVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 }
 
-export function MoreSolutionsHomeSection({ heading = "Conheça mais soluções", subtitle = "Esqueça as propostas surpresa. Calcule seu orçamento aqui mesmo no site.", solutions = [], currentPage = "" }: MoreSolutionsSectionProps) {
+export function MoreSolutionsHomeSection({ 
+  heading = "Conheça mais soluções", 
+  subtitle = "Esqueça as propostas surpresa. Calcule seu orçamento aqui mesmo no site.", 
+  solutions = [], 
+  currentPage = "" 
+}: MoreSolutionsSectionProps) {
   const defaultSolutions = [
     {
       slug: "workshop-de-metas",
@@ -70,7 +75,7 @@ export function MoreSolutionsHomeSection({ heading = "Conheça mais soluções",
     }
   ];
 
-  const displaySolutions = solutions.length > 0 ? solutions : defaultSolutions;
+  const displaySolutions = solutions && solutions.length > 0 ? solutions : defaultSolutions;
   
   // Filtra a solução atual para não aparecer na lista
   const filteredSolutions = displaySolutions.filter((s) => s.slug !== currentPage)
