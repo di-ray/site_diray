@@ -49,7 +49,28 @@ export const client = {
       query: "", 
       variables: {} 
     }),
-    solution: async (args) => ({ data: { solution: null }, query: "", variables: {} }),
+    solution: async (args) => ({ 
+      data: { 
+        solution: {
+          __typename: "Solution",
+          id: "",
+          title: "",
+          icon: null,
+          excerpt: null,
+          _sys: {
+            filename: "default",
+            basename: "default",
+            breadcrumbs: ["default"],
+            path: "content/solutions/default.mdx",
+            relativePath: "default.mdx",
+            extension: ".mdx"
+          },
+          blocks: []
+        }
+      }, 
+      query: "", 
+      variables: {} 
+    }),
     solutionConnection: async (args) => ({ 
       data: { solutionConnection: { edges: [] } }, 
       query: "", 
@@ -103,7 +124,28 @@ export default client;
       query: "", 
       variables: {} 
     }),
-    solution: async (args) => ({ data: { solution: null }, query: "", variables: {} }),
+    solution: async (args) => ({ 
+      data: { 
+        solution: {
+          __typename: "Solution",
+          id: "",
+          title: "",
+          icon: null,
+          excerpt: null,
+          _sys: {
+            filename: "default",
+            basename: "default",
+            breadcrumbs: ["default"],
+            path: "content/solutions/default.mdx",
+            relativePath: "default.mdx",
+            extension: ".mdx"
+          },
+          blocks: []
+        }
+      }, 
+      query: "", 
+      variables: {} 
+    }),
     solutionConnection: async (args) => ({ 
       data: { solutionConnection: { edges: [] } }, 
       query: "", 
@@ -139,18 +181,44 @@ export default client;
   fs.writeFileSync(path.join(generatedDir, 'client.ts'), mockClient);
   fs.writeFileSync(path.join(generatedDir, 'databaseClient.ts'), databaseClient);
   
-  // Create empty types file if it doesn't exist
+  // Create complete types file if it doesn't exist
   const typesFile = path.join(generatedDir, 'types.ts');
   if (!fs.existsSync(typesFile)) {
     fs.writeFileSync(typesFile, `
 export type PageQuery = {
   page: {
+    __typename: "Page"
+    id: string
+    title: string
+    _sys: {
+      filename: string
+      basename: string
+      breadcrumbs: string[]
+      path: string
+      relativePath: string
+      extension: string
+    }
     blocks?: Array<any>
   }
 }
 
 export type SolutionQuery = {
-  solution: any
+  solution: {
+    __typename: "Solution"
+    id: string
+    title: string
+    icon?: string | null
+    excerpt?: string | null
+    _sys: {
+      filename: string
+      basename: string
+      breadcrumbs: string[]
+      path: string
+      relativePath: string
+      extension: string
+    }
+    blocks?: Array<any>
+  }
 }
 `);
   }
