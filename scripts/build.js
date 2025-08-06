@@ -36,11 +36,25 @@ export const client = {
       query: "", 
       variables: {} 
     }),
-    settings: async (args) => ({ data: { settings: {} }, query: "", variables: {} }),
+    settings: async (args) => ({ 
+      data: { 
+        settings: {
+          navigation: null,
+          footer: null
+        } 
+      }, 
+      query: "", 
+      variables: {} 
+    }),
     faqConnection: async (args) => ({ 
       data: { faqConnection: { edges: [] } }, 
       query: "", 
       variables: {} 
+    }),
+    calculator: async (args) => ({
+      data: { calculator: null },
+      query: "",
+      variables: {}
     }),
   }
 };
@@ -57,11 +71,25 @@ export default client;
       query: "", 
       variables: {} 
     }),
-    settings: async (args) => ({ data: { settings: {} }, query: "", variables: {} }),
+    settings: async (args) => ({ 
+      data: { 
+        settings: {
+          navigation: null,
+          footer: null
+        } 
+      }, 
+      query: "", 
+      variables: {} 
+    }),
     faqConnection: async (args) => ({ 
       data: { faqConnection: { edges: [] } }, 
       query: "", 
       variables: {} 
+    }),
+    calculator: async (args) => ({
+      data: { calculator: null },
+      query: "",
+      variables: {}
     }),
   }
 };

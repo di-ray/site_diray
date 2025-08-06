@@ -47,7 +47,7 @@ export async function generateStaticParams() {
 
   const edges = solutions.data.solutionConnection.edges;
 
-  return edges.reduce<{ slug: string }[]>((acc, edge) => {
+  return edges.reduce<{ slug: string }[]>((acc, edge: any) => {
     if (edge && edge.node) {
       acc.push({ slug: edge.node._sys.filename });
     }

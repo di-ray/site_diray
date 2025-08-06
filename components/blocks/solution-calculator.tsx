@@ -47,7 +47,7 @@ export function SolutionCalculator({
           
           console.log('Loading calculator:', relativePath)
           
-          const response = await client.queries.calculator({
+          const response = await (client.queries as any).calculator({
             relativePath: relativePath,
           })
           setCalculatorData(response)
