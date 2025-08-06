@@ -14,5 +14,15 @@ async function getFooterSettings() {
 export async function FooterWrapper() {
   const footerSettings = await getFooterSettings()
   
-  return <FooterSection {...footerSettings} />
+  if (!footerSettings) {
+    return <FooterSection />
+  }
+  
+  // Convert null values to undefined to match FooterProps type
+  const props = Object.entries(footerSettings).reduce((acc, [key, value]) => {
+    acc[key] = value === null ? undefined : value
+    return acc
+  }, {} as any)
+  
+  return <FooterSection {...props} />
 }

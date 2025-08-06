@@ -102,14 +102,12 @@ export function WhyDiraySection({
                     <Icon size={32} className="text-[#ffcd38]" />
                   </motion.div>
                   <h3 
-                    data-tina-field={tinaField(feature, `features.${i}.title`)}
                     className="text-2xl font-bold text-white text-center"
                   >
                     {feature.title}
                   </h3>
                 </div>
                 <p 
-                  data-tina-field={tinaField(feature, `features.${i}.description`)}
                   className="text-white text-center"
                 >
                   {feature.description}
