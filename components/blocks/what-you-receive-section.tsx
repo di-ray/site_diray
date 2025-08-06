@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react"
 import * as Icons from "lucide-react"
 import { tinaField } from "tinacms/dist/react"
 
-interface Item {
+export interface Item {
   icon?: string | null
   title?: string | null
   description?: (string | null)[] | null
