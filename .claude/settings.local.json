@@ -29,7 +29,10 @@
       "Bash(del \"D:\\CATALISTI\\M2Z\\PROPRIETARIO\\m2z-control\\components\\blocks\\SolutionCalculator.tsx\")",
       "Bash(pnpm tinacms build:*)",
       "Bash(taskkill:*)",
-      "Bash(pnpm next:*)"
+      "Bash(pnpm next:*)",
+      "Bash(git fetch:*)",
+      "Bash(git checkout:*)",
+      "Bash(git merge:*)"
     ],
     "deny": []
   }
