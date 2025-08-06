@@ -27,12 +27,12 @@ export const ContactSection = (props: ContactSectionProps) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="reveal">
             <h2
-              data-tina-field={tinaField(props, "heading")}
+              data-tina-field={tinaField(props as any, "heading")}
               className="text-3xl md:text-4xl font-bold mb-6 text-white"
             >
               {heading}
             </h2>
-            <p data-tina-field={tinaField(props, "subheading")} className="text-lg mb-8 text-white/80">
+            <p data-tina-field={tinaField(props as any, "subheading")} className="text-lg mb-8 text-white/80">
               {subheading}
             </p>
             <div className="space-y-6">
@@ -54,7 +54,7 @@ export const ContactSection = (props: ContactSectionProps) => {
                 </div>
                 <div>
                   <h3 className="font-bold mb-1 text-white">Whatsapp</h3>
-                  <p data-tina-field={tinaField(props, "whatsapp")} className="text-white/80">
+                  <p data-tina-field={tinaField(props as any, "whatsapp")} className="text-white/80">
                     {whatsapp}
                   </p>
                 </div>
@@ -78,7 +78,7 @@ export const ContactSection = (props: ContactSectionProps) => {
                 </div>
                 <div>
                   <h3 className="font-bold mb-1 text-white">E-mail</h3>
-                  <p data-tina-field={tinaField(props, "email")} className="text-white/80">
+                  <p data-tina-field={tinaField(props as any, "email")} className="text-white/80">
                     {email}
                   </p>
                 </div>

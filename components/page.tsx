@@ -67,7 +67,7 @@ export function Page(props: {
         const Component = components[blockName]
         if (Component) {
           return (
-            <div key={i} data-tina-field={tinaField(block)}>
+            <div key={i} data-tina-field={tinaField(block as any)}>
               <Component {...block} />
             </div>
           )

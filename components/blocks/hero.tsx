@@ -48,7 +48,7 @@ export const HeroSection = (props: HeroSectionProps) => {
             variants={itemVariants}
             initial="hidden"
             animate="visible"
-            data-tina-field={tinaField(props, "heading")}
+            data-tina-field={tinaField(props as any, "heading")}
           >
             {heading.split('\n').map((line, index) => (
               <span key={index} className="block">
@@ -67,7 +67,7 @@ export const HeroSection = (props: HeroSectionProps) => {
             initial="hidden"
             animate="visible"
             transition={{ delay: 0.3 }}
-            data-tina-field={tinaField(props, "subheading")}
+            data-tina-field={tinaField(props as any, "subheading")}
           >
             {subheading}
           </motion.p>
@@ -78,14 +78,14 @@ export const HeroSection = (props: HeroSectionProps) => {
             initial="hidden"
             animate="visible"
             transition={{ delay: 0.6 }}
-            data-tina-field={tinaField(props, "description")}
+            data-tina-field={tinaField(props as any, "description")}
           >
             {description}
           </motion.p>
 
           <div className="mt-8 animate-fadeInUp delay-1000">
             <CTAButton href={buttonLink} variant="primary" size="lg" showArrow>
-              <span data-tina-field={tinaField(props, "buttonText")}>{buttonText}</span>
+              <span data-tina-field={tinaField(props as any, "buttonText")}>{buttonText}</span>
             </CTAButton>
           </div>
         </div>

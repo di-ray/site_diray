@@ -69,12 +69,12 @@ export function FooterSection({
                 width={120} 
                 height={40} 
                 className="h-10 w-auto" 
-                data-tina-field={tinaField({ logo }, "logo")}
+                data-tina-field={tinaField({  logo  } as any, "logo")}
               />
             </Link>
             <p 
               className="text-white/80 text-sm"
-              data-tina-field={tinaField({ description }, "description")}
+              data-tina-field={tinaField({  description  } as any, "description")}
             >
               {description}
             </p>
@@ -84,7 +84,7 @@ export function FooterSection({
           <div>
             <h3 
               className="text-lg font-bold mb-4"
-              data-tina-field={tinaField({ quickLinksTitle }, "quickLinksTitle")}
+              data-tina-field={tinaField({  quickLinksTitle  } as any, "quickLinksTitle")}
             >
               {quickLinksTitle}
             </h3>
@@ -94,7 +94,7 @@ export function FooterSection({
                   <Link 
                     href={link.href} 
                     className="text-white/60 hover:text-white transition-colors animated-underline"
-                    data-tina-field={tinaField(link, "text")}
+                    data-tina-field={tinaField(link as any, "text")}
                   >
                     {link.text}
                   </Link>
@@ -107,7 +107,7 @@ export function FooterSection({
           <div>
             <h3 
               className="text-lg font-bold mb-4"
-              data-tina-field={tinaField({ servicesTitle }, "servicesTitle")}
+              data-tina-field={tinaField({  servicesTitle  } as any, "servicesTitle")}
             >
               {servicesTitle}
             </h3>
@@ -117,7 +117,7 @@ export function FooterSection({
                   <Link
                     href={link.href}
                     className="text-white/60 hover:text-white transition-colors animated-underline"
-                    data-tina-field={tinaField(link, "text")}
+                    data-tina-field={tinaField(link as any, "text")}
                   >
                     {link.text}
                   </Link>
@@ -130,7 +130,7 @@ export function FooterSection({
           <div>
             <h3 
               className="text-lg font-bold mb-4"
-              data-tina-field={tinaField({ socialTitle }, "socialTitle")}
+              data-tina-field={tinaField({  socialTitle  } as any, "socialTitle")}
             >
               {socialTitle}
             </h3>
@@ -154,7 +154,7 @@ export function FooterSection({
                   <div>
                     <h4 
                       className="font-bold text-white"
-                      data-tina-field={tinaField(social, "platform")}
+                      data-tina-field={tinaField(social as any, "platform")}
                     >
                       {social.platform}
                     </h4>
@@ -163,7 +163,7 @@ export function FooterSection({
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-white/80 hover:text-white animated-underline"
-                      data-tina-field={tinaField(social, "username")}
+                      data-tina-field={tinaField(social as any, "username")}
                     >
                       {social.username}
                     </a>
@@ -175,7 +175,7 @@ export function FooterSection({
         </div>
 
         <div className="border-t border-white/10 mt-8 pt-8 text-center text-white/60 text-sm">
-          <p data-tina-field={tinaField({ copyrightText }, "copyrightText")}>
+          <p data-tina-field={tinaField({  copyrightText  } as any, "copyrightText")}>
             {copyrightText}
           </p>
         </div>

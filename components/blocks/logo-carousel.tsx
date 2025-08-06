@@ -58,7 +58,7 @@ export function LogoCarousel({
         <div className="text-center mb-12">
           {title && (
             <h2 
-              data-tina-field={tinaField({ title }, "title")}
+              data-tina-field={tinaField({  title  } as any, "title")}
               className="text-2xl md:text-3xl font-bold mb-4 text-white"
             >
               {title}
@@ -66,7 +66,7 @@ export function LogoCarousel({
           )}
           {description && (
             <p 
-              data-tina-field={tinaField({ description }, "description")}
+              data-tina-field={tinaField({  description  } as any, "description")}
               className="text-white/70 text-lg"
             >
               {description}
@@ -89,7 +89,7 @@ export function LogoCarousel({
               width={800} 
               height={60} 
               className="client-logos inline-block" 
-              data-tina-field={tinaField({ logoImage }, "logoImage")}
+              data-tina-field={tinaField({  logoImage  } as any, "logoImage")}
               style={{ objectFit: 'contain' }}
             />
             {/* Duplicate for seamless loop */}
