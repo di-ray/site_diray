@@ -10,6 +10,7 @@ interface AboutSectionProps {
   biography?: any
   founderImage?: string
   clientLogosImage?: string
+  [key: string]: any // Index signature para compatibilidade com tinaField
 }
 
 export const AboutSection = (props: AboutSectionProps) => {
@@ -42,7 +43,7 @@ export const AboutSection = (props: AboutSectionProps) => {
       <div className="container mx-auto px-6 md:px-8 relative z-10">
         <h2 
           className="text-4xl md:text-5xl font-bold mb-12 text-center reveal text-white"
-          data-tina-field={tinaField(props, "heading")}
+          data-tina-field={tinaField(props as any, "heading")}
         >
           Sobre a <span className="text-white">DI.RAY</span>
         </h2>
@@ -55,18 +56,18 @@ export const AboutSection = (props: AboutSectionProps) => {
                 width={400}
                 height={400}
                 className="rounded-lg shadow-lg transform hover:scale-105 transition-all duration-500"
-                data-tina-field={tinaField(props, "founderImage")}
+                data-tina-field={tinaField(props as any, "founderImage")}
               />
               <div className="text-center mt-4">
                 <h3 
                   className="text-2xl font-bold text-white"
-                  data-tina-field={tinaField(props, "founderName")}
+                  data-tina-field={tinaField(props as any, "founderName")}
                 >
                   {founderName}
                 </h3>
                 <p 
                   className="text-white/80"
-                  data-tina-field={tinaField(props, "founderTitle")}
+                  data-tina-field={tinaField(props as any, "founderTitle")}
                 >
                   {founderTitle}
                 </p>
@@ -76,7 +77,7 @@ export const AboutSection = (props: AboutSectionProps) => {
           <div className="reveal">
             <div 
               className="text-white text-lg mb-6"
-              data-tina-field={tinaField(props, "biography")}
+              data-tina-field={tinaField(props as any, "biography")}
             >
               <TinaMarkdown content={biography} />
             </div>
@@ -89,7 +90,7 @@ export const AboutSection = (props: AboutSectionProps) => {
                 decoding="async"
                 data-nimg="1"
                 src={clientLogosImage}
-                data-tina-field={tinaField(props, "clientLogosImage")}
+                data-tina-field={tinaField(props as any, "clientLogosImage")}
               />
             </div>
           </div>
