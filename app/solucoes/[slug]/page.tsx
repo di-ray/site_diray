@@ -12,7 +12,7 @@ export default async function SolutionPage({ params }: Props) {
     const tinaProps = await client.queries.solution({ relativePath: `${params.slug}.mdx` });
     const solutionsRes = await client.queries.solutionConnection({});
 
-    // Sanitiza os dados para garantir que são plain objects
+    // Sanitiza os dados para garantir que são plain objectsS
     const plainTinaProps = {
       data: tinaProps?.data ? JSON.parse(JSON.stringify(tinaProps.data)) : {},
       query: tinaProps?.query ? (typeof tinaProps.query === "string" ? tinaProps.query : JSON.parse(JSON.stringify(tinaProps.query))) : "",
