@@ -29,7 +29,26 @@ if (hasTinaCredentials) {
   const mockClient = `// Mock client for builds without TinaCMS credentials
 export const client = {
   queries: {
-    page: async (args) => ({ data: { page: { blocks: [] } }, query: "", variables: {} }),
+    page: async (args) => ({ 
+      data: { 
+        page: { 
+          __typename: "Page",
+          id: "",
+          title: "",
+          _sys: {
+            filename: "home",
+            basename: "home",
+            breadcrumbs: ["home"],
+            path: "content/pages/home.mdx",
+            relativePath: "home.mdx",
+            extension: ".mdx"
+          },
+          blocks: [] 
+        } 
+      }, 
+      query: "", 
+      variables: {} 
+    }),
     solution: async (args) => ({ data: { solution: null }, query: "", variables: {} }),
     solutionConnection: async (args) => ({ 
       data: { solutionConnection: { edges: [] } }, 
@@ -64,7 +83,26 @@ export default client;
 
   const databaseClient = `export const client = {
   queries: {
-    page: async (args) => ({ data: { page: { blocks: [] } }, query: "", variables: {} }),
+    page: async (args) => ({ 
+      data: { 
+        page: { 
+          __typename: "Page",
+          id: "",
+          title: "",
+          _sys: {
+            filename: "home",
+            basename: "home",
+            breadcrumbs: ["home"],
+            path: "content/pages/home.mdx",
+            relativePath: "home.mdx",
+            extension: ".mdx"
+          },
+          blocks: [] 
+        } 
+      }, 
+      query: "", 
+      variables: {} 
+    }),
     solution: async (args) => ({ data: { solution: null }, query: "", variables: {} }),
     solutionConnection: async (args) => ({ 
       data: { solutionConnection: { edges: [] } }, 
