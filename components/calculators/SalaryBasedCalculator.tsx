@@ -174,7 +174,7 @@ export function SalaryBasedCalculator({
             className="text-3xl md:text-4xl font-bold mb-8 text-white text-center"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            transition={{ duration: 0.6, ease: "easeOut" as const }}
           >
             {display?.title || "Contrate já o serviço"}
           </motion.h2>
@@ -184,7 +184,7 @@ export function SalaryBasedCalculator({
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            transition={{ duration: 0.6, ease: "easeOut" as const }}
           >
             <motion.h3
               className="text-xl font-bold mb-6"
@@ -226,7 +226,7 @@ export function SalaryBasedCalculator({
               className="text-center mb-6"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
+              transition={{ duration: 0.6, ease: "easeOut" as const }}
             >
               <motion.button
                 onClick={calculateBudget}
