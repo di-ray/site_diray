@@ -312,13 +312,13 @@ export const FaqSection = (props: FaqSectionProps) => {
           transition={{ duration: 0.5 }}
         >
           <h2 
-            data-tina-field={tinaField(props, "heading")} 
+            data-tina-field={tinaField(props as any, "heading")} 
             className="text-3xl md:text-4xl font-bold mb-6 text-white"
           >
             {props.heading || "Perguntas Frequentes"}
           </h2>
           <p 
-            data-tina-field={tinaField(props, "subheading")} 
+            data-tina-field={tinaField(props as any, "subheading")} 
             className="text-lg text-white/90 font-medium"
           >
             {props.subheading || "Tire suas dúvidas sobre minha metodologia de trabalho."}
@@ -353,7 +353,7 @@ export const FaqSection = (props: FaqSectionProps) => {
                         onClick={() => toggleItem(category, item.id)}
                         aria-expanded={openItems[category] === item.id}
                       >
-                        <span data-tina-field={tinaField(item, "question")}>
+                        <span data-tina-field={tinaField(item as any, "question")}>
                           {item.question}
                         </span>
                         <ChevronDown
@@ -368,7 +368,7 @@ export const FaqSection = (props: FaqSectionProps) => {
                           openItems[category] === item.id ? "max-h-96 pb-4" : "max-h-0"
                         }`}
                       >
-                        <div className="text-white/80 pt-2" data-tina-field={tinaField(item, "answer")}>
+                        <div className="text-white/80 pt-2" data-tina-field={tinaField(item as any, "answer")}>
                           <TinaMarkdown content={item.answer} />
                         </div>
                       </div>

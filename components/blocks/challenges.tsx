@@ -140,7 +140,7 @@ export const ChallengesSection = (props: ChallengesSectionProps) => {
       <div className="container mx-auto px-6 md:px-8 relative z-10">
         <h2 
           className="text-4xl md:text-5xl font-bold mb-12 text-white text-center reveal"
-          data-tina-field={tinaField(props, "heading")}
+          data-tina-field={tinaField(props as any, "heading")}
         >
           {heading}
         </h2>
@@ -149,13 +149,13 @@ export const ChallengesSection = (props: ChallengesSectionProps) => {
             <div
               key={i}
               className="bg-gradient-to-r from-primary to-red-400 p-8 rounded-lg border border-primary/30 hover:border-primary transition-all duration-300 reveal"
-              data-tina-field={tinaField(card)}
+              data-tina-field={tinaField(card as any)}
             >
               <div className="flex flex-col items-center mb-6">
                 <div className="icon-container">{iconMap[card.groupTitle] || null}</div>
                 <h3 
                   className="text-2xl font-bold text-white"
-                  data-tina-field={tinaField(card, "groupTitle")}
+                  data-tina-field={tinaField(card as any, "groupTitle")}
                 >
                   {card.groupTitle}:
                 </h3>
@@ -163,7 +163,7 @@ export const ChallengesSection = (props: ChallengesSectionProps) => {
               
               <div 
                 className="text-white text-center font-medium"
-                data-tina-field={tinaField(card, "content")}
+                data-tina-field={tinaField(card as any, "content")}
               >
                 <TinaMarkdown content={card.content} />
               </div>
@@ -172,7 +172,7 @@ export const ChallengesSection = (props: ChallengesSectionProps) => {
                 <div className="mt-6 text-center">
                   <p 
                     className="text-white font-medium"
-                    data-tina-field={tinaField(card, "resultText")}
+                    data-tina-field={tinaField(card as any, "resultText")}
                   >
                     {card.resultText}
                   </p>

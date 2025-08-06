@@ -99,14 +99,14 @@ export function MoreSolutionsHomeSection({
           viewport={{ once: true }}
         >
           <motion.h2 
-            data-tina-field={tinaField({ heading }, "heading")} 
+            data-tina-field={tinaField({  heading  } as any, "heading")} 
             className="text-3xl md:text-4xl font-bold mb-6 text-white" 
             variants={itemVariants}
           >
             {heading}
           </motion.h2>
           <motion.p 
-            data-tina-field={tinaField({ subtitle }, "subtitle")} 
+            data-tina-field={tinaField({  subtitle  } as any, "subtitle")} 
             className="text-lg text-white mb-12" 
             variants={itemVariants}
           >
