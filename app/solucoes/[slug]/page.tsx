@@ -29,11 +29,12 @@ export default async function SolutionPage({ params }: Props) {
 
 export async function generateStaticParams() {
   const solutions = await client.queries.solutionConnection();
-  const edges = solutions.data.solutionConnection.edges;
-
-  if (!edges) {
+  
+  if (!solutions?.data?.solutionConnection?.edges) {
     return [];
   }
+
+  const edges = solutions.data.solutionConnection.edges;
 
   return edges.reduce<{ slug: string }[]>((acc, edge) => {
     if (edge && edge.node) {

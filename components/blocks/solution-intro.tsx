@@ -5,7 +5,7 @@ import { Clock, DollarSign } from "lucide-react"
 export function SolutionIntro({ introTitle, introDescription, minPrice, minDuration }) {
   return (
     <section className="py-16 md:py-24 bg-gradient-to-b from-red-700 to-primary">
-      <motion.div className="container mx-auto px-4" initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: "easeOut" }}>
+      <motion.div className="container mx-auto px-4" initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: "easeOut" as const }}>
         <div className="container mx-auto px-4">
           <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ staggerChildren: 0.2 }}>
             <motion.div>

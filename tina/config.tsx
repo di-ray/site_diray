@@ -26,11 +26,11 @@ export default defineConfig({
   },
   schema: {
     collections: [
-      PageCollection,
       SettingsCollection,
-      FAQCollection,
+      PageCollection,
       SolutionCollection,
       CalculatorCollection,
+      FAQCollection,
     ],
   },
 });
