@@ -8,23 +8,29 @@ type Props = {
 }
 
 export default async function SolutionPage({ params }: Props) {
-  const tinaProps = await client.queries.solution({ relativePath: `${params.slug}.mdx` });
-  const solutionsRes = await client.queries.solutionConnection();
+  try {
+    const tinaProps = await client.queries.solution({ relativePath: `${params.slug}.mdx` });
+    const solutionsRes = await client.queries.solutionConnection();
 
-  // Sanitiza os dados para garantir que são plain objects
-  const plainTinaProps = {
-    data: JSON.parse(JSON.stringify(tinaProps.data)),
-    query: typeof tinaProps.query === "string" ? tinaProps.query : JSON.parse(JSON.stringify(tinaProps.query)),
-    variables: JSON.parse(JSON.stringify(tinaProps.variables)),
-  };
-  
-  const plainSolutionsProps = {
-    data: JSON.parse(JSON.stringify(solutionsRes.data)),
-    query: typeof solutionsRes.query === "string" ? solutionsRes.query : JSON.parse(JSON.stringify(solutionsRes.query)),
-    variables: JSON.parse(JSON.stringify(solutionsRes.variables)),
-  };
+    // Sanitiza os dados para garantir que são plain objects
+    const plainTinaProps = {
+      data: tinaProps?.data ? JSON.parse(JSON.stringify(tinaProps.data)) : {},
+      query: tinaProps?.query ? (typeof tinaProps.query === "string" ? tinaProps.query : JSON.parse(JSON.stringify(tinaProps.query))) : "",
+      variables: tinaProps?.variables ? JSON.parse(JSON.stringify(tinaProps.variables)) : {},
+    };
+    
+    const plainSolutionsProps = {
+      data: solutionsRes?.data ? JSON.parse(JSON.stringify(solutionsRes.data)) : {},
+      query: solutionsRes?.query ? (typeof solutionsRes.query === "string" ? solutionsRes.query : JSON.parse(JSON.stringify(solutionsRes.query))) : "",
+      variables: solutionsRes?.variables ? JSON.parse(JSON.stringify(solutionsRes.variables)) : {},
+    };
 
-  return <SolutionPageTemplate {...plainTinaProps} solutions={plainSolutionsProps} />
+    return <SolutionPageTemplate {...plainTinaProps} solutions={plainSolutionsProps} />
+  } catch (error) {
+    console.error("Error loading solution page data:", error);
+    // Return a fallback page with empty data
+    return <SolutionPageTemplate data={{}} query="" variables={{}} solutions={{ data: {}, query: "", variables: {} }} />
+  }
 }
 
 export async function generateStaticParams() {
