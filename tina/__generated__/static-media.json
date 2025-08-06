@@ -24,6 +24,444 @@
               "400x400": "/admin\\.gitignore",
               "1000x1000": "/admin\\.gitignore"
             }
+          },
+          {
+            "id": "assets",
+            "filename": "assets",
+            "type": "dir",
+            "directory": "admin",
+            "src": "/admin\\assets",
+            "thumbnails": {
+              "75x75": "/admin\\assets",
+              "400x400": "/admin\\assets",
+              "1000x1000": "/admin\\assets"
+            },
+            "children": {
+              "0": [
+                {
+                  "id": "SchemaReference.es-2c8c2094.js",
+                  "filename": "SchemaReference.es-2c8c2094.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\SchemaReference.es-2c8c2094.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\SchemaReference.es-2c8c2094.js",
+                    "400x400": "/admin\\assets\\SchemaReference.es-2c8c2094.js",
+                    "1000x1000": "/admin\\assets\\SchemaReference.es-2c8c2094.js"
+                  }
+                },
+                {
+                  "id": "brace-fold.es-f2e3735d.js",
+                  "filename": "brace-fold.es-f2e3735d.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\brace-fold.es-f2e3735d.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\brace-fold.es-f2e3735d.js",
+                    "400x400": "/admin\\assets\\brace-fold.es-f2e3735d.js",
+                    "1000x1000": "/admin\\assets\\brace-fold.es-f2e3735d.js"
+                  }
+                },
+                {
+                  "id": "closebrackets.es-e969742b.js",
+                  "filename": "closebrackets.es-e969742b.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\closebrackets.es-e969742b.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\closebrackets.es-e969742b.js",
+                    "400x400": "/admin\\assets\\closebrackets.es-e969742b.js",
+                    "1000x1000": "/admin\\assets\\closebrackets.es-e969742b.js"
+                  }
+                },
+                {
+                  "id": "codemirror.es-52e8b92d.js",
+                  "filename": "codemirror.es-52e8b92d.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\codemirror.es-52e8b92d.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\codemirror.es-52e8b92d.js",
+                    "400x400": "/admin\\assets\\codemirror.es-52e8b92d.js",
+                    "1000x1000": "/admin\\assets\\codemirror.es-52e8b92d.js"
+                  }
+                },
+                {
+                  "id": "codemirror.es2-5884f31a.js",
+                  "filename": "codemirror.es2-5884f31a.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\codemirror.es2-5884f31a.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\codemirror.es2-5884f31a.js",
+                    "400x400": "/admin\\assets\\codemirror.es2-5884f31a.js",
+                    "1000x1000": "/admin\\assets\\codemirror.es2-5884f31a.js"
+                  }
+                },
+                {
+                  "id": "comment.es-39699bae.js",
+                  "filename": "comment.es-39699bae.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\comment.es-39699bae.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\comment.es-39699bae.js",
+                    "400x400": "/admin\\assets\\comment.es-39699bae.js",
+                    "1000x1000": "/admin\\assets\\comment.es-39699bae.js"
+                  }
+                },
+                {
+                  "id": "dialog.es-dffe62e7.js",
+                  "filename": "dialog.es-dffe62e7.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\dialog.es-dffe62e7.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\dialog.es-dffe62e7.js",
+                    "400x400": "/admin\\assets\\dialog.es-dffe62e7.js",
+                    "1000x1000": "/admin\\assets\\dialog.es-dffe62e7.js"
+                  }
+                },
+                {
+                  "id": "dialog.es2-02b3b4e7.js",
+                  "filename": "dialog.es2-02b3b4e7.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\dialog.es2-02b3b4e7.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\dialog.es2-02b3b4e7.js",
+                    "400x400": "/admin\\assets\\dialog.es2-02b3b4e7.js",
+                    "1000x1000": "/admin\\assets\\dialog.es2-02b3b4e7.js"
+                  }
+                },
+                {
+                  "id": "foldgutter.es-b6cee46a.js",
+                  "filename": "foldgutter.es-b6cee46a.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\foldgutter.es-b6cee46a.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\foldgutter.es-b6cee46a.js",
+                    "400x400": "/admin\\assets\\foldgutter.es-b6cee46a.js",
+                    "1000x1000": "/admin\\assets\\foldgutter.es-b6cee46a.js"
+                  }
+                },
+                {
+                  "id": "forEachState.es-b2033c2b.js",
+                  "filename": "forEachState.es-b2033c2b.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\forEachState.es-b2033c2b.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\forEachState.es-b2033c2b.js",
+                    "400x400": "/admin\\assets\\forEachState.es-b2033c2b.js",
+                    "1000x1000": "/admin\\assets\\forEachState.es-b2033c2b.js"
+                  }
+                },
+                {
+                  "id": "hint.es-5caec0b5.js",
+                  "filename": "hint.es-5caec0b5.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\hint.es-5caec0b5.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\hint.es-5caec0b5.js",
+                    "400x400": "/admin\\assets\\hint.es-5caec0b5.js",
+                    "1000x1000": "/admin\\assets\\hint.es-5caec0b5.js"
+                  }
+                },
+                {
+                  "id": "hint.es2-06bc062b.js",
+                  "filename": "hint.es2-06bc062b.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\hint.es2-06bc062b.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\hint.es2-06bc062b.js",
+                    "400x400": "/admin\\assets\\hint.es2-06bc062b.js",
+                    "1000x1000": "/admin\\assets\\hint.es2-06bc062b.js"
+                  }
+                },
+                {
+                  "id": "index-0bb31b2d.js",
+                  "filename": "index-0bb31b2d.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\index-0bb31b2d.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\index-0bb31b2d.js",
+                    "400x400": "/admin\\assets\\index-0bb31b2d.js",
+                    "1000x1000": "/admin\\assets\\index-0bb31b2d.js"
+                  }
+                },
+                {
+                  "id": "index-ada9b7ff.css",
+                  "filename": "index-ada9b7ff.css",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\index-ada9b7ff.css",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\index-ada9b7ff.css",
+                    "400x400": "/admin\\assets\\index-ada9b7ff.css",
+                    "1000x1000": "/admin\\assets\\index-ada9b7ff.css"
+                  }
+                },
+                {
+                  "id": "index-f8d09a05.js",
+                  "filename": "index-f8d09a05.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\index-f8d09a05.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\index-f8d09a05.js",
+                    "400x400": "/admin\\assets\\index-f8d09a05.js",
+                    "1000x1000": "/admin\\assets\\index-f8d09a05.js"
+                  }
+                },
+                {
+                  "id": "info-addon.es-c9b2027b.js",
+                  "filename": "info-addon.es-c9b2027b.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\info-addon.es-c9b2027b.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\info-addon.es-c9b2027b.js",
+                    "400x400": "/admin\\assets\\info-addon.es-c9b2027b.js",
+                    "1000x1000": "/admin\\assets\\info-addon.es-c9b2027b.js"
+                  }
+                },
+                {
+                  "id": "info.es-6b719510.js",
+                  "filename": "info.es-6b719510.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\info.es-6b719510.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\info.es-6b719510.js",
+                    "400x400": "/admin\\assets\\info.es-6b719510.js",
+                    "1000x1000": "/admin\\assets\\info.es-6b719510.js"
+                  }
+                },
+                {
+                  "id": "javascript.es-3c6957c5.js",
+                  "filename": "javascript.es-3c6957c5.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\javascript.es-3c6957c5.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\javascript.es-3c6957c5.js",
+                    "400x400": "/admin\\assets\\javascript.es-3c6957c5.js",
+                    "1000x1000": "/admin\\assets\\javascript.es-3c6957c5.js"
+                  }
+                },
+                {
+                  "id": "jump-to-line.es-d901ea33.js",
+                  "filename": "jump-to-line.es-d901ea33.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\jump-to-line.es-d901ea33.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\jump-to-line.es-d901ea33.js",
+                    "400x400": "/admin\\assets\\jump-to-line.es-d901ea33.js",
+                    "1000x1000": "/admin\\assets\\jump-to-line.es-d901ea33.js"
+                  }
+                },
+                {
+                  "id": "jump.es-0961ff9d.js",
+                  "filename": "jump.es-0961ff9d.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\jump.es-0961ff9d.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\jump.es-0961ff9d.js",
+                    "400x400": "/admin\\assets\\jump.es-0961ff9d.js",
+                    "1000x1000": "/admin\\assets\\jump.es-0961ff9d.js"
+                  }
+                }
+              ],
+              "20": [
+                {
+                  "id": "lint.es-fe7166bb.js",
+                  "filename": "lint.es-fe7166bb.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\lint.es-fe7166bb.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\lint.es-fe7166bb.js",
+                    "400x400": "/admin\\assets\\lint.es-fe7166bb.js",
+                    "1000x1000": "/admin\\assets\\lint.es-fe7166bb.js"
+                  }
+                },
+                {
+                  "id": "lint.es2-c7a07fbb.js",
+                  "filename": "lint.es2-c7a07fbb.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\lint.es2-c7a07fbb.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\lint.es2-c7a07fbb.js",
+                    "400x400": "/admin\\assets\\lint.es2-c7a07fbb.js",
+                    "1000x1000": "/admin\\assets\\lint.es2-c7a07fbb.js"
+                  }
+                },
+                {
+                  "id": "lint.es3-5816f590.js",
+                  "filename": "lint.es3-5816f590.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\lint.es3-5816f590.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\lint.es3-5816f590.js",
+                    "400x400": "/admin\\assets\\lint.es3-5816f590.js",
+                    "1000x1000": "/admin\\assets\\lint.es3-5816f590.js"
+                  }
+                },
+                {
+                  "id": "matchbrackets.es-97d2e827.js",
+                  "filename": "matchbrackets.es-97d2e827.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\matchbrackets.es-97d2e827.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\matchbrackets.es-97d2e827.js",
+                    "400x400": "/admin\\assets\\matchbrackets.es-97d2e827.js",
+                    "1000x1000": "/admin\\assets\\matchbrackets.es-97d2e827.js"
+                  }
+                },
+                {
+                  "id": "matchbrackets.es2-f53f57e6.js",
+                  "filename": "matchbrackets.es2-f53f57e6.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\matchbrackets.es2-f53f57e6.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\matchbrackets.es2-f53f57e6.js",
+                    "400x400": "/admin\\assets\\matchbrackets.es2-f53f57e6.js",
+                    "1000x1000": "/admin\\assets\\matchbrackets.es2-f53f57e6.js"
+                  }
+                },
+                {
+                  "id": "mode-indent.es-057a4f6a.js",
+                  "filename": "mode-indent.es-057a4f6a.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\mode-indent.es-057a4f6a.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\mode-indent.es-057a4f6a.js",
+                    "400x400": "/admin\\assets\\mode-indent.es-057a4f6a.js",
+                    "1000x1000": "/admin\\assets\\mode-indent.es-057a4f6a.js"
+                  }
+                },
+                {
+                  "id": "mode.es-7b865abd.js",
+                  "filename": "mode.es-7b865abd.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\mode.es-7b865abd.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\mode.es-7b865abd.js",
+                    "400x400": "/admin\\assets\\mode.es-7b865abd.js",
+                    "1000x1000": "/admin\\assets\\mode.es-7b865abd.js"
+                  }
+                },
+                {
+                  "id": "mode.es2-bde76909.js",
+                  "filename": "mode.es2-bde76909.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\mode.es2-bde76909.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\mode.es2-bde76909.js",
+                    "400x400": "/admin\\assets\\mode.es2-bde76909.js",
+                    "1000x1000": "/admin\\assets\\mode.es2-bde76909.js"
+                  }
+                },
+                {
+                  "id": "mode.es3-977a1a35.js",
+                  "filename": "mode.es3-977a1a35.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\mode.es3-977a1a35.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\mode.es3-977a1a35.js",
+                    "400x400": "/admin\\assets\\mode.es3-977a1a35.js",
+                    "1000x1000": "/admin\\assets\\mode.es3-977a1a35.js"
+                  }
+                },
+                {
+                  "id": "search.es-1c15f5ea.js",
+                  "filename": "search.es-1c15f5ea.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\search.es-1c15f5ea.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\search.es-1c15f5ea.js",
+                    "400x400": "/admin\\assets\\search.es-1c15f5ea.js",
+                    "1000x1000": "/admin\\assets\\search.es-1c15f5ea.js"
+                  }
+                },
+                {
+                  "id": "searchcursor.es-b1a352a2.js",
+                  "filename": "searchcursor.es-b1a352a2.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\searchcursor.es-b1a352a2.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\searchcursor.es-b1a352a2.js",
+                    "400x400": "/admin\\assets\\searchcursor.es-b1a352a2.js",
+                    "1000x1000": "/admin\\assets\\searchcursor.es-b1a352a2.js"
+                  }
+                },
+                {
+                  "id": "searchcursor.es2-cbfe7cae.js",
+                  "filename": "searchcursor.es2-cbfe7cae.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\searchcursor.es2-cbfe7cae.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\searchcursor.es2-cbfe7cae.js",
+                    "400x400": "/admin\\assets\\searchcursor.es2-cbfe7cae.js",
+                    "1000x1000": "/admin\\assets\\searchcursor.es2-cbfe7cae.js"
+                  }
+                },
+                {
+                  "id": "show-hint.es-b981493e.js",
+                  "filename": "show-hint.es-b981493e.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\show-hint.es-b981493e.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\show-hint.es-b981493e.js",
+                    "400x400": "/admin\\assets\\show-hint.es-b981493e.js",
+                    "1000x1000": "/admin\\assets\\show-hint.es-b981493e.js"
+                  }
+                },
+                {
+                  "id": "sublime.es-e2a3eb60.js",
+                  "filename": "sublime.es-e2a3eb60.js",
+                  "type": "file",
+                  "directory": "admin\\assets",
+                  "src": "/admin\\assets\\sublime.es-e2a3eb60.js",
+                  "thumbnails": {
+                    "75x75": "/admin\\assets\\sublime.es-e2a3eb60.js",
+                    "400x400": "/admin\\assets\\sublime.es-e2a3eb60.js",
+                    "1000x1000": "/admin\\assets\\sublime.es-e2a3eb60.js"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "index.html",
+            "filename": "index.html",
+            "type": "file",
+            "directory": "admin",
+            "src": "/admin\\index.html",
+            "thumbnails": {
+              "75x75": "/admin\\index.html",
+              "400x400": "/admin\\index.html",
+              "1000x1000": "/admin\\index.html"
+            }
           }
         ]
       }
