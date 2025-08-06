@@ -6,6 +6,8 @@ const path = require('path');
 const hasTinaCredentials = !!(process.env.TINA_TOKEN && process.env.NEXT_PUBLIC_TINA_CLIENT_ID);
 
 console.log('Starting build process...');
+console.log('TINA_TOKEN exists:', !!process.env.TINA_TOKEN);
+console.log('NEXT_PUBLIC_TINA_CLIENT_ID exists:', !!process.env.NEXT_PUBLIC_TINA_CLIENT_ID);
 
 if (hasTinaCredentials) {
   console.log('TinaCMS credentials found, running full build...');
@@ -43,7 +45,14 @@ export const client = {
             relativePath: "home.mdx",
             extension: ".mdx"
           },
-          blocks: [] 
+          blocks: [
+            {
+              __typename: "PageBlocksHero",
+              heading: "Bem-vindo",
+              subheading: "Site em construção",
+              description: "Configure as variáveis de ambiente do TinaCMS para ver o conteúdo real."
+            }
+          ] 
         } 
       }, 
       query: "", 
@@ -65,7 +74,14 @@ export const client = {
             relativePath: "default.mdx",
             extension: ".mdx"
           },
-          blocks: []
+          blocks: [
+            {
+              __typename: "PageBlocksHero",
+              heading: "Bem-vindo",
+              subheading: "Site em construção",
+              description: "Configure as variáveis de ambiente do TinaCMS para ver o conteúdo real."
+            }
+          ]
         }
       }, 
       query: "", 
@@ -118,7 +134,14 @@ export default client;
             relativePath: "home.mdx",
             extension: ".mdx"
           },
-          blocks: [] 
+          blocks: [
+            {
+              __typename: "PageBlocksHero",
+              heading: "Bem-vindo",
+              subheading: "Site em construção",
+              description: "Configure as variáveis de ambiente do TinaCMS para ver o conteúdo real."
+            }
+          ] 
         } 
       }, 
       query: "", 
@@ -140,7 +163,14 @@ export default client;
             relativePath: "default.mdx",
             extension: ".mdx"
           },
-          blocks: []
+          blocks: [
+            {
+              __typename: "PageBlocksHero",
+              heading: "Bem-vindo",
+              subheading: "Site em construção",
+              description: "Configure as variáveis de ambiente do TinaCMS para ver o conteúdo real."
+            }
+          ]
         }
       }, 
       query: "", 
