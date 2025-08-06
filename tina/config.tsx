@@ -9,8 +9,8 @@ import { CalculatorCollection } from "./collections/calculator";
 const branch = process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || "dependabot/npm_and_yarn/multi-544f560e85";
 
 export default defineConfig({
-  token:  process.env.TINA_TOKEN, // This should match the value in your .env file
-  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID, // This should match the value in your .env file
+  // Self-hosted configuration
+  contentApiUrlOverride: "/api/tina/graphql",
   branch,
   
   build: {

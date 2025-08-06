@@ -7,7 +7,7 @@ const isLocal = process.env.TINA_PUBLIC_IS_LOCAL === "true";
 const token = process.env.GITHUB_PERSONAL_ACCESS_TOKEN;
 const owner = process.env.GITHUB_OWNER || process.env.VERCEL_GIT_REPO_OWNER;
 const repo = process.env.GITHUB_REPO || process.env.VERCEL_GIT_REPO_SLUG;
-const branch = process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || "main";
+const branch = process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || "dependabot/npm_and_yarn/multi-544f560e85";
 
 if (!isLocal && (!token || !owner || !repo || !branch)) {
   throw new Error(

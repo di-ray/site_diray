@@ -1,14 +1,18 @@
-// Placeholder client para build
-export const client = {
-  queries: {
-    page: async (args?: any) => ({ data: { page: { blocks: [] } }, query: "", variables: {} }),
-    solution: async (args?: any) => ({ data: { solution: null }, query: "", variables: {} }),
-    solutionConnection: async (args?: any) => ({ data: { solutionConnection: { edges: [] } }, query: "", variables: {} }),
-    settings: async (args?: any) => ({ data: { settings: { navigation: null, footer: null } }, query: "", variables: {} }),
-    faqConnection: async (args?: any) => ({ data: { faqConnection: { edges: [] } }, query: "", variables: {} }),
-    calculator: async (args?: any) => ({ data: { calculator: null }, query: "", variables: {} })
-  }
-};
+import { createClient } from "tinacms/dist/client";
+import { queries } from "./types";
+
+// Self-hosted configuration
+const apiUrl = process.env.VERCEL_URL
+  ? `https://${process.env.VERCEL_URL}/api/tina/graphql`
+  : process.env.NODE_ENV === "production"
+  ? "https://site-diray.vercel.app/api/tina/graphql" 
+  : "http://localhost:3000/api/tina/graphql";
+
+export const client = createClient({
+  url: apiUrl,
+  token: process.env.TINA_TOKEN || "",
+  queries,
+});
 
 export default client;
   
