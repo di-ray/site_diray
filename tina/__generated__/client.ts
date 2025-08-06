@@ -1,19 +1,18 @@
-// Self-hosted TinaCMS - não usa API Cloud
-import { databaseRequest } from "./databaseClient";
-
-export const client = {
-  queries: {
-    page: (args) => databaseRequest({ query: queries.page, variables: args }),
-    solution: (args) => databaseRequest({ query: queries.solution, variables: args }),
-    solutionConnection: (args) => databaseRequest({ query: queries.solutionConnection, variables: args }),
-    settings: (args) => databaseRequest({ query: queries.settings, variables: args }),
-    faqConnection: (args) => databaseRequest({ query: queries.faqConnection, variables: args }),
-    calculator: (args) => databaseRequest({ query: queries.calculator, variables: args })
-  }
-};
-
-// Importar queries do types se necessário
+import { createClient } from "tinacms/dist/client";
 import { queries } from "./types";
+
+// Self-hosted configuration
+const apiUrl = process.env.VERCEL_URL
+  ? `https://${process.env.VERCEL_URL}/api/tina/graphql`
+  : process.env.NODE_ENV === "production"
+  ? "https://site-diray.vercel.app/api/tina/graphql" 
+  : "http://localhost:3000/api/tina/graphql";
+
+export const client = createClient({
+  url: apiUrl,
+  token: process.env.TINA_TOKEN || "",
+  queries,
+});
 
 export default client;
   
