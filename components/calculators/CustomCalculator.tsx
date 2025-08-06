@@ -180,7 +180,7 @@ export function CustomCalculator({
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            transition={{ duration: 0.6, ease: "easeOut" as const }}
           >
             {display?.title || "Simule seu investimento"}
           </motion.h2>
@@ -190,7 +190,7 @@ export function CustomCalculator({
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            transition={{ duration: 0.6, ease: "easeOut" as const }}
           >
             {!showBudget ? (
               <>
@@ -219,7 +219,7 @@ export function CustomCalculator({
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, ease: "easeOut" }}
+                  transition={{ duration: 0.6, ease: "easeOut" as const }}
                 >
                   <motion.button
                     onClick={calculateBudget}
@@ -250,7 +250,7 @@ export function CustomCalculator({
                 ref={budgetRef}
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
+                transition={{ duration: 0.6, ease: "easeOut" as const }}
               >
                 <div className="bg-white p-8">
                   <div className="flex justify-center mb-6">

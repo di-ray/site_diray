@@ -861,6 +861,16 @@ select.form-input {
   opacity: 1;
 }
 
+/* Client logos animation styles */
+.client-logos {
+  filter: grayscale(100%) opacity(0.7);
+  transition: filter 0.3s ease;
+}
+
+.client-logos:hover {
+  filter: grayscale(0%) opacity(1);
+}
+
 /* Utility classes for brand colors */
 .text-diray-primary {
   color: var(--diray-primary);

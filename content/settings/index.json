@@ -1,19 +1,140 @@
 {
   "siteInfo": {
-    "title": "Título do Site",
-    "description": "Descrição do seu novo site.",
-    "keywords": "palavra-chave1, palavra-chave2"
+    "title": "DI.RAY Consultoria",
+    "description": "Consultoria especializada em desenvolvimento organizacional e empresarial, ajudando empresas a alcançarem seu potencial máximo.",
+    "keywords": "consultoria, desenvolvimento organizacional, treinamento, cultura organizacional, IA"
   },
   "contact": {
-    "email": "contato@exemplo.com",
-    "phone": "+55 (00) 00000-0000",
-    "address": "Sua Rua, 123\nSua Cidade - UF"
+    "email": "contato@diray.com.br",
+    "phone": "+55 (11) 99638-6103",
+    "address": "São Paulo - SP"
   },
   "social": {
-    "facebook": "https://facebook.com/",
-    "instagram": "https://instagram.com/",
-    "linkedin": "https://linkedin.com/",
-    "twitter": "https://twitter.com/"
+    "facebook": "",
+    "instagram": "https://instagram.com/dirayconsultoria",
+    "linkedin": "https://linkedin.com/company/dirayconsultoria",
+    "twitter": "https://tiktok.com/@dirayconsultoria"
+  },
+  "navigation": {
+    "logo": "/images/diray-logo.png",
+    "menuItems": [
+      {
+        "label": "Home",
+        "href": "/",
+        "hasSubmenu": false
+      },
+      {
+        "label": "Soluções",
+        "href": "/solucoes",
+        "hasSubmenu": true,
+        "submenuItems": [
+          {
+            "label": "Estratégia de Treinamento",
+            "href": "/solucoes/estrategia-de-treinamento"
+          },
+          {
+            "label": "Formação customizada em IA",
+            "href": "/solucoes/formacao-de-ia"
+          },
+          {
+            "label": "Plano de Comunicação",
+            "href": "/solucoes/plano-de-comunicacao"
+          },
+          {
+            "label": "Alinhamento de Cultura",
+            "href": "/solucoes/alinhamento-de-cultura"
+          },
+          {
+            "label": "Workshop de Metas",
+            "href": "/solucoes/workshop-de-metas"
+          }
+        ]
+      },
+      {
+        "label": "Por que Diray",
+        "href": "/por-que-diray",
+        "hasSubmenu": false
+      },
+      {
+        "label": "Sobre",
+        "href": "/#sobre",
+        "hasSubmenu": false
+      },
+      {
+        "label": "FAQ",
+        "href": "/#faq",
+        "hasSubmenu": false
+      }
+    ]
+  },
+  "footer": {
+    "description": "Consultoria especializada em desenvolvimento organizacional e empresarial, ajudando empresas a alcançarem seu potencial máximo.",
+    "copyright": "© 2025 DI.RAY. Todos os direitos reservados.",
+    "sections": [
+      {
+        "title": "Link Rápido",
+        "links": [
+          {
+            "label": "Sobre DI.RAY",
+            "href": "/#sobre"
+          },
+          {
+            "label": "Serviços",
+            "href": "/solucoes"
+          },
+          {
+            "label": "Por que DI.RAY",
+            "href": "/por-que-diray"
+          },
+          {
+            "label": "Perguntas Frequentes",
+            "href": "/#faq"
+          }
+        ]
+      },
+      {
+        "title": "Serviços",
+        "links": [
+          {
+            "label": "Estratégia de Treinamento",
+            "href": "/solucoes/estrategia-de-treinamento"
+          },
+          {
+            "label": "Formação customizada em IA",
+            "href": "/solucoes/formacao-de-ia"
+          },
+          {
+            "label": "Plano de Comunicação",
+            "href": "/solucoes/plano-de-comunicacao"
+          },
+          {
+            "label": "Alinhamento de Cultura",
+            "href": "/solucoes/alinhamento-de-cultura"
+          },
+          {
+            "label": "Workshop de Metas",
+            "href": "/solucoes/workshop-de-metas"
+          }
+        ]
+      },
+      {
+        "title": "Redes Sociais",
+        "links": [
+          {
+            "label": "@dirayconsultoria",
+            "href": "https://instagram.com/dirayconsultoria"
+          },
+          {
+            "label": "DIRAYconsultoria",
+            "href": "https://linkedin.com/company/dirayconsultoria"
+          },
+          {
+            "label": "dirayconsultoria",
+            "href": "https://tiktok.com/@dirayconsultoria"
+          }
+        ]
+      }
+    ]
   },
   "theme": {
     "primaryColor": "#3b82f6",

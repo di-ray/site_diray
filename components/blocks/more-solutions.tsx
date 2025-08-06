@@ -14,10 +14,10 @@ interface Solution {
 }
 
 interface MoreSolutionsSectionProps {
-  heading: string
+  heading?: string
   subtitle?: string
   solutions?: Solution[]
-  currentPage: string
+  currentPage?: string
 }
 
 // Animation Variants
@@ -33,14 +33,21 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { 
+      duration: 0.6, 
+      ease: "easeOut" as const 
+    } 
+  },
 }
 
 export function MoreSolutionsSection({ 
   heading = "Conheça mais soluções", 
   subtitle = "Esqueça as propostas surpresa. Calcule seu orçamento aqui mesmo no site.",
   solutions = [], 
-  currentPage 
+  currentPage = ""
 }: MoreSolutionsSectionProps) {
   const defaultSolutions = [
     {
@@ -75,7 +82,7 @@ export function MoreSolutionsSection({
     }
   ];
 
-  const displaySolutions = solutions.length > 0 ? solutions : defaultSolutions;
+  const displaySolutions = solutions && solutions.length > 0 ? solutions : defaultSolutions;
   
   // Filtra a solução atual para não aparecer na lista
   const filteredSolutions = displaySolutions.filter((s) => s.slug !== currentPage)
@@ -132,8 +139,14 @@ export function MoreSolutionsSection({
                   <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-primary/10">
                     <Icon className="text-primary" size={24} />
                   </div>
-                  <h3 className="text-xl font-bold mb-3">{solution.title}</h3>
-                  <p className="flex-grow text-muted-foreground mb-6">
+                  <h3 
+                    className="text-xl font-bold mb-3"
+                  >
+                    {solution.title}
+                  </h3>
+                  <p 
+                    className="flex-grow text-muted-foreground mb-6"
+                  >
                     {solution.description}
                   </p>
                   <div className="mt-auto flex items-center justify-end">

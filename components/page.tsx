@@ -13,6 +13,8 @@ import { ContactSection } from "./blocks/contact"
 import { MoreSolutionsSection } from "./blocks/more-solutions"
 import { WhyDiraySection } from "./blocks/why-diray"
 import { FaqSection } from "./blocks/faq"
+import { LogoCarousel } from "./blocks/logo-carousel"
+import { MoreSolutionsHomeSection } from "./blocks/more-solutions-home"
 
 const components = {
   hero: HeroSection,
@@ -22,9 +24,13 @@ const components = {
   contact: ContactSection,
   "more-solutions": MoreSolutionsSection,
   moresolutions: MoreSolutionsSection,
+  "more-solutions-home": MoreSolutionsHomeSection,
+  moresolutionshome: MoreSolutionsHomeSection,
   "why-diray": WhyDiraySection,
   whydiray: WhyDiraySection,
   faq: FaqSection,
+  "logo-carousel": LogoCarousel,
+  logocarousel: LogoCarousel,
 }
 
 export function Page(props: {

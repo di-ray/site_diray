@@ -29,7 +29,8 @@
     "strictNullChecks": true
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "vite.config.ts"
   ],
   "include": [
     "next-env.d.ts",

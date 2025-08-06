@@ -6,11 +6,12 @@ import { ContatoSection } from "./contato-section"
 import { PorqueDiRay } from "./porque-diray"
 import { SolutionHero } from "../blocks/solution-hero"
 import { SolutionIntro } from "../blocks/solution-intro"
-import { WhatYouReceiveSection } from "../blocks/what-you-receive-section"
+import { WhatYouReceiveSection, type Item } from "../blocks/what-you-receive-section"
 import { SolutionCalculator } from "../blocks/solution-calculator"
 import { SolutionTimeline } from "../blocks/solution-timeline"
 import { SolutionQuery } from "@/tina/__generated__/types"
 import { MoreSolutionsSection } from "../blocks/more-solutions"
+import { WhyDiraySection } from "../blocks/why-diray"
 
 type SolutionPageTemplateProps = {
   data: SolutionQuery;
@@ -45,6 +46,10 @@ export function SolutionPageTemplate(props: SolutionPageTemplateProps) {
                 heroHighlight={block.heroHighlight}
                 heroSubtitle={block.heroSubtitle}
                 backgroundImage={block.backgroundImage}
+                videoSrc={block.videoSrc}
+                videoStartTime={block.videoStartTime}
+                videoEndTime={block.videoEndTime}
+                overlayOpacity={block.overlayOpacity}
               />
             );
           case "SolutionBlocksSolutionIntro":
@@ -58,10 +63,13 @@ export function SolutionPageTemplate(props: SolutionPageTemplateProps) {
               />
             );
           case "SolutionBlocksWhatYouReceive":
+            if (!block.items) return null;
+            const filteredItems = block.items.filter(item => item !== null) as Item[];
+            if (filteredItems.length === 0) return null;
             return (
               <WhatYouReceiveSection
                 key={idx}
-                items={block.items}
+                items={filteredItems}
               />
             );
           case "SolutionBlocksSolutionCalculator":
@@ -142,18 +150,19 @@ export function SolutionPageTemplate(props: SolutionPageTemplateProps) {
               />
             );
           case "SolutionBlocksSolutionTimeline":
+            const filteredSteps = block.steps?.filter(step => step !== null) ?? undefined;
             return (
               <SolutionTimeline
                 key={idx}
-                timelineTitle={block.timelineTitle}
-                steps={block.steps}
+                timelineTitle={block.timelineTitle ?? undefined}
+                steps={filteredSteps as any}
               />
             );
           default:
             return null;
         }
       })}
-      <PorqueDiRay />
+      <WhyDiraySection />
       <MoreSolutionsSection
         heading="Conheça mais soluções"
         currentPage={data.solution._sys?.filename || ""}

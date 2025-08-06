@@ -18,7 +18,7 @@ const containerVariants: Variants = {
 
 const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
 }
 
 interface Feature {
@@ -59,7 +59,7 @@ export function WhyDiraySection({
     }
   ];
 
-  const displayFeatures = features.length > 0 ? features : defaultFeatures;
+  const displayFeatures = features && features.length > 0 ? features : defaultFeatures;
 
   return (
     <section id="por-que-diray" className="py-16 md:py-24 bg-gradient-to-b from-red-500 to-primary">
@@ -70,7 +70,7 @@ export function WhyDiraySection({
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: "easeOut" as const }}
         >
           {heading} <span className="text-primary">DI.RAY</span>
         </motion.h2>
@@ -102,14 +102,12 @@ export function WhyDiraySection({
                     <Icon size={32} className="text-[#ffcd38]" />
                   </motion.div>
                   <h3 
-                    data-tina-field={tinaField(feature, `features.${i}.title`)}
                     className="text-2xl font-bold text-white text-center"
                   >
                     {feature.title}
                   </h3>
                 </div>
                 <p 
-                  data-tina-field={tinaField(feature, `features.${i}.description`)}
                   className="text-white text-center"
                 >
                   {feature.description}

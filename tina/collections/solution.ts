@@ -2,7 +2,7 @@ import type { Collection } from "tinacms"
 
 export const SolutionCollection: Collection = {
   name: "solution",
-  label: "Soluções",
+  label: "🚀 Soluções",
   path: "content/solutions",
   format: "mdx",
   ui: {
@@ -47,6 +47,10 @@ export const SolutionCollection: Collection = {
             { name: "heroHighlight", label: "Destaque", type: "string" },
             { name: "heroSubtitle", label: "Subtítulo", type: "string" },
             { name: "backgroundImage", label: "Imagem de Fundo", type: "image" },
+            { name: "videoSrc", label: "URL do Vídeo", type: "string", description: "Caminho para o arquivo de vídeo (ex: /videos/hero.mp4)" },
+            { name: "videoStartTime", label: "Tempo Inicial do Vídeo (segundos)", type: "number", description: "Quando o vídeo deve começar" },
+            { name: "videoEndTime", label: "Tempo Final do Vídeo (segundos)", type: "number", description: "Quando o vídeo deve reiniciar" },
+            { name: "overlayOpacity", label: "Opacidade do Overlay", type: "number", description: "Opacidade do overlay escuro (0-1)" },
           ],
         },
         {

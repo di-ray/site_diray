@@ -14,10 +14,10 @@ interface Solution {
 }
 
 interface MoreSolutionsSectionProps {
-  heading: string
+  heading?: string
   subtitle?: string
   solutions?: Solution[]
-  currentPage: string
+  currentPage?: string
 }
 
 // Animation Variants
@@ -33,10 +33,22 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { 
+      duration: 0.6, 
+      ease: "easeOut" as const 
+    } 
+  },
 }
 
-export function MoreSolutionsHomeSection({ heading = "Conheça mais soluções", subtitle = "Esqueça as propostas surpresa. Calcule seu orçamento aqui mesmo no site.", solutions = [], currentPage }: MoreSolutionsSectionProps) {
+export function MoreSolutionsHomeSection({ 
+  heading = "Conheça mais soluções", 
+  subtitle = "Esqueça as propostas surpresa. Calcule seu orçamento aqui mesmo no site.", 
+  solutions = [], 
+  currentPage = "" 
+}: MoreSolutionsSectionProps) {
   const defaultSolutions = [
     {
       slug: "workshop-de-metas",
@@ -60,7 +72,7 @@ export function MoreSolutionsHomeSection({ heading = "Conheça mais soluções",
       slug: "estrategia-de-treinamento",
       icon: "BookOpen",
       title: "Estratégia de Treinamento",
-      description: "Desenho da estratégia de conteúdos e programas que atendam às necessidades de treinamento e desenvolvimento da organização."
+      description: "Desenho de uma estratégia de treinamento robusta para desenvolver a organização ou departamentos específicos."
     },
     {
       slug: "formacao-de-ia",
@@ -70,7 +82,7 @@ export function MoreSolutionsHomeSection({ heading = "Conheça mais soluções",
     }
   ];
 
-  const displaySolutions = solutions.length > 0 ? solutions : defaultSolutions;
+  const displaySolutions = solutions && solutions.length > 0 ? solutions : defaultSolutions;
   
   // Filtra a solução atual para não aparecer na lista
   const filteredSolutions = displaySolutions.filter((s) => s.slug !== currentPage)
@@ -104,7 +116,7 @@ export function MoreSolutionsHomeSection({ heading = "Conheça mais soluções",
         {/* Contêiner dos Cards */}
         <div className="relative">
           <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-7xl mx-auto"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6 max-w-7xl mx-auto"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -121,7 +133,7 @@ export function MoreSolutionsHomeSection({ heading = "Conheça mais soluções",
               return (
                 <motion.div
                   key={index}
-                  className="bg-primary rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col"
+                  className="bg-primary rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col min-h-[280px]"
                   variants={itemVariants}
                   whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
                   onClick={() => !isCurrent && (window.location.href = `/solucoes/${solution.slug}`)}
@@ -137,10 +149,16 @@ export function MoreSolutionsHomeSection({ heading = "Conheça mais soluções",
                     </motion.div>
 
                     {/* Título */}
-                    <h3 className="text-xl font-bold mb-3 text-white">{solution.title}</h3>
+                    <h3 
+                      className="text-xl font-bold mb-3 text-white"
+                    >
+                      {solution.title}
+                    </h3>
 
                     {/* Descrição */}
-                    <p className="text-white text-sm md:text-base mb-2 flex-grow">
+                    <p 
+                      className="text-white text-sm md:text-base mb-2 flex-grow"
+                    >
                       {solution.description}
                     </p>
 
