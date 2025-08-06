@@ -1,18 +1,5 @@
 import { createClient } from "tinacms/dist/client";
 import { queries } from "./types";
-
-// Self-hosted configuration
-const apiUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}/api/tina/graphql`
-  : process.env.NODE_ENV === "production"
-  ? "https://site-diray.vercel.app/api/tina/graphql" 
-  : "http://localhost:3000/api/tina/graphql";
-
-export const client = createClient({
-  url: apiUrl,
-  token: process.env.TINA_TOKEN || "",
-  queries,
-});
-
+export const client = createClient({ url: 'http://localhost:3000/api/tina/graphql', token: '2c23294c4d1c8174c22fa5ca648cc30f1b75f9fc', queries,  });
 export default client;
   

@@ -1041,13 +1041,14 @@ var CalculatorCollection = {
 };
 
 // tina/config.tsx
-var branch = process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || "dependabot/npm_and_yarn/multi-544f560e85";
+var isLocal = process.env.TINA_PUBLIC_IS_LOCAL === "true";
+var branch = process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || process.env.NEXT_PUBLIC_TINA_BRANCH || "main";
 var config_default = defineConfig({
-  token: process.env.TINA_TOKEN,
-  // This should match the value in your .env file
-  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
-  // This should match the value in your .env file
+  // Self-hosted configuration
+  contentApiUrlOverride: isLocal ? `${process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"}/api/tina/graphql` : "/api/tina/graphql",
   branch,
+  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
+  token: process.env.TINA_TOKEN,
   build: {
     publicFolder: "public",
     outputFolder: "admin"

@@ -1,9 +1,9 @@
-import { client } from "@/tina/__generated__/client"
+import databaseClient from "@/tina/__generated__/databaseClient"
 import Header from "./header"
 
 async function getSettings() {
   try {
-    const result = await client.queries.settings({ relativePath: "index.json" })
+    const result = await databaseClient.queries.settings({ relativePath: "index.json" })
     return result.data.settings
   } catch (error) {
     console.error("Error loading settings:", error)
