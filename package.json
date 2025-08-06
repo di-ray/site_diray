@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "next dev",
     "tina": "tinacms dev -c \"next dev\"",
-    "build": "tinacms build --partial-reindex && next build",
+    "build": "tinacms build --partial-reindex && node scripts/fix-tina-client.js && next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -89,8 +89,8 @@
     "sonner": "2.0.6",
     "tailwind-merge": "^3.3.1",
     "tailwindcss-animate": "^1.0.7",
-    "tinacms": "2.1.0",
-    "tinacms-authjs": "4.0.0",
+    "tinacms": "2.8.2",
+    "tinacms-authjs": "11.0.0",
     "tinacms-gitprovider-github": "3.0.1",
     "typescript": "5.5.4",
     "upstash-redis-level": "1.1.1",
