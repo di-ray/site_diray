@@ -1,0 +1,332 @@
+{
+  "0": [
+    {
+      "id": "admin",
+      "filename": "admin",
+      "type": "dir",
+      "directory": "",
+      "src": "/admin",
+      "thumbnails": {
+        "75x75": "/admin",
+        "400x400": "/admin",
+        "1000x1000": "/admin"
+      },
+      "children": {
+        "0": [
+          {
+            "id": ".gitignore",
+            "filename": ".gitignore",
+            "type": "file",
+            "directory": "admin",
+            "src": "/admin\\.gitignore",
+            "thumbnails": {
+              "75x75": "/admin\\.gitignore",
+              "400x400": "/admin\\.gitignore",
+              "1000x1000": "/admin\\.gitignore"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "images",
+      "filename": "images",
+      "type": "dir",
+      "directory": "",
+      "src": "/images",
+      "thumbnails": {
+        "75x75": "/images",
+        "400x400": "/images",
+        "1000x1000": "/images"
+      },
+      "children": {
+        "0": [
+          {
+            "id": "background.webp",
+            "filename": "background.webp",
+            "type": "file",
+            "directory": "images",
+            "src": "/images\\background.webp",
+            "thumbnails": {
+              "75x75": "/images\\background.webp",
+              "400x400": "/images\\background.webp",
+              "1000x1000": "/images\\background.webp"
+            }
+          },
+          {
+            "id": "client-logos.png",
+            "filename": "client-logos.png",
+            "type": "file",
+            "directory": "images",
+            "src": "/images\\client-logos.png",
+            "thumbnails": {
+              "75x75": "/images\\client-logos.png",
+              "400x400": "/images\\client-logos.png",
+              "1000x1000": "/images\\client-logos.png"
+            }
+          },
+          {
+            "id": "clients",
+            "filename": "clients",
+            "type": "dir",
+            "directory": "images",
+            "src": "/images\\clients",
+            "thumbnails": {
+              "75x75": "/images\\clients",
+              "400x400": "/images\\clients",
+              "1000x1000": "/images\\clients"
+            },
+            "children": {
+              "0": [
+                {
+                  "id": "logo1.png",
+                  "filename": "logo1.png",
+                  "type": "file",
+                  "directory": "images\\clients",
+                  "src": "/images\\clients\\logo1.png",
+                  "thumbnails": {
+                    "75x75": "/images\\clients\\logo1.png",
+                    "400x400": "/images\\clients\\logo1.png",
+                    "1000x1000": "/images\\clients\\logo1.png"
+                  }
+                },
+                {
+                  "id": "logo2.png",
+                  "filename": "logo2.png",
+                  "type": "file",
+                  "directory": "images\\clients",
+                  "src": "/images\\clients\\logo2.png",
+                  "thumbnails": {
+                    "75x75": "/images\\clients\\logo2.png",
+                    "400x400": "/images\\clients\\logo2.png",
+                    "1000x1000": "/images\\clients\\logo2.png"
+                  }
+                },
+                {
+                  "id": "logo3.png",
+                  "filename": "logo3.png",
+                  "type": "file",
+                  "directory": "images\\clients",
+                  "src": "/images\\clients\\logo3.png",
+                  "thumbnails": {
+                    "75x75": "/images\\clients\\logo3.png",
+                    "400x400": "/images\\clients\\logo3.png",
+                    "1000x1000": "/images\\clients\\logo3.png"
+                  }
+                },
+                {
+                  "id": "logo4.png",
+                  "filename": "logo4.png",
+                  "type": "file",
+                  "directory": "images\\clients",
+                  "src": "/images\\clients\\logo4.png",
+                  "thumbnails": {
+                    "75x75": "/images\\clients\\logo4.png",
+                    "400x400": "/images\\clients\\logo4.png",
+                    "1000x1000": "/images\\clients\\logo4.png"
+                  }
+                },
+                {
+                  "id": "logo5.png",
+                  "filename": "logo5.png",
+                  "type": "file",
+                  "directory": "images\\clients",
+                  "src": "/images\\clients\\logo5.png",
+                  "thumbnails": {
+                    "75x75": "/images\\clients\\logo5.png",
+                    "400x400": "/images\\clients\\logo5.png",
+                    "1000x1000": "/images\\clients\\logo5.png"
+                  }
+                },
+                {
+                  "id": "logo6.png",
+                  "filename": "logo6.png",
+                  "type": "file",
+                  "directory": "images\\clients",
+                  "src": "/images\\clients\\logo6.png",
+                  "thumbnails": {
+                    "75x75": "/images\\clients\\logo6.png",
+                    "400x400": "/images\\clients\\logo6.png",
+                    "1000x1000": "/images\\clients\\logo6.png"
+                  }
+                },
+                {
+                  "id": "logo7.webp",
+                  "filename": "logo7.webp",
+                  "type": "file",
+                  "directory": "images\\clients",
+                  "src": "/images\\clients\\logo7.webp",
+                  "thumbnails": {
+                    "75x75": "/images\\clients\\logo7.webp",
+                    "400x400": "/images\\clients\\logo7.webp",
+                    "1000x1000": "/images\\clients\\logo7.webp"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "diego-raymundo.png",
+            "filename": "diego-raymundo.png",
+            "type": "file",
+            "directory": "images",
+            "src": "/images\\diego-raymundo.png",
+            "thumbnails": {
+              "75x75": "/images\\diego-raymundo.png",
+              "400x400": "/images\\diego-raymundo.png",
+              "1000x1000": "/images\\diego-raymundo.png"
+            }
+          },
+          {
+            "id": "diray-logo-white.png",
+            "filename": "diray-logo-white.png",
+            "type": "file",
+            "directory": "images",
+            "src": "/images\\diray-logo-white.png",
+            "thumbnails": {
+              "75x75": "/images\\diray-logo-white.png",
+              "400x400": "/images\\diray-logo-white.png",
+              "1000x1000": "/images\\diray-logo-white.png"
+            }
+          },
+          {
+            "id": "diray-logo.png",
+            "filename": "diray-logo.png",
+            "type": "file",
+            "directory": "images",
+            "src": "/images\\diray-logo.png",
+            "thumbnails": {
+              "75x75": "/images\\diray-logo.png",
+              "400x400": "/images\\diray-logo.png",
+              "1000x1000": "/images\\diray-logo.png"
+            }
+          },
+          {
+            "id": "downtown-urban-modern.jpg",
+            "filename": "downtown-urban-modern.jpg",
+            "type": "file",
+            "directory": "images",
+            "src": "/images\\downtown-urban-modern.jpg",
+            "thumbnails": {
+              "75x75": "/images\\downtown-urban-modern.jpg",
+              "400x400": "/images\\downtown-urban-modern.jpg",
+              "1000x1000": "/images\\downtown-urban-modern.jpg"
+            }
+          },
+          {
+            "id": "windows-building-pattern.jpg",
+            "filename": "windows-building-pattern.jpg",
+            "type": "file",
+            "directory": "images",
+            "src": "/images\\windows-building-pattern.jpg",
+            "thumbnails": {
+              "75x75": "/images\\windows-building-pattern.jpg",
+              "400x400": "/images\\windows-building-pattern.jpg",
+              "1000x1000": "/images\\windows-building-pattern.jpg"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "placeholder-logo.png",
+      "filename": "placeholder-logo.png",
+      "type": "file",
+      "directory": "",
+      "src": "/placeholder-logo.png",
+      "thumbnails": {
+        "75x75": "/placeholder-logo.png",
+        "400x400": "/placeholder-logo.png",
+        "1000x1000": "/placeholder-logo.png"
+      }
+    },
+    {
+      "id": "placeholder-logo.svg",
+      "filename": "placeholder-logo.svg",
+      "type": "file",
+      "directory": "",
+      "src": "/placeholder-logo.svg",
+      "thumbnails": {
+        "75x75": "/placeholder-logo.svg",
+        "400x400": "/placeholder-logo.svg",
+        "1000x1000": "/placeholder-logo.svg"
+      }
+    },
+    {
+      "id": "placeholder-user.jpg",
+      "filename": "placeholder-user.jpg",
+      "type": "file",
+      "directory": "",
+      "src": "/placeholder-user.jpg",
+      "thumbnails": {
+        "75x75": "/placeholder-user.jpg",
+        "400x400": "/placeholder-user.jpg",
+        "1000x1000": "/placeholder-user.jpg"
+      }
+    },
+    {
+      "id": "placeholder.jpg",
+      "filename": "placeholder.jpg",
+      "type": "file",
+      "directory": "",
+      "src": "/placeholder.jpg",
+      "thumbnails": {
+        "75x75": "/placeholder.jpg",
+        "400x400": "/placeholder.jpg",
+        "1000x1000": "/placeholder.jpg"
+      }
+    },
+    {
+      "id": "placeholder.svg",
+      "filename": "placeholder.svg",
+      "type": "file",
+      "directory": "",
+      "src": "/placeholder.svg",
+      "thumbnails": {
+        "75x75": "/placeholder.svg",
+        "400x400": "/placeholder.svg",
+        "1000x1000": "/placeholder.svg"
+      }
+    },
+    {
+      "id": "videos",
+      "filename": "videos",
+      "type": "dir",
+      "directory": "",
+      "src": "/videos",
+      "thumbnails": {
+        "75x75": "/videos",
+        "400x400": "/videos",
+        "1000x1000": "/videos"
+      },
+      "children": {
+        "0": [
+          {
+            "id": "megalopolis-timelapse.mp4",
+            "filename": "megalopolis-timelapse.mp4",
+            "type": "file",
+            "directory": "videos",
+            "src": "/videos\\megalopolis-timelapse.mp4",
+            "thumbnails": {
+              "75x75": "/videos\\megalopolis-timelapse.mp4",
+              "400x400": "/videos\\megalopolis-timelapse.mp4",
+              "1000x1000": "/videos\\megalopolis-timelapse.mp4"
+            }
+          },
+          {
+            "id": "megalopolis-timelapse2.mp4",
+            "filename": "megalopolis-timelapse2.mp4",
+            "type": "file",
+            "directory": "videos",
+            "src": "/videos\\megalopolis-timelapse2.mp4",
+            "thumbnails": {
+              "75x75": "/videos\\megalopolis-timelapse2.mp4",
+              "400x400": "/videos\\megalopolis-timelapse2.mp4",
+              "1000x1000": "/videos\\megalopolis-timelapse2.mp4"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
