@@ -1041,7 +1041,7 @@ var CalculatorCollection = {
 };
 
 // tina/config.tsx
-var branch = process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || "master";
+var branch = process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || "dependabot/npm_and_yarn/multi-544f560e85";
 var config_default = defineConfig({
   token: process.env.TINA_TOKEN,
   // This should match the value in your .env file
