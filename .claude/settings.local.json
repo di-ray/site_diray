@@ -32,7 +32,9 @@
       "Bash(pnpm next:*)",
       "Bash(git fetch:*)",
       "Bash(git checkout:*)",
-      "Bash(git merge:*)"
+      "Bash(git merge:*)",
+      "Bash(pnpm install:*)",
+      "Bash(npx tsc:*)"
     ],
     "deny": []
   }

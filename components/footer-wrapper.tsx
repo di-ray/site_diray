@@ -4,7 +4,7 @@ import client from '@/tina/__generated__/client'
 async function getFooterSettings() {
   try {
     const result = await client.queries.settings({ relativePath: "index.json" })
-    return result.data.settings.footer
+    return (result.data.settings as any)?.footer || null
   } catch (error) {
     console.error("Error loading footer settings:", error)
     return null

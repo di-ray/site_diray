@@ -50,7 +50,7 @@ export function WhatYouReceiveSection({ title = "O que você recebe?", items }: 
           viewport={{ once: true }}
         >
           <motion.h2 
-            data-tina-field={tinaField({ title }, "title")}
+            data-tina-field={tinaField({  title  } as any, "title")}
             className="text-3xl md:text-4xl font-bold mb-6 text-white" 
             variants={itemVariants}
           >

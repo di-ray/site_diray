@@ -19,7 +19,7 @@ export function SolutionTimeline({ timelineTitle = "Etapas da Implementação", 
     <section className="py-16 md:py-24 bg-gradient-to-b from-dark to-gray-900">
       <motion.div className="container mx-auto px-4" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.8, ease: "easeOut" as const }}>
         <motion.h2 
-          data-tina-field={tinaField({ timelineTitle }, "timelineTitle")}
+          data-tina-field={tinaField({  timelineTitle  } as any, "timelineTitle")}
           className="text-3xl md:text-4xl font-bold mb-12 text-center text-white" 
           initial={{ opacity: 0, y: -20 }} 
           whileInView={{ opacity: 1, y: 0 }} 

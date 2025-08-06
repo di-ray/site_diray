@@ -31,7 +31,7 @@ export const EngagementSection = (props: EngagementSectionProps) => {
           <div className="reveal">
             <h2 
               className="text-3xl md:text-4xl font-bold mb-6 text-white text-center md:text-left"
-              data-tina-field={tinaField(props, "heading")}
+              data-tina-field={tinaField(props as any, "heading")}
             >
               Seu time <br className="hidden md:block" /> engajado <br className="hidden md:block" />e produtivo
             </h2>
@@ -39,7 +39,7 @@ export const EngagementSection = (props: EngagementSectionProps) => {
           <div className="reveal">
             <div 
               className="text-white text-lg mb-6"
-              data-tina-field={tinaField(props, "text")}
+              data-tina-field={tinaField(props as any, "text")}
             >
               <TinaMarkdown content={text} />
             </div>
