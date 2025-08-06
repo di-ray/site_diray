@@ -1,6 +1,6 @@
 // Test TinaCMS connection
-const CLIENT_ID = '98caf0e5-1fae-4233-94d1-384207c7ba74';
-const TOKEN = '91059217f8835f37ad428b0d5dfc77a2c217ebc2';
+const CLIENT_ID = 'ebb20b99-d45a-4ba2-8f1e-8461e821fde9';
+const TOKEN = '03e16881262879a322f1d5f6a714dc6f32201dc1';
 
 async function testTinaConnection() {
   // Try different branches

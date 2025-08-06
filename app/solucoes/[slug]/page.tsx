@@ -31,23 +31,8 @@ export default async function SolutionPage({ params }: Props) {
     // Return a fallback page with empty data
     return <SolutionPageTemplate 
       data={{ 
-        solution: {
-          __typename: "Solution" as const,
-          id: "",
-          title: "",
-          icon: null,
-          excerpt: null,
-          _sys: {
-            filename: "default",
-            basename: "default",
-            breadcrumbs: ["default"],
-            path: "content/solutions/default.mdx",
-            relativePath: "default.mdx",
-            extension: ".mdx"
-          },
-          blocks: []
-        }
-      }} 
+        solution: null
+      } as any} 
       query="" 
       variables={{}} 
       solutions={{ data: { solutionConnection: { edges: [] } }, query: "", variables: {} }} 
