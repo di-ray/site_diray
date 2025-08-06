@@ -15,21 +15,21 @@ export default async function HeaderWrapper() {
   const settings = await getSettings()
   
   // Convert TinaCMS data to match Header component props
-  const headerSettings = settings ? {
-    navigation: settings.navigation ? {
-      logo: settings.navigation.logo ?? undefined,
-      menuItems: settings.navigation.menuItems?.filter(item => item !== null).map(item => ({
+  const headerSettings = settings && (settings as any).navigation ? {
+    navigation: {
+      logo: (settings as any).navigation.logo ?? undefined,
+      menuItems: (settings as any).navigation.menuItems?.filter((item: any) => item !== null).map((item: any) => ({
         label: item.label,
         href: item.href,
         hasSubmenu: item.hasSubmenu ?? undefined,
-        submenuItems: item.submenuItems?.filter(subItem => 
+        submenuItems: item.submenuItems?.filter((subItem: any) => 
           subItem !== null && subItem.label && subItem.href
-        ).map(subItem => ({
-          label: subItem!.label!,
-          href: subItem!.href!
+        ).map((subItem: any) => ({
+          label: subItem.label,
+          href: subItem.href
         }))
       }))
-    } : undefined
+    }
   } : null
   
   return <Header settings={headerSettings} />

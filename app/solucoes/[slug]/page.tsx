@@ -10,7 +10,7 @@ type Props = {
 export default async function SolutionPage({ params }: Props) {
   try {
     const tinaProps = await client.queries.solution({ relativePath: `${params.slug}.mdx` });
-    const solutionsRes = await client.queries.solutionConnection();
+    const solutionsRes = await client.queries.solutionConnection({});
 
     // Sanitiza os dados para garantir que são plain objects
     const plainTinaProps = {
@@ -29,12 +29,17 @@ export default async function SolutionPage({ params }: Props) {
   } catch (error) {
     console.error("Error loading solution page data:", error);
     // Return a fallback page with empty data
-    return <SolutionPageTemplate data={{}} query="" variables={{}} solutions={{ data: {}, query: "", variables: {} }} />
+    return <SolutionPageTemplate 
+      data={{ solution: null }} 
+      query="" 
+      variables={{}} 
+      solutions={{ data: { solutionConnection: { edges: [] } }, query: "", variables: {} }} 
+    />
   }
 }
 
 export async function generateStaticParams() {
-  const solutions = await client.queries.solutionConnection();
+  const solutions = await client.queries.solutionConnection({});
   
   if (!solutions?.data?.solutionConnection?.edges) {
     return [];
@@ -42,7 +47,7 @@ export async function generateStaticParams() {
 
   const edges = solutions.data.solutionConnection.edges;
 
-  return edges.reduce<{ slug: string }[]>((acc, edge) => {
+  return edges.reduce<{ slug: string }[]>((acc, edge: any) => {
     if (edge && edge.node) {
       acc.push({ slug: edge.node._sys.filename });
     }

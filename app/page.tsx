@@ -7,7 +7,7 @@ const Page = dynamic(() => import("../components/page").then(mod => mod.Page), {
 export default async function Home() {
   try {
     const res = await client.queries.page({ relativePath: "home.mdx" });
-    const solutionsRes = await client.queries.solutionConnection();
+    const solutionsRes = await client.queries.solutionConnection({});
 
     // Sanitiza os dados para garantir que são plain objects
     const plainData = res?.data ? JSON.parse(JSON.stringify(res.data)) : {};
@@ -35,7 +35,7 @@ export default async function Home() {
     return (
       <>
         <Page
-          data={{}}
+          data={{ page: { blocks: [] } }}
           query=""
           variables={{}}
         />
