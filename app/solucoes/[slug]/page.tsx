@@ -29,7 +29,12 @@ export default async function SolutionPage({ params }: Props) {
   } catch (error) {
     console.error("Error loading solution page data:", error);
     // Return a fallback page with empty data
-    return <SolutionPageTemplate data={{}} query="" variables={{}} solutions={{ data: {}, query: "", variables: {} }} />
+    return <SolutionPageTemplate 
+      data={{ solution: null }} 
+      query="" 
+      variables={{}} 
+      solutions={{ data: { solutionConnection: { edges: [] } }, query: "", variables: {} }} 
+    />
   }
 }
 

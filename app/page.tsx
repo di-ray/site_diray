@@ -35,7 +35,7 @@ export default async function Home() {
     return (
       <>
         <Page
-          data={{}}
+          data={{ page: { blocks: [] } }}
           query=""
           variables={{}}
         />
