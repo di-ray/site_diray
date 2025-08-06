@@ -1042,7 +1042,7 @@ var CalculatorCollection = {
 
 // tina/config.tsx
 var isLocal = process.env.TINA_PUBLIC_IS_LOCAL === "true";
-var branch = process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || "dependabot/npm_and_yarn/multi-544f560e85";
+var branch = process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || process.env.NEXT_PUBLIC_TINA_BRANCH || "main";
 var config_default = defineConfig({
   // Self-hosted configuration
   contentApiUrlOverride: isLocal ? `${process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"}/api/tina/graphql` : "/api/tina/graphql",
