@@ -7,7 +7,7 @@ import { SolutionCollection } from "./collections/solution";
 import { CalculatorCollection } from "./collections/calculator";
 
 const isLocal = process.env.TINA_PUBLIC_IS_LOCAL === 'true';
-const branch = process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || process.env.NEXT_PUBLIC_TINA_BRANCH || "main";
+const branch = process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || process.env.NEXT_PUBLIC_TINA_BRANCH || "dependabot/npm_and_yarn/multi-544f560e85";
 
 export default defineConfig({
   // Self-hosted configuration
