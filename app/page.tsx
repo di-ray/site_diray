@@ -37,19 +37,8 @@ export default async function Home() {
         <Page
           data={{ 
             page: { 
-              __typename: "Page" as const,
-              id: "",
-              title: "",
-              _sys: {
-                filename: "home",
-                basename: "home",
-                breadcrumbs: ["home"],
-                path: "content/pages/home.mdx",
-                relativePath: "home.mdx",
-                extension: ".mdx"
-              },
               blocks: [] 
-            } 
+            } as any
           }}
           query=""
           variables={{}}

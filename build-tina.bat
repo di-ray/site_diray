@@ -1,0 +1,4 @@
+@echo off
+set NEXT_PUBLIC_TINA_CLIENT_ID=ebb20b99-d45a-4ba2-8f1e-8461e821fde9
+set TINA_TOKEN=03e16881262879a322f1d5f6a714dc6f32201dc1
+pnpm tinacms build

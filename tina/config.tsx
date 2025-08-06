@@ -6,7 +6,7 @@ import { FAQCollection } from "./collections/faq";
 import { SolutionCollection } from "./collections/solution";
 import { CalculatorCollection } from "./collections/calculator";
 
-const branch = process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || "master";
+const branch = process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || "dependabot/npm_and_yarn/multi-544f560e85";
 
 export default defineConfig({
   token:  process.env.TINA_TOKEN, // This should match the value in your .env file

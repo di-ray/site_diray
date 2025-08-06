@@ -37,7 +37,11 @@
       "Bash(npx tsc:*)",
       "Bash(set NEXT_PUBLIC_TINA_CLIENT_ID=98caf0e5-1fae-4233-94d1-384207c7ba74)",
       "Bash(set TINA_TOKEN=91059217f8835f37ad428b0d5dfc77a2c217ebc2)",
-      "Bash(npx tinacms build:*)"
+      "Bash(npx tinacms build:*)",
+      "Bash(set NEXT_PUBLIC_TINA_CLIENT_ID=ebb20b99-d45a-4ba2-8f1e-8461e821fde9)",
+      "Bash(set TINA_TOKEN=03e16881262879a322f1d5f6a714dc6f32201dc1)",
+      "Bash(cmd /c:*)",
+      "Bash(npx cross-env:*)"
     ],
     "deny": []
   }

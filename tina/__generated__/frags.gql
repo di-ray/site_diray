@@ -1,0 +1,424 @@
+fragment SettingsParts on Settings {
+  __typename
+  siteInfo {
+    __typename
+    title
+    description
+    keywords
+  }
+  contact {
+    __typename
+    email
+    phone
+    address
+  }
+  social {
+    __typename
+    facebook
+    instagram
+    linkedin
+    twitter
+  }
+  navigation {
+    __typename
+    logo
+    menuItems {
+      __typename
+      label
+      href
+      hasSubmenu
+      submenuItems {
+        __typename
+        label
+        href
+      }
+    }
+  }
+  footer {
+    __typename
+    logo
+    logoAlt
+    description
+    quickLinksTitle
+    quickLinks {
+      __typename
+      text
+      href
+    }
+    servicesTitle
+    serviceLinks {
+      __typename
+      text
+      href
+    }
+    socialTitle
+    socialLinks {
+      __typename
+      platform
+      username
+      url
+    }
+    copyrightText
+  }
+  theme {
+    __typename
+    primaryColor
+    secondaryColor
+    darkMode
+  }
+}
+
+fragment PageParts on Page {
+  __typename
+  title
+  blocks {
+    __typename
+    ... on PageBlocksHero {
+      heading
+      subheading
+      description
+      buttonText
+      buttonLink
+    }
+    ... on PageBlocksEngagement {
+      heading
+      text
+    }
+    ... on PageBlocksChallenges {
+      heading
+      cards {
+        __typename
+        groupTitle
+        content
+        resultText
+      }
+    }
+    ... on PageBlocksMoreSolutions {
+      heading
+      subtitle
+      solutions {
+        __typename
+        slug
+        icon
+        title
+        description
+      }
+    }
+    ... on PageBlocksMoreSolutionsHome {
+      heading
+      subtitle
+      solutions {
+        __typename
+        slug
+        icon
+        title
+        description
+      }
+    }
+    ... on PageBlocksWhyDiray {
+      heading
+      subheading
+      features {
+        __typename
+        icon
+        title
+        description
+      }
+    }
+    ... on PageBlocksAbout {
+      heading
+      founderName
+      founderTitle
+      biography
+      founderImage
+      clientLogosImage
+    }
+    ... on PageBlocksFaq {
+      heading
+      subheading
+      questions {
+        __typename
+        category
+        question
+        answer
+      }
+    }
+    ... on PageBlocksLogoCarousel {
+      title
+      description
+      logoImage
+      showAnimation
+    }
+    ... on PageBlocksContact {
+      heading
+      subheading
+      whatsapp
+      email
+    }
+    ... on PageBlocksFooter {
+      logo
+      logoAlt
+      description
+      quickLinksTitle
+      quickLinks {
+        __typename
+        text
+        href
+      }
+      servicesTitle
+      serviceLinks {
+        __typename
+        text
+        href
+      }
+      socialTitle
+      socialLinks {
+        __typename
+        platform
+        username
+        url
+      }
+      copyrightText
+    }
+  }
+}
+
+fragment SolutionParts on Solution {
+  __typename
+  title
+  icon
+  excerpt
+  blocks {
+    __typename
+    ... on SolutionBlocksSolutionHero {
+      heroTitle
+      heroHighlight
+      heroSubtitle
+      backgroundImage
+      videoSrc
+      videoStartTime
+      videoEndTime
+      overlayOpacity
+    }
+    ... on SolutionBlocksSolutionIntro {
+      introTitle
+      introDescription
+      minPrice
+      minDuration
+    }
+    ... on SolutionBlocksWhatYouReceive {
+      items {
+        __typename
+        icon
+        title
+        description
+      }
+    }
+    ... on SolutionBlocksSolutionCalculator {
+      calculatorType
+      calculatorId {
+        ... on Calculator {
+          __typename
+          name
+          type
+          description
+          config {
+            __typename
+            plans {
+              __typename
+              id
+              label
+              range
+              totalCost
+              totalHours
+              duration
+              activities {
+                __typename
+                name
+                duration
+                hours
+                cost
+              }
+            }
+            salaryRanges {
+              __typename
+              id
+              label
+              min
+              max
+              multiplier
+            }
+            trainingTypes {
+              __typename
+              type
+              durations {
+                __typename
+                hours
+                consultingHours
+                cost
+                weeks
+                additionalPerSession
+              }
+            }
+            hourlyRate
+            requiresLeadForm
+            showPDF
+            formula
+            variables {
+              __typename
+              name
+              label
+              type
+              defaultValue
+              min
+              max
+              step
+              options {
+                __typename
+                value
+                label
+              }
+            }
+          }
+          display {
+            __typename
+            title
+            subtitle
+            buttonText
+            warningMessage
+            successMessage
+          }
+        }
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+      }
+      basePrice
+      factors {
+        __typename
+        name
+        options {
+          __typename
+          label
+          multiplier
+        }
+      }
+    }
+    ... on SolutionBlocksSolutionTimeline {
+      timelineTitle
+      steps {
+        __typename
+        icon
+        title
+        description
+      }
+    }
+    ... on SolutionBlocksWhyDiray {
+      heading
+      subheading
+      features {
+        __typename
+        icon
+        title
+        description
+      }
+    }
+    ... on SolutionBlocksMoreSolutions {
+      heading
+    }
+    ... on SolutionBlocksContact {
+      heading
+      subheading
+      whatsapp
+      email
+    }
+  }
+}
+
+fragment CalculatorParts on Calculator {
+  __typename
+  name
+  type
+  description
+  config {
+    __typename
+    plans {
+      __typename
+      id
+      label
+      range
+      totalCost
+      totalHours
+      duration
+      activities {
+        __typename
+        name
+        duration
+        hours
+        cost
+      }
+    }
+    salaryRanges {
+      __typename
+      id
+      label
+      min
+      max
+      multiplier
+    }
+    trainingTypes {
+      __typename
+      type
+      durations {
+        __typename
+        hours
+        consultingHours
+        cost
+        weeks
+        additionalPerSession
+      }
+    }
+    hourlyRate
+    requiresLeadForm
+    showPDF
+    formula
+    variables {
+      __typename
+      name
+      label
+      type
+      defaultValue
+      min
+      max
+      step
+      options {
+        __typename
+        value
+        label
+      }
+    }
+  }
+  display {
+    __typename
+    title
+    subtitle
+    buttonText
+    warningMessage
+    successMessage
+  }
+}
+
+fragment FaqParts on Faq {
+  __typename
+  question
+  answer
+}
