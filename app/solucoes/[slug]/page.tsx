@@ -10,7 +10,7 @@ type Props = {
 export default async function SolutionPage({ params }: Props) {
   try {
     const tinaProps = await client.queries.solution({ relativePath: `${params.slug}.mdx` });
-    const solutionsRes = await client.queries.solutionConnection();
+    const solutionsRes = await client.queries.solutionConnection({});
 
     // Sanitiza os dados para garantir que são plain objects
     const plainTinaProps = {
@@ -39,7 +39,7 @@ export default async function SolutionPage({ params }: Props) {
 }
 
 export async function generateStaticParams() {
-  const solutions = await client.queries.solutionConnection();
+  const solutions = await client.queries.solutionConnection({});
   
   if (!solutions?.data?.solutionConnection?.edges) {
     return [];

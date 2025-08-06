@@ -9,7 +9,8 @@
   "scripts": {
     "dev": "next dev",
     "tina": "tinacms dev -c \"next dev\"",
-    "build": "tinacms build --partial-reindex && node scripts/fix-tina-client.js && next build",
+    "build": "node scripts/build.js",
+    "build:full": "tinacms build --partial-reindex && node scripts/fix-tina-client.js && next build",
     "start": "next start",
     "lint": "next lint"
   },
