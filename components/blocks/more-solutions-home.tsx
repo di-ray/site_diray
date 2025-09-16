@@ -18,6 +18,7 @@ interface MoreSolutionsSectionProps {
   subtitle?: string
   solutions?: Solution[]
   currentPage?: string
+  tinaObject?: any
 }
 
 // Animation Variants
@@ -47,7 +48,8 @@ export function MoreSolutionsHomeSection({
   heading = "Conheça mais soluções", 
   subtitle = "Esqueça as propostas surpresa. Calcule seu orçamento aqui mesmo no site.", 
   solutions = [], 
-  currentPage = "" 
+  currentPage = "",
+  tinaObject
 }: MoreSolutionsSectionProps) {
   const defaultSolutions = [
     {
@@ -99,14 +101,14 @@ export function MoreSolutionsHomeSection({
           viewport={{ once: true }}
         >
           <motion.h2 
-            data-tina-field={tinaField({  heading  } as any, "heading")} 
+            data-tina-field={tinaField(tinaObject as any, "heading")} 
             className="text-3xl md:text-4xl font-bold mb-6 text-white" 
             variants={itemVariants}
           >
             {heading}
           </motion.h2>
           <motion.p 
-            data-tina-field={tinaField({  subtitle  } as any, "subtitle")} 
+            data-tina-field={tinaField(tinaObject as any, "subtitle")} 
             className="text-lg text-white mb-12" 
             variants={itemVariants}
           >
@@ -129,6 +131,7 @@ export function MoreSolutionsHomeSection({
                           solution.icon === "Users" ? Users :
                           solution.icon === "BookOpen" ? BookOpen :
                           solution.icon === "BarChart" ? BarChart : Users;
+              const originalIndex = solutions?.indexOf?.(solution) ?? index;
               
               return (
                 <motion.div
@@ -138,12 +141,14 @@ export function MoreSolutionsHomeSection({
                   whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
                   onClick={() => !isCurrent && (window.location.href = `/solucoes/${solution.slug}`)}
                   style={{ cursor: isCurrent ? "default" : "pointer" }}
+                  data-tina-field={tinaField(tinaObject?.solutions?.[originalIndex] as any)}
                 >
                   <div className="p-6 flex flex-col h-full">
                     {/* Ícone com círculo de fundo */}
                     <motion.div
                       className="w-12 h-12 rounded-full bg-white/30 flex items-center justify-center mb-4"
                       whileHover={{ rotate: 360, transition: { duration: 0.5 } }}
+                      data-tina-field={tinaField(tinaObject?.solutions?.[originalIndex] as any, "icon")}
                     >
                       <Icon className="text-white" width={24} height={24} />
                     </motion.div>
@@ -151,6 +156,7 @@ export function MoreSolutionsHomeSection({
                     {/* Título */}
                     <h3 
                       className="text-xl font-bold mb-3 text-white"
+                      data-tina-field={tinaField(tinaObject?.solutions?.[originalIndex] as any, "title")}
                     >
                       {solution.title}
                     </h3>
@@ -158,6 +164,7 @@ export function MoreSolutionsHomeSection({
                     {/* Descrição */}
                     <p 
                       className="text-white text-sm md:text-base mb-2 flex-grow"
+                      data-tina-field={tinaField(tinaObject?.solutions?.[originalIndex] as any, "description")}
                     >
                       {solution.description}
                     </p>

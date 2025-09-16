@@ -63,12 +63,12 @@ export function Page(props: {
         if (!block || !block.__typename) {
           return null
         }
-        const blockName = block.__typename.replace("PageBlocks", "").toLowerCase()
+    const blockName = block.__typename.replace("PageBlocks", "").toLowerCase()
         const Component = components[blockName]
         if (Component) {
           return (
             <div key={i} data-tina-field={tinaField(block as any)}>
-              <Component {...block} />
+      <Component {...block} tinaObject={block} />
             </div>
           )
         }
