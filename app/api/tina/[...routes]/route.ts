@@ -8,12 +8,12 @@ const handler = TinaNodeBackend({
   databaseClient,
 });
 
-async function handleRequest(request: NextRequest) {
+async function handleRequest(request: NextRequest): Promise<Response> {
   const url = new URL(request.url);
   const body = request.method !== 'GET' ? await request.text() : undefined;
   
   // Create a promise that resolves with the response
-  return new Promise((resolve, reject) => {
+  return new Promise<Response>((resolve, reject) => {
     const req = {
       method: request.method,
       url: url.pathname + url.search,
@@ -38,6 +38,11 @@ async function handleRequest(request: NextRequest) {
         resolve(new Response(data));
       },
       setHeader: () => {}, // Headers are handled differently in App Router
+    } as unknown as {
+      status: (code: number) => { json: (data: any) => void; end: (data?: any) => void };
+      json: (data: any) => void;
+      end: (data?: any) => void;
+      setHeader: (name: string, value: string) => void;
     };
 
     try {
