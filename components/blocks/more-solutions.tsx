@@ -52,7 +52,7 @@ export function MoreSolutionsSection({
   currentPage = "",
   tinaObject
 }: MoreSolutionsSectionProps) {
-  const { isEditing } = useEditState?.() || { isEditing: false }
+  const { edit } = useEditState()
   const defaultSolutions = [
     {
       slug: "workshop-de-metas",
@@ -136,8 +136,8 @@ export function MoreSolutionsSection({
                 key={index}
                 className="rounded-lg shadow-md overflow-hidden transition-all duration-300 bg-white hover:shadow-xl"
                 variants={itemVariants}
-                onClick={() => !isEditing && (window.location.href = `/solucoes/${solution.slug}`)}
-                style={{ cursor: isEditing ? "text" : "pointer" }}
+                onClick={() => !edit && (window.location.href = `/solucoes/${solution.slug}`)}
+                style={{ cursor: edit ? "text" : "pointer" }}
                 data-tina-field={tinaField(solution as any)}
               >
                 <div className="p-6 flex flex-col h-full">
