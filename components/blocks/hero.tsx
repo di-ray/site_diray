@@ -26,7 +26,7 @@ export const HeroSection = (props: HeroSectionProps) => {
   }, [])
 
   // Conteúdo padrão do projeto DIRAY original
-  const defaultHeading = "Desenvolva\nEngaje\nCresça"
+  const defaultHeading = "Eleve sua \ngestão de pessoas \n"
   const defaultSubheading = "Soluções em desenvolvimento organizacional"
   const defaultDescription = "que você contrata uma vez e reaplica quantas vezes quiser."
   const defaultButtonText = "Saiba Mais"
