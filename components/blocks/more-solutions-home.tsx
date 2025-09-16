@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { tinaField } from "tinacms/dist/react"
+import { tinaField, useEditState } from "tinacms/dist/react"
 import { motion } from "framer-motion"
 import { ArrowRight, ArrowUpDown, MessageSquare, Users, BookOpen, BarChart } from "lucide-react"
 
@@ -18,6 +18,7 @@ interface MoreSolutionsSectionProps {
   subtitle?: string
   solutions?: Solution[]
   currentPage?: string
+  tinaObject?: any
 }
 
 // Animation Variants
@@ -47,8 +48,10 @@ export function MoreSolutionsHomeSection({
   heading = "Conheça mais soluções", 
   subtitle = "Esqueça as propostas surpresa. Calcule seu orçamento aqui mesmo no site.", 
   solutions = [], 
-  currentPage = "" 
+  currentPage = "",
+  tinaObject
 }: MoreSolutionsSectionProps) {
+  const { edit } = useEditState?.() || { edit: false }
   const defaultSolutions = [
     {
       slug: "workshop-de-metas",
@@ -99,14 +102,14 @@ export function MoreSolutionsHomeSection({
           viewport={{ once: true }}
         >
           <motion.h2 
-            data-tina-field={tinaField({  heading  } as any, "heading")} 
+            data-tina-field={tinaObject ? tinaField(tinaObject as any, "heading") : undefined} 
             className="text-3xl md:text-4xl font-bold mb-6 text-white" 
             variants={itemVariants}
           >
             {heading}
           </motion.h2>
           <motion.p 
-            data-tina-field={tinaField({  subtitle  } as any, "subtitle")} 
+            data-tina-field={tinaObject ? tinaField(tinaObject as any, "subtitle") : undefined} 
             className="text-lg text-white mb-12" 
             variants={itemVariants}
           >
@@ -136,14 +139,16 @@ export function MoreSolutionsHomeSection({
                   className="bg-primary rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col min-h-[280px]"
                   variants={itemVariants}
                   whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
-                  onClick={() => !isCurrent && (window.location.href = `/solucoes/${solution.slug}`)}
-                  style={{ cursor: isCurrent ? "default" : "pointer" }}
+                  onClick={() => !isCurrent && !edit && (window.location.href = `/solucoes/${solution.slug}`)}
+                  style={{ cursor: isCurrent || edit ? "default" : "pointer" }}
+                  data-tina-field={tinaField(solution as any)}
                 >
                   <div className="p-6 flex flex-col h-full">
                     {/* Ícone com círculo de fundo */}
                     <motion.div
                       className="w-12 h-12 rounded-full bg-white/30 flex items-center justify-center mb-4"
                       whileHover={{ rotate: 360, transition: { duration: 0.5 } }}
+                      data-tina-field={tinaField(solution as any, "icon")}
                     >
                       <Icon className="text-white" width={24} height={24} />
                     </motion.div>
@@ -151,6 +156,7 @@ export function MoreSolutionsHomeSection({
                     {/* Título */}
                     <h3 
                       className="text-xl font-bold mb-3 text-white"
+                      data-tina-field={tinaField(solution as any, "title")}
                     >
                       {solution.title}
                     </h3>
@@ -158,6 +164,7 @@ export function MoreSolutionsHomeSection({
                     {/* Descrição */}
                     <p 
                       className="text-white text-sm md:text-base mb-2 flex-grow"
+                      data-tina-field={tinaField(solution as any, "description")}
                     >
                       {solution.description}
                     </p>

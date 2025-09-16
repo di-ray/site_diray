@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { tinaField } from "tinacms/dist/react"
+import { tinaField, useEditState } from "tinacms/dist/react"
 import { motion } from "framer-motion"
 import { ArrowRight, ArrowUpDown, MessageSquare, Users, BookOpen, BarChart } from "lucide-react"
 
@@ -18,6 +18,8 @@ interface MoreSolutionsSectionProps {
   subtitle?: string
   solutions?: Solution[]
   currentPage?: string
+  // Pass the original Tina block object to enable inline editing
+  tinaObject?: any
 }
 
 // Animation Variants
@@ -47,8 +49,10 @@ export function MoreSolutionsSection({
   heading = "Conheça mais soluções", 
   subtitle = "Esqueça as propostas surpresa. Calcule seu orçamento aqui mesmo no site.",
   solutions = [], 
-  currentPage = ""
+  currentPage = "",
+  tinaObject
 }: MoreSolutionsSectionProps) {
+  const { edit } = useEditState()
   const defaultSolutions = [
     {
       slug: "workshop-de-metas",
@@ -90,7 +94,7 @@ export function MoreSolutionsSection({
   return (
     <section className="py-20 md:py-32 bg-primary">
       <div className="container mx-auto px-4">
-        <motion.div
+    <motion.div
           className="text-center max-w-3xl mx-auto mb-16"
           variants={containerVariants}
           initial="hidden"
@@ -98,14 +102,14 @@ export function MoreSolutionsSection({
           viewport={{ once: true }}
         >
           <motion.h2 
-            data-tina-field={tinaField({  heading  } as any, "heading")} 
+            data-tina-field={tinaObject ? tinaField(tinaObject as any, "heading") : undefined} 
             className="text-3xl md:text-4xl font-bold mb-6 text-white" 
             variants={itemVariants}
           >
             {heading}
           </motion.h2>
           <motion.p 
-            data-tina-field={tinaField({  subtitle  } as any, "subtitle")} 
+            data-tina-field={tinaObject ? tinaField(tinaObject as any, "subtitle") : undefined} 
             className="text-lg text-white mb-12" 
             variants={itemVariants}
           >
@@ -132,20 +136,26 @@ export function MoreSolutionsSection({
                 key={index}
                 className="rounded-lg shadow-md overflow-hidden transition-all duration-300 bg-white hover:shadow-xl"
                 variants={itemVariants}
-                onClick={() => window.location.href = `/solucoes/${solution.slug}`}
-                style={{ cursor: "pointer" }}
+                onClick={() => !edit && (window.location.href = `/solucoes/${solution.slug}`)}
+                style={{ cursor: edit ? "text" : "pointer" }}
+                data-tina-field={tinaField(solution as any)}
               >
                 <div className="p-6 flex flex-col h-full">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-primary/10">
+                  <div 
+                    className="w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-primary/10"
+                    data-tina-field={tinaField(solution as any, "icon")}
+                  >
                     <Icon className="text-primary" size={24} />
                   </div>
                   <h3 
                     className="text-xl font-bold mb-3"
+                    data-tina-field={tinaField(solution as any, "title")}
                   >
                     {solution.title}
                   </h3>
                   <p 
                     className="flex-grow text-muted-foreground mb-6"
+                    data-tina-field={tinaField(solution as any, "description")}
                   >
                     {solution.description}
                   </p>
