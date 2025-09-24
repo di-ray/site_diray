@@ -52,7 +52,7 @@
       },
       {
         "label": "Por que Diray",
-        "href": "/por-que-diray",
+        "href": "/#por-que-diray",
         "hasSubmenu": false
       },
       {
@@ -68,73 +68,7 @@
     ]
   },
   "footer": {
-    "description": "Consultoria especializada em desenvolvimento organizacional e empresarial, ajudando empresas a alcançarem seu potencial máximo.",
-    "copyright": "© 2025 DI.RAY. Todos os direitos reservados.",
-    "sections": [
-      {
-        "title": "Link Rápido",
-        "links": [
-          {
-            "label": "Sobre DI.RAY",
-            "href": "/#sobre"
-          },
-          {
-            "label": "Serviços",
-            "href": "/solucoes"
-          },
-          {
-            "label": "Por que DI.RAY",
-            "href": "/por-que-diray"
-          },
-          {
-            "label": "Perguntas Frequentes",
-            "href": "/#faq"
-          }
-        ]
-      },
-      {
-        "title": "Serviços",
-        "links": [
-          {
-            "label": "Estratégia de Treinamento",
-            "href": "/solucoes/estrategia-de-treinamento"
-          },
-          {
-            "label": "Formação customizada em IA",
-            "href": "/solucoes/formacao-de-ia"
-          },
-          {
-            "label": "Plano de Comunicação",
-            "href": "/solucoes/plano-de-comunicacao"
-          },
-          {
-            "label": "Alinhamento de Cultura",
-            "href": "/solucoes/alinhamento-de-cultura"
-          },
-          {
-            "label": "Workshop de Metas",
-            "href": "/solucoes/workshop-de-metas"
-          }
-        ]
-      },
-      {
-        "title": "Redes Sociais",
-        "links": [
-          {
-            "label": "@dirayconsultoria",
-            "href": "https://instagram.com/dirayconsultoria"
-          },
-          {
-            "label": "DIRAYconsultoria",
-            "href": "https://linkedin.com/company/dirayconsultoria"
-          },
-          {
-            "label": "dirayconsultoria",
-            "href": "https://tiktok.com/@dirayconsultoria"
-          }
-        ]
-      }
-    ]
+    "description": "Consultoria especializada em desenvolvimento organizacional e empresarial, ajudando empresas a alcançarem seu potencial máximo."
   },
   "theme": {
     "primaryColor": "#3b82f6",
