@@ -16,7 +16,7 @@
     "twitter": "https://tiktok.com/@dirayconsultoria"
   },
   "navigation": {
-    "logo": "",
+    "logo": "/images/diray-logo.png",
     "menuItems": [
       {
         "label": "Home",
