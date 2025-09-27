@@ -52,7 +52,7 @@ export const HeroSection = (props: HeroSectionProps) => {
           >
             {heading.split('\n').map((line, index) => (
               <span key={index} className="block">
-                {line === "Engaje" ? (
+                {line === "Gestão de Pessoas" ? (
                   <span className="text-highlight"> {line}</span>
                 ) : (
                   line
