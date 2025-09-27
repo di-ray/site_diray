@@ -1,8 +1,11 @@
 {
   "name": "Formação de IA",
   "type": "custom",
-  "description": "Calculadora para orçamento de Formação de IA baseado em número de participantes e profundidade",
+  "description": "Calculadora para orçamento de Desenho de Onboarding baseado em número de participantes e profundidade",
   "config": {
+    "hourlyRate": 150,
+    "requiresLeadForm": true,
+    "showPDF": true,
     "formula": "9600 * numeroParticipantes * nivelProfundidade",
     "variables": [
       {
@@ -49,13 +52,9 @@
           }
         ]
       }
-    ],
-    "hourlyRate": 150,
-    "requiresLeadForm": true,
-    "showPDF": true
+    ]
   },
   "display": {
-    "title": "Simule seu investimento",
-    "resultLabel": "Investimento estimado:"
+    "title": "Simule seu investimento"
   }
 }
