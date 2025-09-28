@@ -70,11 +70,11 @@
       },
       {
         "id": "plan-100",
-        "label": "De 51 a 100 respondentes",
-        "range": "De 51 a 100 respondentes",
-        "totalCost": 13050,
+        "label": "De 101 a 1000 funcionários",
+        "range": "De 101 a 1000 funcionários",
+        "totalCost": 24900,
         "totalHours": 87,
-        "duration": "17 dias úteis",
+        "duration": "38 dias úteis",
         "activities": [
           {
             "name": "Reunião de Briefing",
