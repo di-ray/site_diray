@@ -25,12 +25,6 @@
             "cost": "R$ 675,00"
           },
           {
-            "name": "Implementação do fluxo",
-            "duration": "20 dias úteis",
-            "hours": "80",
-            "cost": "R$ 12.000,00"
-          },
-          {
             "name": "Desenho do onboarding",
             "duration": "5 dias úteis",
             "hours": "40",
@@ -59,6 +53,12 @@
             "duration": "1 dia útil",
             "hours": "6",
             "cost": "R$ 900,00"
+          },
+          {
+            "name": "Implementação do fluxo",
+            "duration": "20 dias úteis",
+            "hours": "80",
+            "cost": "R$ 12.000,00"
           },
           {
             "name": "Entrega final",
