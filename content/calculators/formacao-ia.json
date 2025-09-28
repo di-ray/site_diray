@@ -34,13 +34,13 @@
       },
       {
         "name": "nivelProfundidade",
-        "label": "Nível de Profundidade",
+        "label": "Localidades Contempladas",
         "type": "select",
         "defaultValue": "1",
         "options": [
           {
             "value": "1",
-            "label": "Introdutório"
+            "label": "100% remoto"
           },
           {
             "value": "1.3",
