@@ -25,16 +25,10 @@
             "cost": "R$ 675,00"
           },
           {
-            "name": "Desenho dos materiais",
-            "duration": "5 dias úteis",
-            "hours": "21",
-            "cost": "R$ 3.150,00"
-          },
-          {
-            "name": "Análise do resultado",
-            "duration": "3 dias úteis",
-            "hours": "10",
-            "cost": "R$ 1.500,00"
+            "name": "Implementação do fluxo",
+            "duration": "20 dias úteis",
+            "hours": "80",
+            "cost": "R$ 12.000,00"
           },
           {
             "name": "Desenho do onboarding",
@@ -53,6 +47,12 @@
             "duration": "3 dias úteis",
             "hours": "12",
             "cost": "R$ 1.800,00"
+          },
+          {
+            "name": "Desenho dos materiais",
+            "duration": "5 dias úteis",
+            "hours": "21",
+            "cost": "R$ 3.150,00"
           },
           {
             "name": "Sessão de Transferência",
