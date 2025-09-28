@@ -10,13 +10,13 @@
     "variables": [
       {
         "name": "numeroParticipantes",
-        "label": "Número de Participantes",
+        "label": "Quantidade de funcionários",
         "type": "select",
         "defaultValue": "1",
         "options": [
           {
             "value": "1",
-            "label": "Até 10 pessoas"
+            "label": "Até 50 pessoas"
           },
           {
             "value": "1.4",
