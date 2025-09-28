@@ -6,8 +6,8 @@
     "plans": [
       {
         "id": "plan-50",
-        "label": "Até 50 respondentes",
-        "range": "Até 50 respondentes",
+        "label": "Até 100 funcionários",
+        "range": "Até 100 funcionários",
         "totalCost": 11700,
         "totalHours": 78,
         "duration": "17 dias úteis",
@@ -37,7 +37,7 @@
             "cost": "R$ 1.500,00"
           },
           {
-            "name": "Desenho do plano de ação",
+            "name": "Desenho do onboarding",
             "duration": "5 dias úteis",
             "hours": "40",
             "cost": "R$ 6.000,00"
