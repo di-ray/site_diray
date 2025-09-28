@@ -5,7 +5,7 @@
   "config": {
     "plans": [
       {
-        "id": "plan-100",
+        "id": "plan-50",
         "label": "Até 100 funcionários",
         "range": "Até 100 funcionários",
         "totalCost": 11700,
