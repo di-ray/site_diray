@@ -29,20 +29,12 @@
         "hasSubmenu": true,
         "submenuItems": [
           {
-            "label": "Estratégia de Treinamento",
-            "href": "/solucoes/estrategia-de-treinamento"
-          },
-          {
-            "label": "Onboarding",
-            "href": "/solucoes/onboarding"
-          },
-          {
             "label": "Seleção",
             "href": "/solucoes/selecao"
           },
           {
-            "label": "Alinhamento de Cultura",
-            "href": "/solucoes/alinhamento-de-cultura"
+            "label": "Onboarding",
+            "href": "/solucoes/onboarding"
           },
           {
             "label": "Definição de Metas",
