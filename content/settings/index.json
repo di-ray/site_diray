@@ -26,7 +26,7 @@
       {
         "label": "Soluções",
         "href": "/solucoes",
-        "hasSubmenu": true
+        "hasSubmenu": false
       },
       {
         "label": "Por que DI.RAY?",
