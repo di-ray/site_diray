@@ -26,21 +26,7 @@
       {
         "label": "Soluções",
         "href": "/solucoes",
-        "hasSubmenu": true,
-        "submenuItems": [
-          {
-            "label": "Seleção",
-            "href": "/solucoes/selecao"
-          },
-          {
-            "label": "Onboarding",
-            "href": "/solucoes/onboarding"
-          },
-          {
-            "label": "Metas",
-            "href": "/solucoes/workshop-de-metas"
-          }
-        ]
+        "hasSubmenu": true
       },
       {
         "label": "Por que DI.RAY?",
