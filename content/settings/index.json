@@ -46,7 +46,12 @@
     ]
   },
   "footer": {
-    "description": "Consultoria especializada em desenvolvimento organizacional e empresarial, ajudando empresas a alcançarem seu potencial máximo."
+    "description": "Consultoria especializada em desenvolvimento organizacional e empresarial, ajudando empresas a alcançarem seu potencial máximo.",
+    "serviceLinks": [
+      {
+        "text": "Conheça as soluções"
+      }
+    ]
   },
   "theme": {
     "primaryColor": "#3b82f6",
